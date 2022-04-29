@@ -7,7 +7,19 @@
   "item": [
     {
       "name": "GetFirstRequest",
-      "_postman_id": "4867f16d-c91d-4fe4-8c6e-0017f859d508",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "987838f2-febd-4013-9b8e-e40c7433086d",
+            "exec": [
+              "//pm.environment.get(\"variable_key\");"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "id": "4867f16d-c91d-4fe4-8c6e-0017f859d508",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
