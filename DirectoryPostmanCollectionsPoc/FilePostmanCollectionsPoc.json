@@ -26,7 +26,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "https://reqres.in/api/{{GlobalParams}}page={{firstInput}}"
+        "url": "https://reqres.in/api/{{GlobalParam}}page={{firstInput}}"
       },
       "response": []
     }
