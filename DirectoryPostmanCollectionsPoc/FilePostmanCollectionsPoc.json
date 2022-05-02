@@ -35,7 +35,25 @@
           "originalRequest": {
             "method": "GET",
             "header": [],
-            "url": "https://reqres.in/api/{{GlobalParam}}page={{firstInput}}"
+            "url": {
+              "raw": "https://reqres.in/api/{{GlobalParam}}page={{firstInput}}?page=1",
+              "protocol": "https",
+              "host": [
+                "reqres",
+                "in"
+              ],
+              "path": [
+                "api",
+                "{{GlobalParam}}page={{firstInput}}"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            }
           },
           "_postman_previewlanguage": null,
           "header": null,
