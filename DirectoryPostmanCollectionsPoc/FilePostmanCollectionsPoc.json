@@ -28,7 +28,22 @@
         "header": [],
         "url": "https://reqres.in/api/{{GlobalParam}}page={{firstInput}}"
       },
-      "response": []
+      "response": [
+        {
+          "id": "2a2d37bb-ce7b-40e3-8c3e-fc370bcef7de",
+          "name": "GetFirstRequest",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": "https://reqres.in/api/{{GlobalParam}}page={{firstInput}}"
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "responseTime": null,
+          "body": null
+        }
+      ]
     }
   ]
 }
