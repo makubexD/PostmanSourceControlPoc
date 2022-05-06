@@ -362,19 +362,18 @@
                 "exec": [
                   "var didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");;\r",
                   "var campaign = pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\");\r",
-                  "var afid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\");\r",
+                  "var expectedAfid = pm.iterationData.get(\"expectedAfid\") || pm.collectionVariables.get(\"expectedAfid\");\r",
                   "\r",
-                  "var testName = `DID/Tfn is ${didTfn} for campaign : ${campaign.toUpperCase()}  and must have afid --> ${afid}`;\r",
+                  "var testName = `DID/Tfn is ${didTfn} for campaign : ${campaign.toUpperCase()}  and must have afid --> ${expectedAfid}`;\r",
                   "\r",
                   "pm.test(testName, function () {\r",
                   "    var jsonData = pm.response.json();\r",
                   "    if (campaign == \"cuy-mms\"){ // Campaign with different Endpoint\r",
-                  "        pm.expect(jsonData.AFID).to.eql(afid.toString());\r",
+                  "        pm.expect(jsonData.AFID).to.eql(expectedAfid.toString());\r",
                   "    }else{\r",
-                  "        pm.expect(jsonData.Afid).to.eql(afid.toString());\r",
+                  "        pm.expect(jsonData.Afid).to.eql(expectedAfid.toString());\r",
                   "    }    \r",
-                  "});\r",
-                  ""
+                  "});"
                 ],
                 "type": "text/javascript"
               }
@@ -464,73 +463,73 @@
   ],
   "variable": [
     {
-      "id": "90070098-474d-4162-8cbf-ca5c928ee162",
+      "id": "da9a14ca-0cf9-4c7e-babe-5cb5a247adb9",
       "key": "Did",
       "value": "2223334444"
     },
     {
-      "id": "4211ceec-6fc7-46f2-a0b9-648212d14ccd",
+      "id": "14d5994a-ee1c-448a-9b7e-21110868d32f",
       "key": "Campaign",
       "value": "cuy-hma"
     },
     {
-      "id": "404b21dc-ca66-4ad6-906f-dea7720e8e14",
+      "id": "e5c07fb8-f309-48ab-bc69-539d14d9ed98",
       "key": "AfidByTfnEndpoint",
       "value": "afid-by-tfn"
     },
     {
-      "id": "186b6779-3ec4-4b65-ac7f-60323ac54c3c",
+      "id": "e33d0069-4681-4b34-a3c8-667e677e9c60",
       "key": "IBSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "942072bd-88c4-4e1c-b38a-be8692720cdf",
+      "id": "3a373e77-b7d4-4ea0-8e92-681b0df1e443",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "99dc7a23-685a-4e11-89ab-6e903acec6d0",
+      "id": "6cb2f149-db53-435a-8550-8cecedf75be0",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "1e775b3d-39e1-4462-b085-5bf85bb8ab6a",
+      "id": "de695554-517c-45d3-a58e-38a00ea7c40a",
       "key": "OBSubCampaignEndpoint",
       "value": "dnis"
     },
     {
-      "id": "04c82d0a-1384-4cbf-9b0a-8dcfddc256b3",
+      "id": "e1d144e2-9023-4f72-89ad-b4925b1623b8",
       "key": "Cid",
       "value": "1111"
     },
     {
-      "id": "a3fbbee1-9a3f-4ca9-a016-ab408a42aa07",
+      "id": "51b51158-f449-41b8-a2f2-66a1583f2221",
       "key": "ZipCode",
       "value": "123",
       "type": "string"
     },
     {
-      "id": "aa3651de-7669-4eeb-bf8f-f1c35e2ed054",
+      "id": "451231c0-1fcf-4cb6-954d-883b4b55e21d",
       "key": "DestinationDidType",
       "value": "DestinationDID"
     },
     {
-      "id": "e900a8b5-4777-4d65-838e-b87fa689422d",
+      "id": "e31d2b44-607a-4ba6-975a-510efab8f804",
       "key": "IsZingCarrier",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "b6aa6a10-d3ef-42a3-99c1-bd9df26b0018",
+      "id": "5c265872-f420-43a8-98e0-2b39b2b058ac",
       "key": "ExpectedSubCampaignOB",
       "value": "SB99",
       "type": "string"
     },
     {
-      "id": "01712349-da63-4d4c-a19a-b9610dbff4ba",
+      "id": "3cb8cadd-3f2d-4a62-adea-7411a3f5967d",
       "key": "OBSubCampaignEndoint",
       "value": ""
     }
