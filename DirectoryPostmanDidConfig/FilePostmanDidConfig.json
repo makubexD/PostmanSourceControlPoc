@@ -359,17 +359,14 @@
                 "id": "fbeca481-a18f-454c-a858-8f808e443cac",
                 "exec": [
                   "var didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");;\r",
-                  "var campaignId = pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\");\r",
+                  "var campaign = pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\");\r",
                   "var afid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\");\r",
                   "\r",
-                  "var jsonData = pm.response.json();\r",
-                  "\r",
-                  "var testName = `DID/Tfn: ${didTfn}, CampaignId : ${campaignId.toUpperCase()}, expected AFID: ${afid} ---> AFID: ${jsonData.Afid}`;\r",
-                  "\r",
-                  "if(campaignId == \"MMS\") testName = `DID/Tfn: ${didTfn}, CampaignId : ${campaignId.toUpperCase()}, expected AFID: ${afid} ---> AFID: ${jsonData.AFID}`;\r",
+                  "var testName = `DID/Tfn is ${didTfn} for campaign : ${campaign.toUpperCase()}  and must have afid --> ${afid}`;\r",
                   "\r",
                   "pm.test(testName, function () {\r",
-                  "    if (campaignId == \"MMS\"){ // Campaign with different Endpoint\r",
+                  "    var jsonData = pm.response.json();\r",
+                  "    if (campaign == \"cuy-mms\"){ // Campaign with different Endpoint\r",
                   "        pm.expect(jsonData.AFID).to.eql(afid.toString());\r",
                   "    }else{\r",
                   "        pm.expect(jsonData.Afid).to.eql(afid.toString());\r",
@@ -459,61 +456,61 @@
   ],
   "variable": [
     {
-      "id": "d953d0c9-6526-4fd4-bc85-62612b1abd27",
+      "id": "8f0537ad-beee-491f-83fe-19adc1a0044b",
       "key": "Did",
       "value": "2223334444"
     },
     {
-      "id": "820ffc70-2376-425b-aee0-093d6aef2923",
+      "id": "5701f97a-75b6-40a6-a400-1f05fee1c7d3",
       "key": "Campaign",
       "value": "cuy-hma"
     },
     {
-      "id": "3f0fafb4-4f40-4b89-9279-a1d3abf6afe1",
+      "id": "1b77c281-8be7-47cb-9640-0a5d12e0cf57",
       "key": "AfidByTfnEndpoint",
       "value": "afid-by-tfn"
     },
     {
-      "id": "1e177124-02f7-4001-a83b-9cefaa9f10d5",
+      "id": "e4f9df5e-3171-4306-8187-20490fe02fc5",
       "key": "IBSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "2a80a843-697e-48b5-8d12-23cf1e3295a5",
+      "id": "bc1a3ce3-ac01-4293-ab9c-7216354c3534",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "b1cc1ea5-4639-41db-ad3d-7f245fa4f4ea",
+      "id": "e9158634-f67b-40ee-a253-e692582299a8",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "6fcc7a7d-be60-452d-b373-d747ebac8a20",
+      "id": "de1ff815-d403-46d4-ba5a-614a52e07c22",
       "key": "OBSubCampaignEndpoint",
       "value": "dnis"
     },
     {
-      "id": "242d54ac-e6b1-429f-90b1-66efd448d461",
+      "id": "571a6ac9-fa40-47a8-ab99-cebe5164c885",
       "key": "Cid",
       "value": "1111"
     },
     {
-      "id": "d37051d4-a3f1-4664-8836-4212bf186f0b",
+      "id": "f8af5e6a-d754-470b-881e-87b40b86f158",
       "key": "OBSubCampaignEndoint",
       "value": "123"
     },
     {
-      "id": "512999ba-f52b-4211-b9b7-45e8e49b8980",
+      "id": "f5897100-5eae-4521-a1f4-8b512c10bca3",
       "key": "ZipCode",
       "value": "123",
       "type": "string"
     },
     {
-      "id": "017221be-26ed-4923-add5-b01a062d495b",
+      "id": "07d48567-a791-471a-8bdb-a622933e0753",
       "key": "DestinationDidType",
       "value": "DestinationDID"
     }
