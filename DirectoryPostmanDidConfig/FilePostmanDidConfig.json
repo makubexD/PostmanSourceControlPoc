@@ -213,12 +213,10 @@
                   "\r",
                   "    if (!campaign.includes(cuyPrefix))\r",
                   "        campaign = `${cuyPrefix}${campaign}`;\r",
-                  "\r",
-                  "    console.log(\"aaaa --> \" + campaign);\r",
+                  "    \r",
                   "    if ([\"CUY-ZMA\", \"ZMA\"].includes(campaign))\r",
                   "        campaign = \"cuy-oma\";\r",
-                  "\r",
-                  "    console.log(\"bbbb --> \" + campaign);\r",
+                  "    \r",
                   "    return campaign;\r",
                   "}"
                 ],
@@ -591,78 +589,78 @@
   ],
   "variable": [
     {
-      "id": "2633e873-51f6-4b47-94df-fdc52b8cd424",
+      "id": "bbca395b-ffd2-4cb2-9484-dc6c6526aad8",
       "key": "Did",
       "value": "2223334444"
     },
     {
-      "id": "1645bc45-458a-4936-ae44-7fd817bb7748",
+      "id": "5fd762f7-9fb5-4d59-919e-ccb74fc89224",
       "key": "Campaign",
       "value": "cuy-hma"
     },
     {
-      "id": "470ecc44-d1aa-4037-a511-be01878da22c",
+      "id": "f18194db-8851-4dc5-a1f5-d4af71e2ba88",
       "key": "AfidByTfnEndpoint",
       "value": "afid-by-tfn"
     },
     {
-      "id": "727a3d1e-4fe8-403e-be51-878e4fac8ac6",
+      "id": "abfdbb3e-bb75-46df-845d-149596168832",
       "key": "IbSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "e41edbea-9e95-4803-b137-041cbaa0a8b1",
+      "id": "53ed41c1-5373-4e00-9a17-d8153b4a7c15",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "eecb70ad-5e91-4256-9568-f82b78cfe98b",
+      "id": "0f7ce799-8def-4acb-bdb2-3609b34f9342",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "923a1b80-761b-4317-9584-46c225813608",
+      "id": "5829057b-6e15-4e1e-95ca-6f98c6d0c8ca",
       "key": "OBSubCampaignEndpoint",
       "value": "dnis"
     },
     {
-      "id": "2b42a900-a724-4987-8d1f-269ceb379453",
+      "id": "d4e44c3f-52b4-463e-a30f-d71230344df0",
       "key": "Cid",
       "value": "1111"
     },
     {
-      "id": "c2e8c4d2-9f25-4bad-9a65-4dbd5d812dbd",
+      "id": "aca94a4d-6138-4482-a24e-6334488336ec",
       "key": "ZipCode",
       "value": "123",
       "type": "string"
     },
     {
-      "id": "897d9618-2cbd-4044-8457-875a1c3d3329",
+      "id": "7c5533c3-1440-4c74-a48c-f1b6f161744e",
       "key": "DestinationDidTypeLiveops",
       "value": "DestinationDID"
     },
     {
-      "id": "76b6a0e7-846f-4d7a-80af-d7c4ae3a99a4",
+      "id": "544128e3-7c9c-4fa4-bd6f-3f7d4469e243",
       "key": "IsZingCarrier",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "3285cbad-3590-4944-8b13-4a594465ad94",
+      "id": "485ce8b0-18e4-43ed-bf63-178e7211d458",
       "key": "ExpectedSubCampaignOB",
       "value": "SB99",
       "type": "string"
     },
     {
-      "id": "d7bfd5d2-0526-4346-93a6-3423e979987f",
+      "id": "4f5d006a-0968-4e75-a0a8-75297598ad4f",
       "key": "DestinationDidTypeGreeting",
       "value": "IVRGreeting"
     },
     {
-      "id": "039abc64-0bf8-47d7-a1d6-8dffb1b96a3a",
+      "id": "e55f83dd-185f-4ad0-ba3f-4f48e9ef7c92",
       "key": "ObSubCampaign",
       "value": "SB21",
       "type": "string"
