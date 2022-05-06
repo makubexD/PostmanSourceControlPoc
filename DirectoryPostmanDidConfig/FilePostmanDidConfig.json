@@ -32,7 +32,7 @@
               }
             }
           ],
-          "_postman_id": "11349ad9-00f7-449b-814f-3e2f2ce8b1ef",
+          "id": "11349ad9-00f7-449b-814f-3e2f2ce8b1ef",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -135,90 +135,9 @@
               "body": "{\n    \"Subcampaign\": \"SB33\",\n    \"Active\": \"TRUE\"\n}"
             }
           ]
-        },
-        {
-          "name": "TR - [Populate Inbound] Afid by Tfn",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "fbeca481-a18f-454c-a858-8f808e443cac",
-                "exec": [
-                  "var didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\");\r",
-                  "var campaignId = pm.iterationData.get(\"CampaignId\") || pm.collectionVariables.get(\"CampaignId\");\r",
-                  "var afid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\");\r",
-                  "\r",
-                  "var jsonData = pm.response.json();\r",
-                  "\r",
-                  "var testName = `DID/Tfn: ${didTfn}, CampaignId : ${campaignId.toUpperCase()}, expected AFID: ${afid} ---> AFID: ${jsonData.Afid}`;\r",
-                  "\r",
-                  "if(campaignId == \"MMS\") testName = `DID/Tfn: ${didTfn}, CampaignId : ${campaignId.toUpperCase()}, expected AFID: ${afid} ---> AFID: ${jsonData.AFID}`;\r",
-                  "\r",
-                  "pm.test(testName, function () {\r",
-                  "    if (campaignId == \"MMS\"){ // Campaign with different Endpoint\r",
-                  "        pm.expect(jsonData.AFID).to.eql(afid.toString());\r",
-                  "    }else{\r",
-                  "        pm.expect(jsonData.Afid).to.eql(afid.toString());\r",
-                  "    }    \r",
-                  "});\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "411a262c-f06a-4541-82af-4f7ff8029e02",
-                "exec": [
-                  "var campaignId = pm.iterationData.get(\"CampaignId\") || pm.collectionVariables.get(\"CampaignId\");\r",
-                  "\r",
-                  "var campaign = \"cuy-\" + campaignId.toLowerCase();\r",
-                  "if(campaignId == \"ZMA\") campaign = \"cuy-oma\";\r",
-                  "\r",
-                  "pm.collectionVariables.set(\"Campaign\", campaign);\r",
-                  "pm.collectionVariables.set(\"AfidByTfnEndpoint\", \"afid-by-tfn\");"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "5fe4bbbd-51e0-4242-8b88-e8affd16a63c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/{{AfidByTfnEndpoint}}?Tfn={{Did}}",
-              "protocol": "https",
-              "host": [
-                "lm",
-                "cignium",
-                "com"
-              ],
-              "path": [
-                "run",
-                "cignium",
-                "{{Campaign}}",
-                "{{CurrentEnv}}",
-                "{{AfidByTfnEndpoint}}"
-              ],
-              "query": [
-                {
-                  "key": "Tfn",
-                  "value": "{{Did}}",
-                  "description": "Direct Inward Dial number is usually number which is not known/visible to leads and is used for: \n•\ttransfers - internal and external\n•\tto route from Invoca TFNs to Noble, in order to be able to identify the source or channel of contact of the lead"
-                }
-              ]
-            },
-            "description": "# Purpose:\r\n\r\nTo validate the correct Afid by DID/Tfn, according new requirements by each campaign. \r\n\r\n## Usage\r\nCreate a json file like:\r\n\r\n\t[\r\n\t {\r\n\t   \"DidTfn\": ##########,\r\n\t   \"Campaign\": \"cuy-AAA\",\r\n\t   \"Afid\": ######\r\n\t }\r\n\t]"
-          },
-          "response": []
         }
       ],
-      "_postman_id": "5d4e6c82-14f4-400b-bbd4-2414989d07f0"
+      "id": "5d4e6c82-14f4-400b-bbd4-2414989d07f0"
     },
     {
       "name": "ByCampaigns",
@@ -280,7 +199,7 @@
               }
             }
           ],
-          "_postman_id": "f9695147-6436-4ff3-b49e-df9d275c5b33",
+          "id": "f9695147-6436-4ff3-b49e-df9d275c5b33",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -365,7 +284,7 @@
               }
             }
           ],
-          "_postman_id": "adf8ba0b-2398-4fd2-b334-16af07e7d19f",
+          "id": "adf8ba0b-2398-4fd2-b334-16af07e7d19f",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -401,9 +320,90 @@
             "description": "# Purpose:\r\n\r\nTo validate the correct DestinationDid by DID/Tfn, according new requirements by each campaign. **(Works for every Type --> DestinationDID, IVRGreeting...)**\r\n\r\n## Usage\r\nCreate a json file like:\r\n\r\n\t[\r\n\t {\r\n\t   \"DidTfn\": ##########,,\r\n\t   \"Campaign\": \"cuy-AAA\",\r\n\t   \"Type\": \"AAAAAAAAAAAAA\",\r\n\t   \"DestinationDID\": A#A#A#A#A#A#\r\n\t }\r\n\t]"
           },
           "response": []
+        },
+        {
+          "name": "TR - [Populate Inbound] Afid by Tfn",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "fbeca481-a18f-454c-a858-8f808e443cac",
+                "exec": [
+                  "var didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\");\r",
+                  "var campaignId = pm.iterationData.get(\"CampaignId\") || pm.collectionVariables.get(\"CampaignId\");\r",
+                  "var afid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\");\r",
+                  "\r",
+                  "var jsonData = pm.response.json();\r",
+                  "\r",
+                  "var testName = `DID/Tfn: ${didTfn}, CampaignId : ${campaignId.toUpperCase()}, expected AFID: ${afid} ---> AFID: ${jsonData.Afid}`;\r",
+                  "\r",
+                  "if(campaignId == \"MMS\") testName = `DID/Tfn: ${didTfn}, CampaignId : ${campaignId.toUpperCase()}, expected AFID: ${afid} ---> AFID: ${jsonData.AFID}`;\r",
+                  "\r",
+                  "pm.test(testName, function () {\r",
+                  "    if (campaignId == \"MMS\"){ // Campaign with different Endpoint\r",
+                  "        pm.expect(jsonData.AFID).to.eql(afid.toString());\r",
+                  "    }else{\r",
+                  "        pm.expect(jsonData.Afid).to.eql(afid.toString());\r",
+                  "    }    \r",
+                  "});\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "411a262c-f06a-4541-82af-4f7ff8029e02",
+                "exec": [
+                  "var campaignId = pm.iterationData.get(\"CampaignId\") || pm.collectionVariables.get(\"CampaignId\");\r",
+                  "\r",
+                  "var campaign = \"cuy-\" + campaignId.toLowerCase();\r",
+                  "if(campaignId == \"ZMA\") campaign = \"cuy-oma\";\r",
+                  "\r",
+                  "pm.collectionVariables.set(\"Campaign\", campaign);\r",
+                  "pm.collectionVariables.set(\"AfidByTfnEndpoint\", \"afid-by-tfn\");"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "5fe4bbbd-51e0-4242-8b88-e8affd16a63c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/{{AfidByTfnEndpoint}}?Tfn={{Did}}",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "{{Campaign}}",
+                "{{CurrentEnv}}",
+                "{{AfidByTfnEndpoint}}"
+              ],
+              "query": [
+                {
+                  "key": "Tfn",
+                  "value": "{{Did}}",
+                  "description": "Direct Inward Dial number is usually number which is not known/visible to leads and is used for: \n•\ttransfers - internal and external\n•\tto route from Invoca TFNs to Noble, in order to be able to identify the source or channel of contact of the lead"
+                }
+              ]
+            },
+            "description": "# Purpose:\r\n\r\nTo validate the correct Afid by DID/Tfn, according new requirements by each campaign. \r\n\r\n## Usage\r\nCreate a json file like:\r\n\r\n\t[\r\n\t {\r\n\t   \"DidTfn\": ##########,\r\n\t   \"Campaign\": \"cuy-AAA\",\r\n\t   \"Afid\": ######\r\n\t }\r\n\t]"
+          },
+          "response": []
         }
       ],
-      "_postman_id": "297839a6-6ae1-48cb-b50a-54cf1d378fb7"
+      "id": "297839a6-6ae1-48cb-b50a-54cf1d378fb7"
     }
   ],
   "event": [
@@ -430,52 +430,52 @@
   ],
   "variable": [
     {
-      "id": "f45ab9b9-17a7-4c6f-934c-c88a9285f2b2",
+      "id": "99e186b4-e5d7-41ed-a7bd-d0185b5b729c",
       "key": "Did",
-      "value": "2223334444",
-      "type": "string"
+      "value": "2223334444"
     },
     {
-      "id": "062abc90-b4f0-4616-8286-b7aeeb30766e",
+      "id": "68c6c1b7-0b6b-4df7-bacd-383bd58a9b62",
       "key": "Campaign",
-      "value": "cuy-hma",
-      "type": "string"
+      "value": "cuy-hma"
     },
     {
-      "id": "7ee7a9ba-36e1-42fc-abac-912c803ab3d7",
+      "id": "19e03c02-0541-449f-8fe9-ddbe0c78b895",
       "key": "AfidByTfnEndpoint",
-      "value": "afid-by-tfn",
-      "type": "string"
+      "value": "afid-by-tfn"
     },
     {
-      "id": "6781d2e3-7a56-43c5-8813-f285612d92ea",
+      "id": "5bea8eba-8a3e-46a4-abc1-5c51487e1557",
       "key": "IBSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "27a7b376-b1c5-4ab2-a937-5d3c179ec63b",
+      "id": "f5d58ff8-2740-44ea-b6ef-1439ae0d85cd",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "e1a344f6-ddc4-4d39-8f7a-baef5cd0344e",
+      "id": "3fec4f10-9bec-4036-91aa-e065d4252737",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "47b34a50-dd52-46c4-a357-2302088c7f82",
+      "id": "77ab62c5-35a0-4734-aa02-a2b1e80891ea",
       "key": "OBSubCampaignEndpoint",
-      "value": "dnis",
-      "type": "string"
+      "value": "dnis"
     },
     {
-      "id": "ca765a92-1fbc-44a3-a26d-73cecc866604",
+      "id": "a23c89a4-0f9d-4e3d-998a-c641af0187c8",
       "key": "Cid",
-      "value": "1111",
-      "type": "string"
+      "value": "1111"
+    },
+    {
+      "id": "1cba72a4-bfdc-4725-92a4-729021a08ae7",
+      "key": "OBSubCampaignEndoint",
+      "value": "123"
     }
   ]
 }
