@@ -150,7 +150,7 @@
               "script": {
                 "id": "8d8d29ab-dc05-4f52-923a-4033c35678a3",
                 "exec": [
-                  "var subCampaignOB = pm.iterationData.get(\"SubCampaignOB\") || pm.collectionVariables.get(\"SubCampaignOB\");\r",
+                  "var subCampaignOB = pm.iterationData.get(\"SubCampaignOB\") || pm.collectionVariables.get(\"ExpectedSubCampaignOB\");\r",
                   "var subCampaignOBWithOutPrefix = subCampaignOB.substring(2);\r",
                   "\r",
                   "var campaign = pm.iterationData.get(\"Campaign\");\r",
@@ -462,67 +462,67 @@
   ],
   "variable": [
     {
-      "id": "a2734eaf-e53b-48ac-b219-5a9fab3b9d75",
+      "id": "516595d8-ef61-4563-9b29-aa238aeac186",
       "key": "Did",
       "value": "2223334444"
     },
     {
-      "id": "3da907be-dcf1-40bb-8ddf-dccf55cf85fc",
+      "id": "b11c13cb-fc17-43ea-895b-7e098f5660b6",
       "key": "Campaign",
       "value": "cuy-hma"
     },
     {
-      "id": "6c9c831d-5d97-4b6d-afc7-a8b4756e4d7a",
+      "id": "e2c57497-b548-4c38-bafc-42d919836a08",
       "key": "AfidByTfnEndpoint",
       "value": "afid-by-tfn"
     },
     {
-      "id": "90f75107-ace2-46cb-b082-f9872391c493",
+      "id": "08a84b68-2ea6-44c5-b3ab-24cc5e14920d",
       "key": "IBSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "bc080898-23f0-4975-8569-68d1fa629edf",
+      "id": "261fb2e6-be9a-4d93-ae98-3d22db8a6410",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "88be8455-d654-45b9-acd8-5be4aae177f7",
+      "id": "402edeb3-3851-488a-badf-12af014f8381",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "b0d8f1ba-83de-4e06-bc13-a6dd9bcdce33",
+      "id": "ba9ee327-5bd7-4752-9bd7-edaa2d0105ea",
       "key": "OBSubCampaignEndpoint",
       "value": "dnis"
     },
     {
-      "id": "3cdb6d67-853d-4a78-b672-f042234159ff",
+      "id": "6d192a9c-6fe2-4e61-b10e-0aabe7634387",
       "key": "Cid",
       "value": "1111"
     },
     {
-      "id": "3ce55cc2-6509-495e-a95f-177f3b17ae48",
+      "id": "c53df95f-f4cb-4e6a-9c53-a8ab49565c7f",
       "key": "ZipCode",
       "value": "123",
       "type": "string"
     },
     {
-      "id": "4a900f96-5af9-4e28-8b89-5c15bc7635f0",
+      "id": "92728315-455c-41ee-b719-ed928cba1eaa",
       "key": "DestinationDidType",
       "value": "DestinationDID"
     },
     {
-      "id": "4ea9dbbf-d17d-4868-bae5-c865f727ec71",
+      "id": "95e1857f-be14-49df-915d-46ffc41d21d7",
       "key": "IsZingCarrier",
       "value": "1",
       "type": "string"
     },
     {
-      "id": "801d2bd0-d84c-4277-ab7e-668f8e6e160b",
+      "id": "15196fdd-e124-476c-81e7-4cfcef88328d",
       "key": "ExpectedSubCampaignOB",
       "value": "SB99",
       "type": "string"
