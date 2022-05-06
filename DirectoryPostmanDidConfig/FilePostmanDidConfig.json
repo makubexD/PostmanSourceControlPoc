@@ -150,7 +150,7 @@
               "script": {
                 "id": "8d8d29ab-dc05-4f52-923a-4033c35678a3",
                 "exec": [
-                  "var subCampaignOB = pm.iterationData.get(\"SubCampaignOB\");\r",
+                  "var subCampaignOB = pm.iterationData.get(\"SubCampaignOB\") || pm.collectionVariables.get(\"SubCampaignOB\");\r",
                   "var subCampaignOBWithOutPrefix = subCampaignOB.substring(2);\r",
                   "\r",
                   "var campaign = pm.iterationData.get(\"Campaign\");\r",
@@ -207,7 +207,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/{{OBSubCampaignEndoint}}?State=NJ&Afid={{Afid}}&CID={{Cid}}&ZipCode={{ZipCode}}",
+              "raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/{{OBSubCampaignEndpoint}}?State=NJ&Afid={{Afid}}&CID={{Cid}}&ZipCode={{ZipCode}}",
               "protocol": "https",
               "host": [
                 "lm",
@@ -219,7 +219,7 @@
                 "cignium",
                 "{{Campaign}}",
                 "{{CurrentEnv}}",
-                "{{OBSubCampaignEndoint}}"
+                "{{OBSubCampaignEndpoint}}"
               ],
               "query": [
                 {
@@ -462,61 +462,61 @@
   ],
   "variable": [
     {
-      "id": "c7a6fdd7-2b2e-4371-ab57-3ce39fab4b10",
+      "id": "70f8efa1-5eb5-4b3d-a1d4-a0c454a65f52",
       "key": "Did",
       "value": "2223334444"
     },
     {
-      "id": "252b1988-4b87-4148-a145-c4f159249885",
+      "id": "e9c9e464-7bbc-4e65-9eee-5e61cc252432",
       "key": "Campaign",
       "value": "cuy-hma"
     },
     {
-      "id": "1d66a4c8-83fb-4d7b-b8c6-6d9766524a93",
+      "id": "21a0d1c5-3813-413b-b2b0-335b7cf6e21d",
       "key": "AfidByTfnEndpoint",
       "value": "afid-by-tfn"
     },
     {
-      "id": "c99887e2-0b28-4c14-86e0-8fe8d122365c",
+      "id": "0fa0a7ca-fa2d-4d98-92bf-b134f5c8a306",
       "key": "IBSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "cc746089-e82f-4008-a930-611d82f28cab",
+      "id": "34f8bd90-8eda-409f-937e-f71b9bccf786",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "4fd8c0e5-38e3-47b5-82d3-e3a0f2a1e5e3",
+      "id": "1c0784bb-bc1a-41fb-bc90-8dd18f258f05",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "39a53fa2-86f2-4f8d-afcb-85fbb000aa67",
+      "id": "7373f30b-c604-4d9d-9538-58c78098f3b8",
       "key": "OBSubCampaignEndpoint",
       "value": "dnis"
     },
     {
-      "id": "e5df8385-9470-4047-8093-f2c8729aeb9a",
+      "id": "1d532b63-637f-4d3a-ae51-81e8537cce3b",
       "key": "Cid",
       "value": "1111"
     },
     {
-      "id": "c5e2cc9a-442f-4064-a33c-bb838d38b26a",
+      "id": "952d1491-a175-4035-aa40-d7df94091a9d",
       "key": "ZipCode",
       "value": "123",
       "type": "string"
     },
     {
-      "id": "b7fd43e8-e6dd-4fc5-8a5f-cc7362265eeb",
+      "id": "8d84a252-51e2-42c8-a853-90f84da781a0",
       "key": "DestinationDidType",
       "value": "DestinationDID"
     },
     {
-      "id": "824b492a-423c-43e8-a90b-0dc3abe3d2f1",
+      "id": "76613d07-312d-4ff0-b520-1ddf865dd165",
       "key": "IsZingCarrier",
       "value": "1",
       "type": "string"
