@@ -462,22 +462,22 @@
               "script": {
                 "id": "fbeca481-a18f-454c-a858-8f808e443cac",
                 "exec": [
-                  "let expectedAfid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\");\r",
+                  "// let expectedAfid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\");\r",
                   "\r",
-                  "let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");;\r",
-                  "let campaign = pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\");\r",
+                  "// let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");;\r",
+                  "// let campaign = pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\");\r",
                   "\r",
-                  "let testName = `DID/Tfn is ${didTfn} for campaign : ${campaign.toUpperCase()}  and must have afid --> ${expectedAfid}`;\r",
+                  "// let testName = `DID/Tfn is ${didTfn} for campaign : ${campaign.toUpperCase()}  and must have afid --> ${expectedAfid}`;\r",
                   "\r",
-                  "pm.test(testName, function () {\r",
-                  "    let jsonData = pm.response.json();\r",
+                  "// pm.test(testName, function () {\r",
+                  "//     let jsonData = pm.response.json();\r",
                   "    \r",
-                  "    if (campaign == \"cuy-mms\"){ // Campaign with different Endpoint\r",
-                  "        pm.expect(jsonData.AFID).to.eql(expectedAfid.toString());\r",
-                  "    }else{\r",
-                  "        pm.expect(jsonData.Afid).to.eql(expectedAfid.toString());\r",
-                  "    }    \r",
-                  "});"
+                  "//     if (campaign == \"cuy-mms\"){ // Campaign with different Endpoint\r",
+                  "//         pm.expect(jsonData.AFID).to.eql(expectedAfid.toString());\r",
+                  "//     }else{\r",
+                  "//         pm.expect(jsonData.Afid).to.eql(expectedAfid.toString());\r",
+                  "//     }    \r",
+                  "// });"
                 ],
                 "type": "text/javascript"
               }
@@ -569,78 +569,78 @@
   ],
   "variable": [
     {
-      "id": "6c58ae1c-f14c-4b7a-8915-d2d47fea51d9",
+      "id": "54af3381-4c23-4f28-a896-21511e00a12f",
       "key": "Did",
       "value": "2223334444"
     },
     {
-      "id": "785e85a0-7697-4a26-a738-4bb55ce095f4",
+      "id": "65d4b463-927c-46f5-acac-0c247d8a5181",
       "key": "Campaign",
       "value": "cuy-hma"
     },
     {
-      "id": "af59d4dc-9c20-40a1-99d7-aff0b46e6967",
+      "id": "467bdef8-592c-4a0f-b6f4-90e80945c6e6",
       "key": "AfidByTfnEndpoint",
       "value": "afid-by-tfn"
     },
     {
-      "id": "908fcc8a-fa1e-4d34-9f1c-b39fa1641024",
+      "id": "f1e16374-9fe4-415a-94ae-63dc8e4badb9",
       "key": "IbSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "525d3e1e-a37d-4e1e-8965-8684b1cd82f7",
+      "id": "5ecf02c5-de6d-4850-aca6-740869539441",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "2fbe8ad1-dfbe-4984-9ff6-eb2038288e26",
+      "id": "32bfe63e-484d-440b-9c41-a34a1f5c5c46",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "67ed8f85-d60c-496f-9ef0-2e1d8265294d",
+      "id": "0fd50d00-4dad-4d12-82e1-bd1ef44c51d9",
       "key": "OBSubCampaignEndpoint",
       "value": "dnis"
     },
     {
-      "id": "d9cf342c-af7a-41c5-862c-d6ba6fc0ac08",
+      "id": "5f0b3df9-2535-45ef-940b-5a62ad32ef78",
       "key": "Cid",
       "value": "1111"
     },
     {
-      "id": "0f5147c7-119d-423a-9f8b-5ef5fd5bdc0c",
+      "id": "97c9735d-40f1-4573-8830-821e3ad08d63",
       "key": "ZipCode",
       "value": "123",
       "type": "string"
     },
     {
-      "id": "f127b694-cbf0-4fa2-bfd3-bb5683611a6c",
+      "id": "9afb5b36-33f0-4de4-9b8a-9c3880b1ca47",
       "key": "DestinationDidTypeLiveops",
       "value": "DestinationDID"
     },
     {
-      "id": "e43becce-e957-4027-8ca3-350015a8064c",
+      "id": "e1d48b7c-ff1a-4735-b60a-8d1d9abbddd1",
       "key": "IsZingCarrier",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "d1d5c33d-38d1-4947-81e5-f3cdff56847b",
+      "id": "ad9d54fe-9afa-4cd4-88f7-c6de517ab607",
       "key": "ExpectedSubCampaignOB",
       "value": "SB99",
       "type": "string"
     },
     {
-      "id": "a5fdec21-c5e9-4812-9607-5d44e1f44953",
+      "id": "8899381d-3cca-48bd-bc0c-993889b84b97",
       "key": "OBSubCampaignEndoint",
       "value": ""
     },
     {
-      "id": "41c47887-0769-4c7b-9cc0-435e0df91c95",
+      "id": "f929958f-a32e-4bec-9558-ef3d75625d24",
       "key": "DestinationDidTypeGreeting",
       "value": "IVRGreeting"
     }
