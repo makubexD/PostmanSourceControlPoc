@@ -296,52 +296,24 @@
                   "let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");\r",
                   "\r",
                   "let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
-                  "let destinationDIDNoFormat = pm.iterationData.get(\"LiveopsDid\");\r",
-                  "let destinationDID = \"\";\r",
+                  "let liveopsNoFormat = pm.iterationData.get(\"LiveopsDid\");\r",
+                  "let liveops = \"\";\r",
                   "\r",
                   "let testName = \"\"; \r",
                   "\r",
-                  "destinationDID = [ \"\", null, \"null\", \"NA\", \"N/A\"].includes(destinationDIDNoFormat) ? null :  destinationDIDNoFormat.toString();\r",
+                  "liveops = [ \"\", null, \"null\", \"NA\", \"N/A\"].includes(liveopsNoFormat) ? null :  liveopsNoFormat.toString();\r",
                   "\r",
                   "if (type == \"DestinationDID\"){\r",
-                  "    testName = `${campaign} DID/Tfn is ${didTfn} for Type: ${type} -- must have DestinationDID --> ${destinationDID}`;\r",
+                  "    testName = `${campaign} DID/Tfn is ${didTfn} for Type: ${type} -- must have DestinationDID --> ${liveops}`;\r",
                   "}\r",
                   "\r",
                   "pm.test(testName, function () {\r",
                   "    let jsonData = pm.response.json();\r",
                   "    if (type == \"DestinationDID\"){\r",
-                  "        pm.expect(jsonData.DistinationDID).to.eql(destinationDID);    \r",
+                  "        pm.expect(jsonData.DistinationDID).to.eql(liveops);    \r",
                   "    } \r",
                   "});\r",
-                  "\r",
-                  "\r",
-                  "// var didTfn = pm.iterationData.get(\"DidTfn\");\r",
-                  "// var campaign = pm.iterationData.get(\"Campaign\");\r",
-                  "// var type = pm.iterationData.get(\"Type\");\r",
-                  "// var destinationDIDNoFormat = pm.iterationData.get(\"DestinationDID\");\r",
-                  "// var destinationDID = \"\";\r",
-                  "\r",
-                  "// var testName = \"\"; \r",
-                  "\r",
-                  "// destinationDID = destinationDIDNoFormat == \"null\" || destinationDIDNoFormat == \"NA\" || destinationDIDNoFormat == \"N/A\"  ? null :  destinationDIDNoFormat.toString();\r",
-                  "\r",
-                  "// if (type == \"DestinationDID\"){\r",
-                  "//     testName = `DID/Tfn is ${didTfn} for Type: ${type} -- must have DestinationDID --> ${destinationDID}`;\r",
-                  "// }\r",
-                  "// if (type == \"IVRGreeting\"){    \r",
-                  "//     testName = `DID/Tfn is ${didTfn} for Type: ${type} -- must have DestinationDID --> NA  && VoiceFileName --> ${destinationDID}`;\r",
-                  "// }\r",
-                  "\r",
-                  "// pm.test(testName, function () {\r",
-                  "//     var jsonData = pm.response.json();\r",
-                  "//     if (type == \"DestinationDID\"){\r",
-                  "//         pm.expect(jsonData.DistinationDID).to.eql(destinationDID);    \r",
-                  "//     }\r",
-                  "\r",
-                  "//     if (type == \"IVRGreeting\"){\r",
-                  "//         pm.expect(jsonData.VoiceFileName).to.eql(destinationDID);    \r",
-                  "//     }\r",
-                  "// });"
+                  ""
                 ],
                 "type": "text/javascript"
               }
@@ -606,78 +578,78 @@
   ],
   "variable": [
     {
-      "id": "24a5b765-a39a-488d-86d6-ea57dfe61157",
+      "id": "b3db891d-0a1b-4e14-b96b-1e3dffd75a24",
       "key": "Did",
       "value": "2223334444"
     },
     {
-      "id": "f6e97ac5-3493-48bb-880a-72f518364ae1",
+      "id": "505c51c2-8216-4d04-bad9-9eb5d39b4af2",
       "key": "Campaign",
       "value": "cuy-yyy"
     },
     {
-      "id": "16ba50b9-08b3-40e1-80fa-95e1b3b0d606",
+      "id": "b38aab92-da47-46d9-a483-40d1975d8bff",
       "key": "AfidByTfnEndpoint",
       "value": "afid-by-tfn"
     },
     {
-      "id": "4b66db2a-b0d9-4694-a7d9-8dd44147860b",
+      "id": "a71c268c-c71c-4650-8662-18ab6af4cbbe",
       "key": "IbSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "8328c15c-1bbc-4246-adfc-7b752cabd6b9",
+      "id": "4ec3e058-78b3-4465-a679-defc02f1f264",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "de6df496-3783-4615-9c10-8b69191bc0b9",
+      "id": "9aee91ce-c55c-404a-a456-54fb51781859",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "7588af45-cd6c-44b8-9609-7763c50c78c1",
+      "id": "c4f387c3-d3c8-4c5f-8fe6-69ec25b8fec9",
       "key": "OBSubCampaignEndpoint",
       "value": "dnis"
     },
     {
-      "id": "08c9b395-20a9-4ea0-b92c-9aa40bfcf139",
+      "id": "0c884c73-5b8d-4ff0-9673-b442e510fdb7",
       "key": "Cid",
       "value": "1111"
     },
     {
-      "id": "07e81692-3cac-4f0e-814a-8a4e4333ba9b",
+      "id": "40f2fd96-e07d-4482-9958-d046bc14f702",
       "key": "ZipCode",
       "value": "123",
       "type": "string"
     },
     {
-      "id": "3581efec-f49f-4285-84fe-4eb45a001738",
+      "id": "8522fc8c-554a-4fed-9026-7c52c9b357d1",
       "key": "DestinationDidTypeLiveops",
       "value": "DestinationDID"
     },
     {
-      "id": "14c99cde-0bff-41b1-97f9-bedc6b71fd34",
+      "id": "6492e2f2-1cb9-48a6-bfdc-b489ae9de9d4",
       "key": "IsZingCarrier",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "2383bde3-0a8c-48d8-a805-2b39f688ea87",
+      "id": "3ee7335e-5977-43fa-9fb4-bff314be9116",
       "key": "ExpectedSubCampaignOB",
       "value": "SB99",
       "type": "string"
     },
     {
-      "id": "afa85c13-41be-4b64-9db7-db01d4eea9a0",
+      "id": "d7e6bf97-00e1-4dce-84e0-a9afc39e0910",
       "key": "DestinationDidTypeGreeting",
       "value": "IVRGreeting"
     },
     {
-      "id": "55765788-e7d6-4670-92d7-84b8284c0abd",
+      "id": "cfec7739-cb45-4609-8622-c710bf85976f",
       "key": "ObSubCampaign",
       "value": "SB21",
       "type": "string"
