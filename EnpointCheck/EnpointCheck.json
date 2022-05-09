@@ -1,0 +1,1179 @@
+{
+  "info": {
+    "_postman_id": "09e385c4-9b66-4361-8433-8a01245a50b3",
+    "name": "Endpoint Check",
+    "description": "Verify endpount status",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "HMA",
+      "item": [
+        {
+          "name": "TR - [TORO] Blending Time",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "c4e0ed67-df34-467c-ab54-55600629d248",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "42c7874c-2d81-42a2-bf12-fb4a1b03b316",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/blending?AgentDialerId=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "blending"
+              ],
+              "query": [
+                {
+                  "key": "AgentDialerId",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [DNIS - IB]",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "c79b5930-a32a-43f6-b7bd-ebc2b8aeb28f",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "622275d7-df39-4473-9dee-4eee50df98fc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/campaigninfo?CampaignCode=16&SubCampaignCode=SB00&State=NY",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "campaigninfo"
+              ],
+              "query": [
+                {
+                  "key": "CampaignCode",
+                  "value": "16"
+                },
+                {
+                  "key": "SubCampaignCode",
+                  "value": "SB00"
+                },
+                {
+                  "key": "State",
+                  "value": "NY"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TR - [Standard] Fields",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "f46e33e7-f062-463f-bc64-51aa935b7a01",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "594732ff-3e4c-4212-9d9e-fbc2f6a1eb80",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/fields?For=marketing",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "fields"
+              ],
+              "query": [
+                {
+                  "key": "For",
+                  "value": "marketing"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Standard] Marketing",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "3354f076-b24e-4e01-930f-8b3b35f220e7",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "c1dcef9a-76a5-4f8e-affb-812c95d43b49",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/marketing?Did=&Cid=&SessionId=&Afid=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "marketing"
+              ],
+              "query": [
+                {
+                  "key": "Did",
+                  "value": ""
+                },
+                {
+                  "key": "Cid",
+                  "value": ""
+                },
+                {
+                  "key": "SessionId",
+                  "value": ""
+                },
+                {
+                  "key": "Afid",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Standard] Notifications",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "4bd5ad80-8aad-4854-85d2-264031507b9d",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "a9ee0dc6-cece-41cc-91b3-4de2ff4b2035",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/notifications?LeadType=&SessionId=&TransferSourceCampaignDialerID=&Afid=&Tcpa=&State=&AgentName=&ZipCode=&TransferTo=&DID=&IsOakStreet=&LeadDateOfBirth=&IsModelB=&CallType=&Cid=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "notifications"
+              ],
+              "query": [
+                {
+                  "key": "LeadType",
+                  "value": ""
+                },
+                {
+                  "key": "SessionId",
+                  "value": ""
+                },
+                {
+                  "key": "TransferSourceCampaignDialerID",
+                  "value": ""
+                },
+                {
+                  "key": "Afid",
+                  "value": ""
+                },
+                {
+                  "key": "Tcpa",
+                  "value": ""
+                },
+                {
+                  "key": "State",
+                  "value": ""
+                },
+                {
+                  "key": "AgentName",
+                  "value": ""
+                },
+                {
+                  "key": "ZipCode",
+                  "value": ""
+                },
+                {
+                  "key": "TransferTo",
+                  "value": ""
+                },
+                {
+                  "key": "DID",
+                  "value": ""
+                },
+                {
+                  "key": "IsOakStreet",
+                  "value": ""
+                },
+                {
+                  "key": "LeadDateOfBirth",
+                  "value": ""
+                },
+                {
+                  "key": "IsModelB",
+                  "value": ""
+                },
+                {
+                  "key": "CallType",
+                  "value": ""
+                },
+                {
+                  "key": "Cid",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Standard] Processes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "f41f395d-a91e-4c2c-ae8e-b20466e2f1fa",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "5e4dcc92-f715-4c87-82b1-73bcd8764fed",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/allowed-processes"
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Disposition] Main",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "81be08e0-a5b4-410d-a7a5-48645be54b6c",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "0cb4e845-597b-4b74-81f5-6f1c2997c1fd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/disposition?LeadGender=&LeadType=&LeadMaidenName=&LeadState=&LeadMiddleName=&SessionId=&PartnerSendEmailCallConsent=&CallType=&SelectedTransferName=&DispositionGroupCode=&TransferIsStopped=&Tcpa=&TransferFulfilled=&AgentName=&LeadAfid=&LeadZipCode=&LeadPhoneNumber=&LeadLastName=&LeadStreet2=&LeadCity=&LeadEmailAddress=&LeadTFN=&AgentEMail=&LeadFirstName=&LeadDateOfBirth=&DispositionCode=&LeadPhoneAreaCode=&LeadExternalId=&CampaignDialerId=&Carrier=&LeadStreet1=&LeadPhone=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "disposition"
+              ],
+              "query": [
+                {
+                  "key": "LeadGender",
+                  "value": ""
+                },
+                {
+                  "key": "LeadType",
+                  "value": ""
+                },
+                {
+                  "key": "LeadMaidenName",
+                  "value": ""
+                },
+                {
+                  "key": "LeadState",
+                  "value": ""
+                },
+                {
+                  "key": "LeadMiddleName",
+                  "value": ""
+                },
+                {
+                  "key": "SessionId",
+                  "value": ""
+                },
+                {
+                  "key": "PartnerSendEmailCallConsent",
+                  "value": ""
+                },
+                {
+                  "key": "CallType",
+                  "value": ""
+                },
+                {
+                  "key": "SelectedTransferName",
+                  "value": ""
+                },
+                {
+                  "key": "DispositionGroupCode",
+                  "value": ""
+                },
+                {
+                  "key": "TransferIsStopped",
+                  "value": ""
+                },
+                {
+                  "key": "Tcpa",
+                  "value": ""
+                },
+                {
+                  "key": "TransferFulfilled",
+                  "value": ""
+                },
+                {
+                  "key": "AgentName",
+                  "value": ""
+                },
+                {
+                  "key": "LeadAfid",
+                  "value": ""
+                },
+                {
+                  "key": "LeadZipCode",
+                  "value": ""
+                },
+                {
+                  "key": "LeadPhoneNumber",
+                  "value": ""
+                },
+                {
+                  "key": "LeadLastName",
+                  "value": ""
+                },
+                {
+                  "key": "LeadStreet2",
+                  "value": ""
+                },
+                {
+                  "key": "LeadCity",
+                  "value": ""
+                },
+                {
+                  "key": "LeadEmailAddress",
+                  "value": ""
+                },
+                {
+                  "key": "LeadTFN",
+                  "value": ""
+                },
+                {
+                  "key": "AgentEMail",
+                  "value": ""
+                },
+                {
+                  "key": "LeadFirstName",
+                  "value": ""
+                },
+                {
+                  "key": "LeadDateOfBirth",
+                  "value": ""
+                },
+                {
+                  "key": "DispositionCode",
+                  "value": ""
+                },
+                {
+                  "key": "LeadPhoneAreaCode",
+                  "value": ""
+                },
+                {
+                  "key": "LeadExternalId",
+                  "value": ""
+                },
+                {
+                  "key": "CampaignDialerId",
+                  "value": ""
+                },
+                {
+                  "key": "Carrier",
+                  "value": ""
+                },
+                {
+                  "key": "LeadStreet1",
+                  "value": ""
+                },
+                {
+                  "key": "LeadPhone",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Standard] Create Decision",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "b1a00b16-ccb9-4ce0-a408-60f850a712e2",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "9abf91a9-9c7d-49cd-bccf-7fa75783ffac",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/create-decision?NewLeadDateOfBirth=&NewLeadAddressStreet1=&NewLeadTransferTo=&NewLeadAddressStreet2=&FoundLeadAddressStreet2=&NewLeadAddressState=&NewLeadFirstName=&Did=&NewLeadAddressCity=&FoundLeadId=&NewLeadLastName=&NewLeadAddressCountyState=&NewLeadCid=&NewLeadAddressPostalCode=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "create-decision"
+              ],
+              "query": [
+                {
+                  "key": "NewLeadDateOfBirth",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadAddressStreet1",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadTransferTo",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadAddressStreet2",
+                  "value": ""
+                },
+                {
+                  "key": "FoundLeadAddressStreet2",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadAddressState",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadFirstName",
+                  "value": ""
+                },
+                {
+                  "key": "Did",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadAddressCity",
+                  "value": ""
+                },
+                {
+                  "key": "FoundLeadId",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadLastName",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadAddressCountyState",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadCid",
+                  "value": ""
+                },
+                {
+                  "key": "NewLeadAddressPostalCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Standard] Populate Inbound",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "065d1e80-92fe-40c5-a465-5a6d4b1d75b0",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "98571724-3cb9-4f56-9ea7-49c447595a5c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/populate-inbound?LeadAfid=&LeadId=&Tfn=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "populate-inbound"
+              ],
+              "query": [
+                {
+                  "key": "LeadAfid",
+                  "value": ""
+                },
+                {
+                  "key": "LeadId",
+                  "value": ""
+                },
+                {
+                  "key": "Tfn",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TR - [Standard] Dialing Strategy Fields",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "310fc923-c91e-4c50-9fd2-a060d6a9664e",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "4868084b-a771-432b-ad96-896d7b829c1a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/dialing-strategy-fields?For=&Trigger=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "dialing-strategy-fields"
+              ],
+              "query": [
+                {
+                  "key": "For",
+                  "value": ""
+                },
+                {
+                  "key": "Trigger",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [TORO] Priority",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "3cef20f8-b212-46a4-aff9-87716e56e152",
+                "exec": [
+                  "pm.test(\"Status code is 400 (Bad Request Error: Missing input parameters)\", function () {\r",
+                  "    pm.response.to.have.status(400);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "badae084-0888-4172-873e-b0e1e4f47a24",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/dialing-strategy-priority?Cid=&CreateReason=&LeadDateTime=&Afid=&State=&IsCallMeNow=&StatusReason=&AttemptsCount=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "dialing-strategy-priority"
+              ],
+              "query": [
+                {
+                  "key": "Cid",
+                  "value": ""
+                },
+                {
+                  "key": "CreateReason",
+                  "value": ""
+                },
+                {
+                  "key": "LeadDateTime",
+                  "value": ""
+                },
+                {
+                  "key": "Afid",
+                  "value": ""
+                },
+                {
+                  "key": "State",
+                  "value": ""
+                },
+                {
+                  "key": "IsCallMeNow",
+                  "value": ""
+                },
+                {
+                  "key": "StatusReason",
+                  "value": ""
+                },
+                {
+                  "key": "AttemptsCount",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [DNIS - OB]",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "d2c411f8-e301-40f9-bf55-022aefe442d4",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "a30700da-529a-4972-aaa8-93b2f6aa5f40",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/dnis?CreateReason=&Trigger=&State=&TransferSourceCampaignDialerId=&Cid=&Pseudodnis=&TransferSourceLeadType=&RecalculateReason=&TFN=&InitialAttemptsCount=&AttemptsCount=&Afid=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "dnis"
+              ],
+              "query": [
+                {
+                  "key": "CreateReason",
+                  "value": ""
+                },
+                {
+                  "key": "Trigger",
+                  "value": ""
+                },
+                {
+                  "key": "State",
+                  "value": ""
+                },
+                {
+                  "key": "TransferSourceCampaignDialerId",
+                  "value": ""
+                },
+                {
+                  "key": "Cid",
+                  "value": ""
+                },
+                {
+                  "key": "Pseudodnis",
+                  "value": ""
+                },
+                {
+                  "key": "TransferSourceLeadType",
+                  "value": ""
+                },
+                {
+                  "key": "RecalculateReason",
+                  "value": ""
+                },
+                {
+                  "key": "TFN",
+                  "value": ""
+                },
+                {
+                  "key": "InitialAttemptsCount",
+                  "value": ""
+                },
+                {
+                  "key": "AttemptsCount",
+                  "value": ""
+                },
+                {
+                  "key": "Afid",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Standard] Caller Id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "304200a0-ecb1-499b-a074-b6b745a0bccb",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "1931b893-6b3c-48ee-9c37-293b52ae353c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/callerid?Cid=&Afid=&AreaCode=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "callerid"
+              ],
+              "query": [
+                {
+                  "key": "Cid",
+                  "value": ""
+                },
+                {
+                  "key": "Afid",
+                  "value": ""
+                },
+                {
+                  "key": "AreaCode",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Standard] Dialing Info Logic",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2a293459-9d31-4587-9959-53fd4f179d97",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "e8eb629b-e780-4f3d-9192-c3837ddfd1bc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/dialing-info?CreateReason=&State=&Afid=&Cid=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "dialing-info"
+              ],
+              "query": [
+                {
+                  "key": "CreateReason",
+                  "value": ""
+                },
+                {
+                  "key": "State",
+                  "value": ""
+                },
+                {
+                  "key": "Afid",
+                  "value": ""
+                },
+                {
+                  "key": "Cid",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Cadence] Cadence Calculation Process",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "1bcc162a-b541-4ca4-a119-7e4fbfac32a4",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "883271cb-281f-4b4a-b421-bd2c259c7bbc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/dialing-strategy-cadence?LeadAttemptsCount=&LeadState=&SessionCallType=&SessionDispositionCode=&LeadCreateReason=&LeadCid=&LeadAfid=&LeadDialingStrategyCadenceScenario=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "dialing-strategy-cadence"
+              ],
+              "query": [
+                {
+                  "key": "LeadAttemptsCount",
+                  "value": ""
+                },
+                {
+                  "key": "LeadState",
+                  "value": ""
+                },
+                {
+                  "key": "SessionCallType",
+                  "value": ""
+                },
+                {
+                  "key": "SessionDispositionCode",
+                  "value": ""
+                },
+                {
+                  "key": "LeadCreateReason",
+                  "value": ""
+                },
+                {
+                  "key": "LeadCid",
+                  "value": ""
+                },
+                {
+                  "key": "LeadAfid",
+                  "value": ""
+                },
+                {
+                  "key": "LeadDialingStrategyCadenceScenario",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TR - [Standard] CallEvents",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "4ca99a98-a8eb-4faa-8f01-21d540a08be6",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "66535417-b200-4d68-9189-8c80f4b0dd3f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/call-events?DispositionCode=&event=",
+              "protocol": "https",
+              "host": [
+                "lm",
+                "cignium",
+                "com"
+              ],
+              "path": [
+                "run",
+                "cignium",
+                "cuy-hma",
+                "{{CurrentEnv}}",
+                "call-events"
+              ],
+              "query": [
+                {
+                  "key": "DispositionCode",
+                  "value": ""
+                },
+                {
+                  "key": "event",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PR - [Call Terminated Event] Main",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2345f4ef-9425-4074-b36b-8eb24940127b",
+                "exec": [
+                  "pm.test(\"Status code is 500 (Internal Server Error: Missing input parameters)\", function () {\r",
+                  "    pm.response.to.have.status(500);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "4f2261a5-ec80-42de-b1df-139a104586be",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/call-terminated-event"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "72da5904-127e-4c64-a19e-5abd62cdac50",
+      "description": "Verify HMA's endpoint status"
+    }
+  ]
+}
