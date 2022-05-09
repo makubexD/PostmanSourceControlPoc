@@ -212,6 +212,7 @@
                   "function UpdateZipCodeForZing(isZingCarrier) {\r",
                   "    var zingZipCode = \"60603\";\r",
                   "    \r",
+                  "    //TBD: To improve approach to evaluate between ZING/ZMA/OMA\r",
                   "    if (isZingCarrier == 1) {\r",
                   "        pm.collectionVariables.set(\"ZipCode\", zingZipCode);\r",
                   "    }\r",
@@ -555,78 +556,78 @@
   ],
   "variable": [
     {
-      "id": "c1877ff3-7f63-4135-bc87-9ba5ce59209a",
+      "id": "763a4afe-a00f-4622-8667-2fab76cb85ab",
       "key": "Did",
       "value": "2016957537"
     },
     {
-      "id": "67987077-07bf-4707-8fc7-b026c6e96217",
+      "id": "aef638ee-36c3-438a-91bc-c344e6a1fe14",
       "key": "Campaign",
       "value": "cuy-xyz"
     },
     {
-      "id": "afd46491-dbe2-4911-a388-8133e70c81fc",
+      "id": "83075fcf-8f59-4789-87fe-0b5f087b3ba6",
       "key": "AfidByTfnEndpoint",
       "value": "afid-by-tfn"
     },
     {
-      "id": "cd378ba3-3fc8-432e-97f6-8ca6a1ad0772",
+      "id": "ce598dc4-d091-4b02-b851-da8d7c52c277",
       "key": "IbSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "206487b9-1079-4bee-8494-c9b96643bc1d",
+      "id": "be255c4d-fc57-4612-adf8-4df10a7c7258",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "44be65c7-9d4b-4a65-8773-fcd402c7a4f4",
+      "id": "caeb3546-03d6-4225-b8db-622e2d8a5a3f",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "57f96d61-adfa-44d3-ac36-ff142f7380a1",
+      "id": "a29da330-4af7-4fa5-af4a-051b6a8b29de",
       "key": "OBSubCampaignEndpoint",
       "value": "dnis"
     },
     {
-      "id": "43581bc4-88bf-4d4e-b1a0-6bdf027b696c",
+      "id": "710c0cd4-0da0-43aa-9fe1-cb53b684b4f7",
       "key": "Cid",
       "value": "1111"
     },
     {
-      "id": "799743d2-203e-4fd1-8083-6a54a004d260",
+      "id": "033a0b9b-72e2-484c-b63f-b466beccc276",
       "key": "ZipCode",
       "value": "123",
       "type": "string"
     },
     {
-      "id": "8069403a-7a43-47fa-a1a0-2caf6d602aeb",
+      "id": "9c793cb2-1d10-4b5e-bc74-d60fdd5914c4",
       "key": "DestinationDidTypeLiveops",
       "value": "DestinationDID"
     },
     {
-      "id": "c177e441-88c9-4836-92ea-2d32b943b388",
+      "id": "ec210a20-2afd-4611-93f9-1e75eb1b8213",
       "key": "IsZingCarrier",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "17e71889-f090-44c0-9a0b-8f3285783127",
+      "id": "23af07c3-5588-451a-8cd6-db723fef24ec",
       "key": "ExpectedSubCampaignOB",
       "value": "SB99",
       "type": "string"
     },
     {
-      "id": "5d6c57cf-a8bc-46ab-a213-4f6adb90c850",
+      "id": "850735aa-8d9a-45f6-ba19-fec686a38826",
       "key": "DestinationDidTypeGreeting",
       "value": "IVRGreeting"
     },
     {
-      "id": "c6d50c31-a922-4a72-ab39-fe972988300d",
+      "id": "f6b75063-f853-4c96-a263-7424a1cc14c4",
       "key": "ObSubCampaign",
       "value": "SB21",
       "type": "string"
