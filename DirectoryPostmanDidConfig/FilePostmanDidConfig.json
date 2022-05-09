@@ -154,6 +154,8 @@
                   "let afid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\") || pm.request.url.query.get(\"Afid\");\r",
                   "let campaign = pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\");\r",
                   "\r",
+                  "ParseCampaignName(campaign);\r",
+                  "\r",
                   "let subCampaignOBWithOutPrefix = expectedObsubCampaign.substring(2);\r",
                   "\r",
                   "let testName = `For campaign: ${campaign.toUpperCase()} -- With Afid equals to: ${afid} must have SubCampaign --> ${expectedObsubCampaign}`;\r",
@@ -167,6 +169,19 @@
                   "        pm.expect(subCampaignOBWithOutPrefix).to.eql(subCampaignOBWithOutPrefixFromDnis);\r",
                   "    }    \r",
                   "});\r",
+                  "\r",
+                  "function ParseCampaignName(campaign) {\r",
+                  "    let cuyPrefix = 'CUY-';\r",
+                  "\r",
+                  "    if (!campaign.includes(cuyPrefix))\r",
+                  "        campaign = `${cuyPrefix}${campaign}`;\r",
+                  "    \r",
+                  "    if ([\"CUY-ZMA\", \"ZMA\"].includes(campaign)){\r",
+                  "        campaign = \"CUY-OMA\";\r",
+                  "        pm.iterationData.set(\"Campaign\", campaign);\r",
+                  "        pm.collectionVariables.set(\"Campaign\", campaign);        \r",
+                  "    }    \r",
+                  "}\r",
                   ""
                 ],
                 "type": "text/javascript"
@@ -184,11 +199,6 @@
                   "UpdateZipCodeForZing(isZingCarrier);\r",
                   "ParseCampaignName(campaign);\r",
                   "SetObSubcampaignEndpoint(campaign);\r",
-                  "\r",
-                  "console.log(\"---------------- BEGIN FINAL ----------------\");\r",
-                  "console.log(\"Iteration --> \" + pm.iterationData.get(\"Campaign\"));\r",
-                  "console.log(\"Iteration --> \" + pm.collectionVariables.get(\"Campaign\", campaign));        \r",
-                  "console.log(\"---------------- END FINAL ----------------\");\r",
                   "\r",
                   "\r",
                   "function SetDefaultZipCode() {\r",
@@ -213,14 +223,8 @@
                   "    if ([\"CUY-ZMA\", \"ZMA\"].includes(campaign)){\r",
                   "        campaign = \"CUY-OMA\";\r",
                   "        pm.iterationData.set(\"Campaign\", campaign);\r",
-                  "        pm.collectionVariables.set(\"Campaign\", campaign);\r",
-                  "\r",
-                  "        console.log(\"---------------- BEGIN FX ----------------\");\r",
-                  "        console.log(\"Iteration --> \" + pm.iterationData.get(\"Campaign\"));\r",
-                  "        console.log(\"Iteration --> \" + pm.collectionVariables.get(\"Campaign\", campaign));        \r",
-                  "        console.log(\"---------------- END FX ----------------\");\r",
-                  "    }\r",
-                  "    \r",
+                  "        pm.collectionVariables.set(\"Campaign\", campaign);        \r",
+                  "    }    \r",
                   "}\r",
                   "\r",
                   "function SetObSubcampaignEndpoint(campaign) {\r",
@@ -601,78 +605,78 @@
   ],
   "variable": [
     {
-      "id": "447e2729-e542-4674-aca0-86aee5da2a6e",
+      "id": "2bb1ff25-bfcb-457f-b5c5-a37200d91c1e",
       "key": "Did",
       "value": "2223334444"
     },
     {
-      "id": "388639d6-ea58-4148-8c60-b1214784fd97",
+      "id": "6fabe9d1-f2af-4898-811d-9bf8e7240ef7",
       "key": "Campaign",
       "value": "cuy-yyy"
     },
     {
-      "id": "f57009b5-0379-483d-b73e-bbf3fa339bf6",
+      "id": "7a519cfa-41b2-45d0-bcca-e726f1d64fa5",
       "key": "AfidByTfnEndpoint",
       "value": "afid-by-tfn"
     },
     {
-      "id": "a8105294-899e-427d-a66d-83c41b954d92",
+      "id": "e6771998-1c43-47fd-9fa9-3335c121b6f9",
       "key": "IbSubCampaign",
       "value": "SB00",
       "type": "string"
     },
     {
-      "id": "d0e6aed7-1008-4832-bd20-cafe145d04d9",
+      "id": "a8595b46-5478-4651-a5a2-4fd3a903fc38",
       "key": "CampaignId",
       "value": "HMA",
       "type": "string"
     },
     {
-      "id": "e31db93e-7c78-40fb-ad26-31f6a88353f6",
+      "id": "94867451-a3c9-45e6-be95-ebf78b8df268",
       "key": "Afid",
       "value": "523687",
       "type": "string"
     },
     {
-      "id": "90009e14-22f2-4c5d-ac6e-0517b752c1b3",
+      "id": "95cc1983-0668-4026-abe4-9ce2e1bcaf45",
       "key": "OBSubCampaignEndpoint",
       "value": "dnis"
     },
     {
-      "id": "3f87096c-e4c7-41bf-8573-5bc31d7507c0",
+      "id": "78f79b27-f1f9-412a-8579-2552c754633a",
       "key": "Cid",
       "value": "1111"
     },
     {
-      "id": "b377bcb0-f439-47b4-bc54-a3a43543ca39",
+      "id": "99a568ac-e8d7-431b-8f06-57d121ba1057",
       "key": "ZipCode",
       "value": "123",
       "type": "string"
     },
     {
-      "id": "49270608-9ea7-4223-a2f9-d16c06bbf7ae",
+      "id": "fea874e6-4e47-4a2f-8fd5-0ff3607a7294",
       "key": "DestinationDidTypeLiveops",
       "value": "DestinationDID"
     },
     {
-      "id": "8a7db96a-da31-4ac7-ae2c-32c51f96f193",
+      "id": "7c965e40-6ab7-4f2e-bbe5-a862e04e701c",
       "key": "IsZingCarrier",
       "value": "0",
       "type": "string"
     },
     {
-      "id": "59f779f7-0c09-4f07-bf90-151cf345a0b0",
+      "id": "3366dcd5-9102-436c-86be-34cab64fa75d",
       "key": "ExpectedSubCampaignOB",
       "value": "SB99",
       "type": "string"
     },
     {
-      "id": "cb5c7c24-9b8a-4bc2-936f-7ee169d1e950",
+      "id": "3a68f368-84b5-4599-aae1-8da3aa472ac8",
       "key": "DestinationDidTypeGreeting",
       "value": "IVRGreeting"
     },
     {
-      "id": "504b8cae-6038-4eda-adc2-7abff114776e",
+      "id": "c8df3933-9634-403a-9bcd-98910906b978",
       "key": "ObSubCampaign",
       "value": "SB21",
       "type": "string"
