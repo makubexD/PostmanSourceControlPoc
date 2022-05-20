@@ -1179,7 +1179,7 @@
 			"name": "MA-SHARED",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "TR - [Transfer] TPV Agent Exclusion List",
 					"id": "0a95fb44-090b-4c85-93e3-888b36139aec",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
