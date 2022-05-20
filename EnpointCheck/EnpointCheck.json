@@ -1186,7 +1186,33 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/cuy-ma-shared/{{CurrentEnv}}/tpv-agent-exclusion?Campaign=HMA&AgentEmail=jose.sato@tranzact.net",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"cuy-ma-shared",
+								"{{CurrentEnv}}",
+								"tpv-agent-exclusion"
+							],
+							"query": [
+								{
+									"key": "Campaign",
+									"value": "HMA"
+								},
+								{
+									"key": "AgentEmail",
+									"value": "jose.sato@tranzact.net"
+								}
+							]
+						}
 					},
 					"response": []
 				}
