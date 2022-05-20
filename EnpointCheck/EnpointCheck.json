@@ -1176,7 +1176,7 @@
 			"description": "Verify HMA's endpoint status"
 		},
 		{
-			"name": "New Folder",
+			"name": "MA-SHARED",
 			"item": [],
 			"id": "f07801ac-19b2-4faf-9bfe-1648ec64e9c7"
 		}
