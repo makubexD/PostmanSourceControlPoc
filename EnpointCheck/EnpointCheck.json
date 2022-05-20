@@ -1173,7 +1173,7 @@
 				}
 			],
 			"id": "72da5904-127e-4c64-a19e-5abd62cdac50",
-			"description": "Verify HMA's endpoint status"
+			"description": "Verify HMA's endpoint status. This set of test allow us to check that important endpoint are up and running."
 		},
 		{
 			"name": "MA-SHARED",
