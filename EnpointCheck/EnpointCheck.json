@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "09e385c4-9b66-4361-8433-8a01245a50b3",
 		"name": "Endpoint Check",
-		"description": "This set of tests allows us to check that important endpoints are up and running.\n\nIt performs a call to each endpoint and check that it returns status code 200 (In some cases it could be a different one).\n\n``` javascript\npm.test(\"Status code is 200\", function ()\n{   \npm.response.to.have.status(200);   \n});\n\n```",
+		"description": "This set of tests allows us to check that important endpoints are up and running.\n\nIt performs a call to each endpoint and check that it returns status code is 200 (In some cases it could be a different one).\n\n``` javascript\npm.test(\"Status code is 200\", function ()\n{   \npm.response.to.have.status(200);   \n});\n\n```",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
