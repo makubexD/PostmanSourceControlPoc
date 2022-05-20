@@ -1172,8 +1172,7 @@
 					"response": []
 				}
 			],
-			"id": "72da5904-127e-4c64-a19e-5abd62cdac50",
-			"description": "This set of tests allows us to check that important endpoints are up and running."
+			"id": "72da5904-127e-4c64-a19e-5abd62cdac50"
 		},
 		{
 			"name": "MA-SHARED",
