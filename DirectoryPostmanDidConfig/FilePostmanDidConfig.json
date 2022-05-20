@@ -1,633 +1,633 @@
 {
-  "info": {
-    "_postman_id": "8bb27d30-00bf-4952-8ba3-14366cdd02bd",
-    "name": "DIDConfig",
-    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "CUY",
-      "item": [
-        {
-          "name": "TR - [Noble] SubcampaignByTFN",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "8e439a3b-f3ae-42ed-bbb1-3e2fa9c66198",
-                "exec": [
-                  "let expectedIbsubCampaign = pm.iterationData.get(\"IbSubCampaign\") || pm.collectionVariables.get(\"IbSubCampaign\");\r",
-                  "let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");\r",
-                  "\r",
-                  "let jsonData = pm.response.json();\r",
-                  "let testName = `DID/Tfn: ${didTfn}, expected Subcampaign: ${expectedIbsubCampaign} ---> Subcampaign: ${jsonData.Subcampaign}`;\r",
-                  "\r",
-                  "pm.test(testName, function () {\r",
-                  "    pm.expect(jsonData.Subcampaign).to.eql(expectedIbsubCampaign.toString());\r",
-                  "});\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "11349ad9-00f7-449b-814f-3e2f2ce8b1ef",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "https://lm.cignium.com/run/cignium/cuy/{{CurrentEnv}}/subcampaign-table?Tfn={{Did}}",
-              "protocol": "https",
-              "host": [
-                "lm",
-                "cignium",
-                "com"
-              ],
-              "path": [
-                "run",
-                "cignium",
-                "cuy",
-                "{{CurrentEnv}}",
-                "subcampaign-table"
-              ],
-              "query": [
-                {
-                  "key": "Tfn",
-                  "value": "{{Did}}"
-                }
-              ]
-            },
-            "description": "# Purpose:\n\nTo validate the IbSubCampaign\n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"IbSubCampaign\": \"SB##\",\n   \"Did\": ##########\n }\n]\n\n```"
-          },
-          "response": [
-            {
-              "id": "01224772-811b-43e7-b587-7598e6d698ae",
-              "name": "00.TR-SubCampaignByTFN_2016957537",
-              "originalRequest": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                  "raw": "https://lm.cignium.com/run/cignium/cuy/{{CurrentEnv}}/subcampaign-table?Tfn={{Did}}",
-                  "protocol": "https",
-                  "host": [
-                    "lm",
-                    "cignium",
-                    "com"
-                  ],
-                  "path": [
-                    "run",
-                    "cignium",
-                    "cuy",
-                    "{{CurrentEnv}}",
-                    "subcampaign-table"
-                  ],
-                  "query": [
-                    {
-                      "key": "Tfn",
-                      "value": "{{Did}}"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Length",
-                  "value": "158"
-                },
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                },
-                {
-                  "key": "Date",
-                  "value": "Tue, 03 May 2022 23:20:24 GMT"
-                },
-                {
-                  "key": "Access-Control-Expose-Headers",
-                  "value": "Request-Context"
-                },
-                {
-                  "key": "Content-Encoding",
-                  "value": "gzip"
-                },
-                {
-                  "key": "Vary",
-                  "value": "Accept-Encoding"
-                },
-                {
-                  "key": "Strict-Transport-Security",
-                  "value": "max-age=31536000; includeSubDomains"
-                },
-                {
-                  "key": "Request-Context",
-                  "value": "appId=cid-v1:cd9fbec2-9850-4ba7-ab93-7960ae35dedd"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n    \"Subcampaign\": \"SB33\",\n    \"Active\": \"TRUE\"\n}"
-            }
-          ]
-        }
-      ],
-      "id": "5d4e6c82-14f4-400b-bbd4-2414989d07f0"
-    },
-    {
-      "name": "ByCampaigns",
-      "item": [
-        {
-          "name": "PR - [DNIS - OB]",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "25182bf0-be74-42eb-9697-57c6216c9d7b",
-                "exec": [
-                  "let expectedObsubCampaign = pm.iterationData.get(\"ObSubCampaign\") || pm.collectionVariables.get(\"ObSubCampaign\");\r",
-                  "\r",
-                  "let afid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\") || pm.request.url.query.get(\"Afid\");\r",
-                  "let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
-                  "\r",
-                  "campaign = ParseCampaignName(campaign);\r",
-                  "\r",
-                  "let subCampaignOBWithOutPrefix = expectedObsubCampaign.substring(2);\r",
-                  "\r",
-                  "let testName = `${campaign} :::: -- With Afid equals to: ${afid} must have SubCampaign --> ${expectedObsubCampaign}`;\r",
-                  "\r",
-                  "pm.test(testName, function () {\r",
-                  "    var jsonData = pm.response.json();\r",
-                  "    var dnis = jsonData.dnis;\r",
-                  "\r",
-                  "    if (dnis){        \r",
-                  "        var subCampaignOBWithOutPrefixFromDnis = dnis.substring(5,7);        \r",
-                  "        pm.expect(subCampaignOBWithOutPrefix).to.eql(subCampaignOBWithOutPrefixFromDnis);\r",
-                  "    }    \r",
-                  "});\r",
-                  "\r",
-                  "function ParseCampaignName(campaign) {\r",
-                  "    let cuyPrefix = 'CUY-';\r",
-                  "\r",
-                  "    if (!campaign.includes(cuyPrefix))\r",
-                  "        campaign = `${cuyPrefix}${campaign}`;\r",
-                  "    \r",
-                  "    if ([\"CUY-ZMA\", \"ZMA\"].includes(campaign)){\r",
-                  "        campaign = \"CUY-OMA\";        \r",
-                  "    }\r",
-                  "\r",
-                  "    return campaign;\r",
-                  "}\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "1a1ea0e0-47ae-4a66-b75a-82114080f1b6",
-                "exec": [
-                  "let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
-                  "let isZingCarrier = pm.iterationData.get(\"IsZingCarrier\") || pm.collectionVariables.get(\"IsZingCarrier\");\r",
-                  "\r",
-                  "SetDefaultZipCode();\r",
-                  "UpdateZipCodeForZing(isZingCarrier);\r",
-                  "ParseCampaignName(campaign);\r",
-                  "SetObSubcampaignEndpoint(campaign);\r",
-                  "\r",
-                  "\r",
-                  "function SetDefaultZipCode() {\r",
-                  "    let defaultZipcode = \"07303\";\r",
-                  "    pm.collectionVariables.set(\"ZipCode\",defaultZipcode);\r",
-                  "}\r",
-                  "\r",
-                  "function UpdateZipCodeForZing(isZingCarrier) {\r",
-                  "    var zingZipCode = \"60603\";\r",
-                  "    \r",
-                  "    //TBD: To improve approach to evaluate between ZING/ZMA/OMA\r",
-                  "    if (isZingCarrier == 1) {\r",
-                  "        pm.collectionVariables.set(\"ZipCode\", zingZipCode);\r",
-                  "    }\r",
-                  "}\r",
-                  "\r",
-                  "function ParseCampaignName(campaign) {\r",
-                  "    let cuyPrefix = 'CUY-';\r",
-                  "\r",
-                  "    if (!campaign.includes(cuyPrefix))\r",
-                  "        campaign = `${cuyPrefix}${campaign}`;\r",
-                  "    \r",
-                  "    // https://learning.postman.com/docs/sending-requests/variables/#using-data-variables\r",
-                  "    if ([\"CUY-ZMA\", \"ZMA\"].includes(campaign)){\r",
-                  "        campaign = \"CUY-OMA\";\r",
-                  "        //pm.iterationData.set(\"Campaign\", campaign);\r",
-                  "        pm.collectionVariables.set(\"Campaign\", campaign);\r",
-                  "    }    \r",
-                  "}\r",
-                  "\r",
-                  "function SetObSubcampaignEndpoint(campaign) {\r",
-                  "    pm.collectionVariables.set(\"OBSubCampaignEndpoint\", \"dnis\");\r",
-                  "    if ([\"CUY-ANMA\", \"CUY-HMA\"].includes(campaign)) {\r",
-                  "        pm.collectionVariables.set(\"OBSubCampaignEndpoint\", \"dnis-subcampaign-ob\");\r",
-                  "    }\r",
-                  "}"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "f9695147-6436-4ff3-b49e-df9d275c5b33",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/{{OBSubCampaignEndpoint}}?State=NJ&Afid={{Afid}}&CID={{Cid}}&ZipCode={{ZipCode}}",
-              "protocol": "https",
-              "host": [
-                "lm",
-                "cignium",
-                "com"
-              ],
-              "path": [
-                "run",
-                "cignium",
-                "{{Campaign}}",
-                "{{CurrentEnv}}",
-                "{{OBSubCampaignEndpoint}}"
-              ],
-              "query": [
-                {
-                  "key": "State",
-                  "value": "NJ"
-                },
-                {
-                  "key": "Afid",
-                  "value": "{{Afid}}"
-                },
-                {
-                  "key": "CID",
-                  "value": "{{Cid}}"
-                },
-                {
-                  "key": "ZipCode",
-                  "value": "{{ZipCode}}"
-                }
-              ]
-            },
-            "description": "# Purpose:\n\nTo validate the correct OB SubCampaign, based on:\n\n*   Afid\n*   Cid\n*   Other (Depend on the campaign)\n    \n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"Campaign\": \"cuy-AAA\",\n   \"Afid\": ######,\n   \"ObSubCampaign\": \"SB##\"\n }\n]\n\n```"
-          },
-          "response": []
-        },
-        {
-          "name": "TR - [IVR] Destination DIDs (Liveops)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "62e1252b-5a07-47a2-8972-9b3b6fa3b230",
-                "exec": [
-                  "let type = pm.iterationData.get(\"DestinationDidTypeLiveops\") || pm.collectionVariables.get(\"DestinationDidTypeLiveops\") || pm.request.url.query.get(\"Type\");\r",
-                  "let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");\r",
-                  "\r",
-                  "let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
-                  "let liveopsNoFormat = (pm.iterationData.get(\"LiveopsDid\") || '');\r",
-                  "let liveops = \"\";\r",
-                  "\r",
-                  "let testName = \"\"; \r",
-                  "\r",
-                  "liveops = [ \"\", null, \"null\", \"NA\", \"N/A\"].includes(liveopsNoFormat) ? null :  liveopsNoFormat.toString();\r",
-                  "\r",
-                  "if (type == \"DestinationDID\"){\r",
-                  "    testName = `${campaign} :::: DID/Tfn is ${didTfn} for Type: ${type} -- must have DestinationDID --> ${liveops}`;\r",
-                  "}\r",
-                  "\r",
-                  "pm.test(testName, function () {\r",
-                  "    let jsonData = pm.response.json();\r",
-                  "    if (type == \"DestinationDID\"){\r",
-                  "        pm.expect(jsonData.DistinationDID).to.eql(liveops);    \r",
-                  "    } \r",
-                  "});\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "adf8ba0b-2398-4fd2-b334-16af07e7d19f",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/ivr-dest-dids?Type={{DestinationDidTypeLiveops}}&TZDID={{Did}}",
-              "protocol": "https",
-              "host": [
-                "lm",
-                "cignium",
-                "com"
-              ],
-              "path": [
-                "run",
-                "cignium",
-                "{{Campaign}}",
-                "{{CurrentEnv}}",
-                "ivr-dest-dids"
-              ],
-              "query": [
-                {
-                  "key": "Type",
-                  "value": "{{DestinationDidTypeLiveops}}",
-                  "description": "This request will be used only for Liveops using DestinationDID as param"
-                },
-                {
-                  "key": "TZDID",
-                  "value": "{{Did}}"
-                }
-              ]
-            },
-            "description": "# Purpose:\n\nTo validate the correct Liveops by DID/Tfn\n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"Did\": ##########,,\n   \"Campaign\": {{Campaign}},\n   \"DestinationDidTypeLiveops\": \"DestinationDID\",\n   \"LiveopsDid\": A#A#A#A#A#A#\n }\n]\n\n```"
-          },
-          "response": []
-        },
-        {
-          "name": "TR - [IVR] Destination DIDs (Greeting)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "62e1252b-5a07-47a2-8972-9b3b6fa3b230",
-                "exec": [
-                  "let type = pm.iterationData.get(\"DestinationDidTypeGreeting\") || pm.collectionVariables.get(\"DestinationDidTypeGreeting\") || pm.request.url.query.get(\"Type\");\r",
-                  "let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");\r",
-                  "\r",
-                  "let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
-                  "var voiceFileNameNoFormat = (pm.iterationData.get(\"VoiceFileName\") || \"\");\r",
-                  "var voiceFileName = \"\";\r",
-                  "\r",
-                  "var testName = \"\"; \r",
-                  "\r",
-                  "voiceFileName = [ \"\", null, \"null\", \"NA\", \"N/A\"].includes(voiceFileNameNoFormat) ? null :  voiceFileNameNoFormat.toString();\r",
-                  "\r",
-                  "if (type == \"IVRGreeting\"){    \r",
-                  "    testName = `${campaign} :::: DID/Tfn is ${didTfn} for Type: ${type} -- must have DestinationDID --> NA  && VoiceFileName --> ${voiceFileName}`;\r",
-                  "}\r",
-                  "\r",
-                  "pm.test(testName, function () {\r",
-                  "    var jsonData = pm.response.json();\r",
-                  "\r",
-                  "    if (type == \"IVRGreeting\"){\r",
-                  "        pm.expect(jsonData.VoiceFileName).to.eql(voiceFileName);    \r",
-                  "    }\r",
-                  "});\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "98d352be-4b8c-4057-834e-1c3944a4bf5b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/ivr-dest-dids?Type={{DestinationDidTypeGreeting}}&TZDID={{Did}}",
-              "protocol": "https",
-              "host": [
-                "lm",
-                "cignium",
-                "com"
-              ],
-              "path": [
-                "run",
-                "cignium",
-                "{{Campaign}}",
-                "{{CurrentEnv}}",
-                "ivr-dest-dids"
-              ],
-              "query": [
-                {
-                  "key": "Type",
-                  "value": "{{DestinationDidTypeGreeting}}",
-                  "description": "This request will be used only for Greeting using IVRGreeting as param"
-                },
-                {
-                  "key": "TZDID",
-                  "value": "{{Did}}"
-                }
-              ]
-            },
-            "description": "# Purpose:\n\nTo validate the correct greeting by DID/Tfn\n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"Did\": ##########,,\n   \"Campaign\": \"cuy-AAA\",\n   \"DestinationDidTypeIvrGreeting\": \"IVRGreeting\",\n   \"VoiceFileName\": A#A#A#A#A#A#\n }\n]\n\n```"
-          },
-          "response": []
-        },
-        {
-          "name": "TR - [Populate Inbound] Afid by Tfn",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "fbeca481-a18f-454c-a858-8f808e443cac",
-                "exec": [
-                  "let expectedAfid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\");\r",
-                  "\r",
-                  "let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");;\r",
-                  "let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
-                  "\r",
-                  "let testName = `${campaign} :::: DID/Tfn is ${didTfn} for campaign : ${campaign.toUpperCase()}  and must have afid --> ${expectedAfid}`;\r",
-                  "\r",
-                  "pm.test(testName, function () {\r",
-                  "    let jsonData = pm.response.json();\r",
-                  "    \r",
-                  "    if (campaign == \"CUY-MMS\"){ // Campaign with different Endpoint\r",
-                  "        pm.expect(jsonData.AFID).to.eql(expectedAfid.toString());\r",
-                  "    }else{\r",
-                  "        pm.expect(jsonData.Afid).to.eql(expectedAfid.toString());\r",
-                  "    }    \r",
-                  "});"
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "411a262c-f06a-4541-82af-4f7ff8029e02",
-                "exec": [
-                  "let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
-                  "\r",
-                  "ParseCampaignName(campaign);\r",
-                  "\r",
-                  "pm.collectionVariables.set(\"AfidByTfnEndpoint\", \"afid-by-tfn\");\r",
-                  "if (campaign == \"cuy-mms\"){    \r",
-                  "    pm.collectionVariables.set(\"AfidByTfnEndpoint\", \"populate-ib-afid-by-tfn\");\r",
-                  "}\r",
-                  "\r",
-                  "function ParseCampaignName(campaign) {\r",
-                  "    let cuyPrefix = 'CUY-';\r",
-                  "\r",
-                  "    if (!campaign.includes(cuyPrefix))\r",
-                  "        campaign = `${cuyPrefix}${campaign}`;\r",
-                  "    \r",
-                  "    if ([\"CUY-ZMA\", \"ZMA\"].includes(campaign))\r",
-                  "        campaign = \"cuy-oma\";\r",
-                  "    \r",
-                  "    pm.iterationData.set(\"Campaign\", campaign);\r",
-                  "    pm.collectionVariables.set(\"Campaign\", campaign);\r",
-                  "}"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "5fe4bbbd-51e0-4242-8b88-e8affd16a63c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/{{AfidByTfnEndpoint}}?Tfn={{Did}}",
-              "protocol": "https",
-              "host": [
-                "lm",
-                "cignium",
-                "com"
-              ],
-              "path": [
-                "run",
-                "cignium",
-                "{{Campaign}}",
-                "{{CurrentEnv}}",
-                "{{AfidByTfnEndpoint}}"
-              ],
-              "query": [
-                {
-                  "key": "Tfn",
-                  "value": "{{Did}}",
-                  "description": "Direct Inward Dial number is usually number which is not known/visible to leads and is used for: \n•\ttransfers - internal and external\n•\tto route from Invoca TFNs to Noble, in order to be able to identify the source or channel of contact of the lead"
-                }
-              ]
-            },
-            "description": "# Purpose:\n\nTo validate the correct Afid by DID/Tfn\n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"Did\": ##########,\n   \"Campaign\": \"cuy-AAA\",\n   \"Afid\": ######\n }\n]\n\n```"
-          },
-          "response": []
-        }
-      ],
-      "id": "297839a6-6ae1-48cb-b50a-54cf1d378fb7"
-    }
-  ],
-  "event": [
-    {
-      "listen": "prerequest",
-      "script": {
-        "id": "3133d22d-aedf-4d98-9b6e-da93e52f68c9",
-        "type": "text/javascript",
-        "exec": [
-          ""
-        ]
-      }
-    },
-    {
-      "listen": "test",
-      "script": {
-        "id": "76bb7638-e169-44f7-b09c-47edc573e82e",
-        "type": "text/javascript",
-        "exec": [
-          ""
-        ]
-      }
-    }
-  ],
-  "variable": [
-    {
-      "id": "6253cce1-c031-4795-b4f1-8b58417c7352",
-      "key": "Did",
-      "value": "2016957537"
-    },
-    {
-      "id": "da6ad24c-d147-4fd3-87a3-e1abdb0c36d2",
-      "key": "Campaign",
-      "value": "cuy-xyz"
-    },
-    {
-      "id": "5525b338-28c9-402e-9c5d-d7f1e6bcc116",
-      "key": "AfidByTfnEndpoint",
-      "value": "afid-by-tfn"
-    },
-    {
-      "id": "0816e0f5-c8b4-4619-b290-cb7d8e5eaada",
-      "key": "IbSubCampaign",
-      "value": "SB00",
-      "type": "string"
-    },
-    {
-      "id": "c8c7f424-35c0-4660-9020-832bd61e7759",
-      "key": "CampaignId",
-      "value": "HMA",
-      "type": "string"
-    },
-    {
-      "id": "fb1b73d6-c963-48b9-850e-ff72ff0283ac",
-      "key": "Afid",
-      "value": "523687",
-      "type": "string"
-    },
-    {
-      "id": "32747c46-75f6-4f95-9174-e1f57218f0c1",
-      "key": "OBSubCampaignEndpoint",
-      "value": "dnis"
-    },
-    {
-      "id": "e9a27f40-79df-4de9-a8ac-9af5738bd6be",
-      "key": "Cid",
-      "value": "1111"
-    },
-    {
-      "id": "76210688-3bb2-4ef3-a822-d40daa7ff2a4",
-      "key": "ZipCode",
-      "value": "123",
-      "type": "string"
-    },
-    {
-      "id": "426d3666-add2-406d-a505-c8fd563ec09b",
-      "key": "DestinationDidTypeLiveops",
-      "value": "DestinationDID"
-    },
-    {
-      "id": "ef242468-c577-4a43-89ca-455238672f10",
-      "key": "IsZingCarrier",
-      "value": "0",
-      "type": "string"
-    },
-    {
-      "id": "170c92a3-4c97-4445-b49a-27b2bc676d4f",
-      "key": "ExpectedSubCampaignOB",
-      "value": "SB99",
-      "type": "string"
-    },
-    {
-      "id": "01eeff28-5d32-4507-9550-cd29af10baf3",
-      "key": "DestinationDidTypeGreeting",
-      "value": "IVRGreeting"
-    },
-    {
-      "id": "15e6b497-6bab-42cd-aac3-0101b4fe1268",
-      "key": "ObSubCampaign",
-      "value": "SB21",
-      "type": "string"
-    }
-  ]
+	"info": {
+		"_postman_id": "8bb27d30-00bf-4952-8ba3-14366cdd02bd",
+		"name": "DIDConfig",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CUY",
+			"item": [
+				{
+					"name": "TR - [Noble] SubcampaignByTFN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8e439a3b-f3ae-42ed-bbb1-3e2fa9c66198",
+								"exec": [
+									"let expectedIbsubCampaign = pm.iterationData.get(\"IbSubCampaign\") || pm.collectionVariables.get(\"IbSubCampaign\");\r",
+									"let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");\r",
+									"\r",
+									"let jsonData = pm.response.json();\r",
+									"let testName = `DID/Tfn: ${didTfn}, expected Subcampaign: ${expectedIbsubCampaign} ---> Subcampaign: ${jsonData.Subcampaign}`;\r",
+									"\r",
+									"pm.test(testName, function () {\r",
+									"    pm.expect(jsonData.Subcampaign).to.eql(expectedIbsubCampaign.toString());\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "11349ad9-00f7-449b-814f-3e2f2ce8b1ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/cuy/{{CurrentEnv}}/subcampaign-table?Tfn={{Did}}",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"cuy",
+								"{{CurrentEnv}}",
+								"subcampaign-table"
+							],
+							"query": [
+								{
+									"key": "Tfn",
+									"value": "{{Did}}"
+								}
+							]
+						},
+						"description": "# Purpose:\n\nTo validate the IbSubCampaign\n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"IbSubCampaign\": \"SB##\",\n   \"Did\": ##########\n }\n]\n\n```"
+					},
+					"response": [
+						{
+							"id": "01224772-811b-43e7-b587-7598e6d698ae",
+							"name": "00.TR-SubCampaignByTFN_2016957537",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://lm.cignium.com/run/cignium/cuy/{{CurrentEnv}}/subcampaign-table?Tfn={{Did}}",
+									"protocol": "https",
+									"host": [
+										"lm",
+										"cignium",
+										"com"
+									],
+									"path": [
+										"run",
+										"cignium",
+										"cuy",
+										"{{CurrentEnv}}",
+										"subcampaign-table"
+									],
+									"query": [
+										{
+											"key": "Tfn",
+											"value": "{{Did}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "158"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 03 May 2022 23:20:24 GMT"
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "Request-Context"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "Request-Context",
+									"value": "appId=cid-v1:cd9fbec2-9850-4ba7-ab93-7960ae35dedd"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"Subcampaign\": \"SB33\",\n    \"Active\": \"TRUE\"\n}"
+						}
+					]
+				}
+			],
+			"id": "5d4e6c82-14f4-400b-bbd4-2414989d07f0"
+		},
+		{
+			"name": "ByCampaigns",
+			"item": [
+				{
+					"name": "PR - [DNIS - OB]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "25182bf0-be74-42eb-9697-57c6216c9d7b",
+								"exec": [
+									"let expectedObsubCampaign = pm.iterationData.get(\"ObSubCampaign\") || pm.collectionVariables.get(\"ObSubCampaign\");\r",
+									"\r",
+									"let afid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\") || pm.request.url.query.get(\"Afid\");\r",
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
+									"\r",
+									"campaign = ParseCampaignName(campaign);\r",
+									"\r",
+									"let subCampaignOBWithOutPrefix = expectedObsubCampaign.substring(2);\r",
+									"\r",
+									"let testName = `${campaign} :::: -- With Afid equals to: ${afid} must have SubCampaign --> ${expectedObsubCampaign}`;\r",
+									"\r",
+									"pm.test(testName, function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var dnis = jsonData.dnis;\r",
+									"\r",
+									"    if (dnis){        \r",
+									"        var subCampaignOBWithOutPrefixFromDnis = dnis.substring(5,7);        \r",
+									"        pm.expect(subCampaignOBWithOutPrefix).to.eql(subCampaignOBWithOutPrefixFromDnis);\r",
+									"    }    \r",
+									"});\r",
+									"\r",
+									"function ParseCampaignName(campaign) {\r",
+									"    let cuyPrefix = 'CUY-';\r",
+									"\r",
+									"    if (!campaign.includes(cuyPrefix))\r",
+									"        campaign = `${cuyPrefix}${campaign}`;\r",
+									"    \r",
+									"    if ([\"CUY-ZMA\", \"ZMA\"].includes(campaign)){\r",
+									"        campaign = \"CUY-OMA\";        \r",
+									"    }\r",
+									"\r",
+									"    return campaign;\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "1a1ea0e0-47ae-4a66-b75a-82114080f1b6",
+								"exec": [
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
+									"let isZingCarrier = pm.iterationData.get(\"IsZingCarrier\") || pm.collectionVariables.get(\"IsZingCarrier\");\r",
+									"\r",
+									"SetDefaultZipCode();\r",
+									"UpdateZipCodeForZing(isZingCarrier);\r",
+									"ParseCampaignName(campaign);\r",
+									"SetObSubcampaignEndpoint(campaign);\r",
+									"\r",
+									"\r",
+									"function SetDefaultZipCode() {\r",
+									"    let defaultZipcode = \"07303\";\r",
+									"    pm.collectionVariables.set(\"ZipCode\",defaultZipcode);\r",
+									"}\r",
+									"\r",
+									"function UpdateZipCodeForZing(isZingCarrier) {\r",
+									"    var zingZipCode = \"60603\";\r",
+									"    \r",
+									"    //TBD: To improve approach to evaluate between ZING/ZMA/OMA\r",
+									"    if (isZingCarrier == 1) {\r",
+									"        pm.collectionVariables.set(\"ZipCode\", zingZipCode);\r",
+									"    }\r",
+									"}\r",
+									"\r",
+									"function ParseCampaignName(campaign) {\r",
+									"    let cuyPrefix = 'CUY-';\r",
+									"\r",
+									"    if (!campaign.includes(cuyPrefix))\r",
+									"        campaign = `${cuyPrefix}${campaign}`;\r",
+									"    \r",
+									"    // https://learning.postman.com/docs/sending-requests/variables/#using-data-variables\r",
+									"    if ([\"CUY-ZMA\", \"ZMA\"].includes(campaign)){\r",
+									"        campaign = \"CUY-OMA\";\r",
+									"        //pm.iterationData.set(\"Campaign\", campaign);\r",
+									"        pm.collectionVariables.set(\"Campaign\", campaign);\r",
+									"    }    \r",
+									"}\r",
+									"\r",
+									"function SetObSubcampaignEndpoint(campaign) {\r",
+									"    pm.collectionVariables.set(\"OBSubCampaignEndpoint\", \"dnis\");\r",
+									"    if ([\"CUY-ANMA\", \"CUY-HMA\"].includes(campaign)) {\r",
+									"        pm.collectionVariables.set(\"OBSubCampaignEndpoint\", \"dnis-subcampaign-ob\");\r",
+									"    }\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "f9695147-6436-4ff3-b49e-df9d275c5b33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/{{OBSubCampaignEndpoint}}?State=NJ&Afid={{Afid}}&CID={{Cid}}&ZipCode={{ZipCode}}",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"{{OBSubCampaignEndpoint}}"
+							],
+							"query": [
+								{
+									"key": "State",
+									"value": "NJ"
+								},
+								{
+									"key": "Afid",
+									"value": "{{Afid}}"
+								},
+								{
+									"key": "CID",
+									"value": "{{Cid}}"
+								},
+								{
+									"key": "ZipCode",
+									"value": "{{ZipCode}}"
+								}
+							]
+						},
+						"description": "# Purpose:\n\nTo validate the correct OB SubCampaign, based on:\n\n*   Afid\n*   Cid\n*   Other (Depend on the campaign)\n    \n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"Campaign\": \"cuy-AAA\",\n   \"Afid\": ######,\n   \"ObSubCampaign\": \"SB##\"\n }\n]\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "TR - [IVR] Destination DIDs (Liveops)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "62e1252b-5a07-47a2-8972-9b3b6fa3b230",
+								"exec": [
+									"let type = pm.iterationData.get(\"DestinationDidTypeLiveops\") || pm.collectionVariables.get(\"DestinationDidTypeLiveops\") || pm.request.url.query.get(\"Type\");\r",
+									"let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");\r",
+									"\r",
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
+									"let liveopsNoFormat = (pm.iterationData.get(\"LiveopsDid\") || '');\r",
+									"let liveops = \"\";\r",
+									"\r",
+									"let testName = \"\"; \r",
+									"\r",
+									"liveops = [ \"\", null, \"null\", \"NA\", \"N/A\"].includes(liveopsNoFormat) ? null :  liveopsNoFormat.toString();\r",
+									"\r",
+									"if (type == \"DestinationDID\"){\r",
+									"    testName = `${campaign} :::: DID/Tfn is ${didTfn} for Type: ${type} -- must have DestinationDID --> ${liveops}`;\r",
+									"}\r",
+									"\r",
+									"pm.test(testName, function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    if (type == \"DestinationDID\"){\r",
+									"        pm.expect(jsonData.DistinationDID).to.eql(liveops);    \r",
+									"    } \r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "adf8ba0b-2398-4fd2-b334-16af07e7d19f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/ivr-dest-dids?Type={{DestinationDidTypeLiveops}}&TZDID={{Did}}",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"ivr-dest-dids"
+							],
+							"query": [
+								{
+									"key": "Type",
+									"value": "{{DestinationDidTypeLiveops}}",
+									"description": "This request will be used only for Liveops using DestinationDID as param"
+								},
+								{
+									"key": "TZDID",
+									"value": "{{Did}}"
+								}
+							]
+						},
+						"description": "# Purpose:\n\nTo validate the correct Liveops by DID/Tfn\n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"Did\": ##########,,\n   \"Campaign\": {{Campaign}},\n   \"DestinationDidTypeLiveops\": \"DestinationDID\",\n   \"LiveopsDid\": A#A#A#A#A#A#\n }\n]\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "TR - [IVR] Destination DIDs (Greeting)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "62e1252b-5a07-47a2-8972-9b3b6fa3b230",
+								"exec": [
+									"let type = pm.iterationData.get(\"DestinationDidTypeGreeting\") || pm.collectionVariables.get(\"DestinationDidTypeGreeting\") || pm.request.url.query.get(\"Type\");\r",
+									"let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");\r",
+									"\r",
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
+									"var voiceFileNameNoFormat = (pm.iterationData.get(\"VoiceFileName\") || \"\");\r",
+									"var voiceFileName = \"\";\r",
+									"\r",
+									"var testName = \"\"; \r",
+									"\r",
+									"voiceFileName = [ \"\", null, \"null\", \"NA\", \"N/A\"].includes(voiceFileNameNoFormat) ? null :  voiceFileNameNoFormat.toString();\r",
+									"\r",
+									"if (type == \"IVRGreeting\"){    \r",
+									"    testName = `${campaign} :::: DID/Tfn is ${didTfn} for Type: ${type} -- must have DestinationDID --> NA  && VoiceFileName --> ${voiceFileName}`;\r",
+									"}\r",
+									"\r",
+									"pm.test(testName, function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    if (type == \"IVRGreeting\"){\r",
+									"        pm.expect(jsonData.VoiceFileName).to.eql(voiceFileName);    \r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "98d352be-4b8c-4057-834e-1c3944a4bf5b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/ivr-dest-dids?Type={{DestinationDidTypeGreeting}}&TZDID={{Did}}",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"ivr-dest-dids"
+							],
+							"query": [
+								{
+									"key": "Type",
+									"value": "{{DestinationDidTypeGreeting}}",
+									"description": "This request will be used only for Greeting using IVRGreeting as param"
+								},
+								{
+									"key": "TZDID",
+									"value": "{{Did}}"
+								}
+							]
+						},
+						"description": "# Purpose:\n\nTo validate the correct greeting by DID/Tfn\n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"Did\": ##########,,\n   \"Campaign\": \"cuy-AAA\",\n   \"DestinationDidTypeIvrGreeting\": \"IVRGreeting\",\n   \"VoiceFileName\": A#A#A#A#A#A#\n }\n]\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "TR - [Populate Inbound] Afid by Tfn",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fbeca481-a18f-454c-a858-8f808e443cac",
+								"exec": [
+									"let expectedAfid = pm.iterationData.get(\"Afid\") || pm.collectionVariables.get(\"Afid\");\r",
+									"\r",
+									"let didTfn = pm.iterationData.get(\"Did\") || pm.collectionVariables.get(\"Did\") || pm.request.url.query.get(\"Tfn\");;\r",
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
+									"\r",
+									"let testName = `${campaign} :::: DID/Tfn is ${didTfn} for campaign : ${campaign.toUpperCase()}  and must have afid --> ${expectedAfid}`;\r",
+									"\r",
+									"pm.test(testName, function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    \r",
+									"    if (campaign == \"CUY-MMS\"){ // Campaign with different Endpoint\r",
+									"        pm.expect(jsonData.AFID).to.eql(expectedAfid.toString());\r",
+									"    }else{\r",
+									"        pm.expect(jsonData.Afid).to.eql(expectedAfid.toString());\r",
+									"    }    \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "411a262c-f06a-4541-82af-4f7ff8029e02",
+								"exec": [
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '').toUpperCase();\r",
+									"\r",
+									"ParseCampaignName(campaign);\r",
+									"\r",
+									"pm.collectionVariables.set(\"AfidByTfnEndpoint\", \"afid-by-tfn\");\r",
+									"if (campaign == \"cuy-mms\"){    \r",
+									"    pm.collectionVariables.set(\"AfidByTfnEndpoint\", \"populate-ib-afid-by-tfn\");\r",
+									"}\r",
+									"\r",
+									"function ParseCampaignName(campaign) {\r",
+									"    let cuyPrefix = 'CUY-';\r",
+									"\r",
+									"    if (!campaign.includes(cuyPrefix))\r",
+									"        campaign = `${cuyPrefix}${campaign}`;\r",
+									"    \r",
+									"    if ([\"CUY-ZMA\", \"ZMA\"].includes(campaign))\r",
+									"        campaign = \"cuy-oma\";\r",
+									"    \r",
+									"    pm.iterationData.set(\"Campaign\", campaign);\r",
+									"    pm.collectionVariables.set(\"Campaign\", campaign);\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "5fe4bbbd-51e0-4242-8b88-e8affd16a63c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/{{AfidByTfnEndpoint}}?Tfn={{Did}}",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"{{AfidByTfnEndpoint}}"
+							],
+							"query": [
+								{
+									"key": "Tfn",
+									"value": "{{Did}}",
+									"description": "Direct Inward Dial number is usually number which is not known/visible to leads and is used for: \n•\ttransfers - internal and external\n•\tto route from Invoca TFNs to Noble, in order to be able to identify the source or channel of contact of the lead"
+								}
+							]
+						},
+						"description": "# Purpose:\n\nTo validate the correct Afid by DID/Tfn\n\n## Usage\n\nCreate a json file like:\n\n```\n[\n {\n   \"Did\": ##########,\n   \"Campaign\": \"cuy-AAA\",\n   \"Afid\": ######\n }\n]\n\n```"
+					},
+					"response": []
+				}
+			],
+			"id": "297839a6-6ae1-48cb-b50a-54cf1d378fb7"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3133d22d-aedf-4d98-9b6e-da93e52f68c9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "76bb7638-e169-44f7-b09c-47edc573e82e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "5bdccc47-4861-481e-89da-9ca45687e77a",
+			"key": "Did",
+			"value": "2016957537"
+		},
+		{
+			"id": "eaddc369-a173-4503-bc5a-ea55ece1213e",
+			"key": "Campaign",
+			"value": "cuy-xyz"
+		},
+		{
+			"id": "b0084230-ce39-41ad-b1f5-e366a3b44222",
+			"key": "AfidByTfnEndpoint",
+			"value": "afid-by-tfn"
+		},
+		{
+			"id": "144a8b85-0efe-4c12-a26a-82a581f6ea98",
+			"key": "IbSubCampaign",
+			"value": "SB00",
+			"type": "string"
+		},
+		{
+			"id": "33d8c4fe-2ba9-49af-b040-509ef0b17c6f",
+			"key": "CampaignId",
+			"value": "HMA",
+			"type": "string"
+		},
+		{
+			"id": "00abe00f-d2ca-47d6-835d-faf50565cff8",
+			"key": "Afid",
+			"value": "523687",
+			"type": "string"
+		},
+		{
+			"id": "819c1146-0e79-4e1c-83ef-459ea1e5f490",
+			"key": "OBSubCampaignEndpoint",
+			"value": "dnis"
+		},
+		{
+			"id": "2a319dbc-91e1-4ca5-8e35-6211566f35d9",
+			"key": "Cid",
+			"value": "1111"
+		},
+		{
+			"id": "741a26b4-34db-4050-9db7-1acc1acf4753",
+			"key": "ZipCode",
+			"value": "123",
+			"type": "string"
+		},
+		{
+			"id": "8dfb4614-a03d-406b-b14f-e2dec879686d",
+			"key": "DestinationDidTypeLiveops",
+			"value": "DestinationDID"
+		},
+		{
+			"id": "a3dd4522-6598-44e3-891d-059f63bc5b6b",
+			"key": "IsZingCarrier",
+			"value": "0",
+			"type": "string"
+		},
+		{
+			"id": "6df34c72-14b5-4c6e-9d45-9ba617d29386",
+			"key": "ExpectedSubCampaignOB",
+			"value": "SB99",
+			"type": "string"
+		},
+		{
+			"id": "5a8a87e2-a629-49b0-be0e-fc7d88788151",
+			"key": "DestinationDidTypeGreeting",
+			"value": "IVRGreeting"
+		},
+		{
+			"id": "3814c546-6e89-4443-b8be-7ee50747f228",
+			"key": "ObSubCampaign",
+			"value": "SB21",
+			"type": "string"
+		}
+	]
 }
