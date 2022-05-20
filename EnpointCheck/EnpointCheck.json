@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "09e385c4-9b66-4361-8433-8a01245a50b3",
 		"name": "Endpoint Check",
-		"description": "Verify endpount status",
+		"description": "Verify endpount status\n\n``` javascript\npm.test(\"Status code is 200\", function ()\n{   \npm.response.to.have.status(200);   \n});\n```",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
