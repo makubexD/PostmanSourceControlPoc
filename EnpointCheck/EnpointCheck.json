@@ -1173,7 +1173,7 @@
 				}
 			],
 			"id": "72da5904-127e-4c64-a19e-5abd62cdac50",
-			"description": "StartFragment\n\nThis set of tests allows us to check that important endpoints are up and running.\n\nEndFragment"
+			"description": "This set of tests allows us to check that important endpoints are up and running."
 		},
 		{
 			"name": "MA-SHARED",
