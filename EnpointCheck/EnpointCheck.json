@@ -1173,7 +1173,7 @@
 				}
 			],
 			"id": "72da5904-127e-4c64-a19e-5abd62cdac50",
-			"description": "This set of tests allows us to check that important endpoints are up and running.\n\nThis test perform a call to each endpoint and check that their return status is 200 (ii could be another in some cases).\n\nStartFragment\n\npm.test(\"Status code is 200\", function () {    pm.response.to.have.status(200);});\n\nEndFragment"
+			"description": "This set of tests allows us to check that important endpoints are up and running.\n\nThis test perform a call to each endpoint and check that their return status is 200 (ii could be another in some cases).\n\n`pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200);});`"
 		},
 		{
 			"name": "MA-SHARED",
