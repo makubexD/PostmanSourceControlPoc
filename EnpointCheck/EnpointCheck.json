@@ -1177,7 +1177,20 @@
 		},
 		{
 			"name": "MA-SHARED",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "0a95fb44-090b-4c85-93e3-888b36139aec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "f07801ac-19b2-4faf-9bfe-1648ec64e9c7"
 		}
 	]
