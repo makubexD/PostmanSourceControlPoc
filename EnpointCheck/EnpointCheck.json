@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f17c41c4-30b2-4924-9976-a9eed25dfc2b",
+						"id": "5fd93232-e331-4312-b2e1-02d80108a4b4",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1244,11 +1244,16 @@
 							"    , 'PR - [Call Terminated Event] Main'",
 							"]",
 							"",
-							"",
-							"while (ProcessAndTableRules.some(x => x === pm.info.requestName)){",
+							"let currentRequestName = pm.info.requestName;",
+							"while (ProcessAndTableRules.some(x => x === currentRequestName)){",
 							"    Campaigns.forEach((ca, index) => {",
 							"        pm.collectionVariables.set(\"Campaign\", (Campaigns[index] || \"\").toString());",
-							"        postman.setNextRequest(pm.info.requestId);",
+							"        //postman.setNextRequest(pm.info.requestId);",
+							"        console.log(pm.info.requestId);",
+							"    });",
+							"",
+							"    ProcessAndTableRules = ProcessAndTableRules.filter(function(item) {",
+							"        return item !== currentRequestName;",
 							"    });",
 							"}",
 							"",
@@ -1354,7 +1359,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7f865da3-3af9-4f87-801a-85cdd55b091c",
+						"id": "9f1b89cb-9f9d-43f2-b79a-17b36a0e0f1e",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1446,19 +1451,19 @@
 	],
 	"variable": [
 		{
-			"id": "514d13bd-f887-461b-9ebf-0ff10961d026",
+			"id": "dbe2a731-25bb-4b4a-b396-b2386c3e9afc",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "1a23fd90-ffc2-4ff0-b907-283784199f26",
+			"id": "0eca6016-be4d-451c-954f-7aae8ef5cea1",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "97c08d04-a098-4014-b299-934778b59423",
+			"id": "e956c054-6cc4-4c49-8709-fefa2a5edb5b",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
