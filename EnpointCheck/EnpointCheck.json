@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b2031c15-f0f5-4bbc-9bd8-6bc44157ac16",
+						"id": "e720a67b-1b6e-4ffd-996f-af96a00fe189",
 						"type": "text/javascript",
 						"exec": [
 							"const LifeCampaigns = []; //['AFLC', 'AFQL', 'ASUP', 'COL', 'COLS', 'MLF', 'MLFQ', 'MLFS', 'PDP' ];",
@@ -1221,7 +1221,10 @@
 							"let campaignCounter = pm.collectionVariables.get(\"CampaignCounter\");",
 							"campaignCounter++;",
 							"",
-							"// console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter  + ' in --> ' + pm.info.requestName);",
+							"/*",
+							"//TODO: To create custom endpoint by campaign/request",
+							"console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter  + ' in --> ' + pm.info.requestName);  ",
+							"*/",
 							"",
 							"pm.collectionVariables.set(\"Campaign\", Campaigns[campaignCounter - 1]);",
 							"",
@@ -1237,7 +1240,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e79649c4-76f4-49c3-9f72-68e8720f2212",
+						"id": "8e26fe4e-0c70-4ade-a684-af7a37f3b096",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1329,25 +1332,25 @@
 	],
 	"variable": [
 		{
-			"id": "e2d757c4-7aad-4a5e-9907-a78a1da9ce35",
+			"id": "31659620-a016-47c5-99cf-6d443a295152",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "dab5e68b-f18b-4ce5-8bd4-519f283bc983",
+			"id": "77e7ea42-d7c7-4df6-9881-fa233a21c841",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "0bb78cc4-4ce5-4a4f-b66b-259104adc557",
+			"id": "fe99594b-2687-4f41-a5cc-a48ac269c52c",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "6a1ab94c-99ec-4b57-988f-df3eedb644d5",
+			"id": "c3a7ed2d-faff-475a-948d-848fdd570898",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
