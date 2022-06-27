@@ -1422,11 +1422,6 @@
 				}
 			],
 			"id": "f07801ac-19b2-4faf-9bfe-1648ec64e9c7"
-		},
-		{
-			"name": "RunnerChecker",
-			"item": [],
-			"id": "93975ed7-c475-4a91-8ba7-ea84149fd4fc"
 		}
 	],
 	"event": [
@@ -1453,19 +1448,19 @@
 	],
 	"variable": [
 		{
-			"id": "c38c4494-ec3a-4a65-ab6e-6c31a6ebb2e2",
+			"id": "e766e2c8-9743-48b7-82f6-f26fdf219ca2",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "2542c056-a722-4f24-b98a-f9fb0e537f4c",
+			"id": "4ae2d85f-5c4e-41b7-bd75-ba5b5a9b63cc",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "d615d819-29d8-4b22-b74f-c95481c09fb4",
+			"id": "bb2d0f4f-192b-4754-a4d8-84f14aff0c3f",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
