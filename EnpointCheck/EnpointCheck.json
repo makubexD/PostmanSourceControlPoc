@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c180b279-e5fe-4a75-8d15-d112543f2f54",
+						"id": "b7e1ad8f-7098-4df7-84db-56ce40337b55",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1220,40 +1220,27 @@
 							"",
 							"const Campaigns = LifeCampaigns.concat(Health_MA_Campaigns, Health_MS_Campaigns, Other_Campaigns);",
 							"",
-							"// console.log(pm.info.requestName)",
 							"",
-							"",
-							"let currentRequestName = pm.info.requestName;",
 							"let campaignCounter = pm.collectionVariables.get(\"CampaignCounter\");",
 							"campaignCounter++;",
 							"",
-							"console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter);",
+							"console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter  + ' in --> ' + pm.info.requestName);",
 							"",
 							"pm.collectionVariables.set(\"Campaign\", Campaigns[campaignCounter - 1]);",
 							"",
 							"if (Campaigns.length > campaignCounter){",
-							"    ",
-							"    console.log('Current Campaign --> ' + Campaigns[campaignCounter - 1]);    ",
-							"",
 							"    pm.collectionVariables.set(\"CampaignCounter\", campaignCounter);",
-							"    postman.setNextRequest(pm.info.requestId);",
-							"    //console.log(\"AFTER next REQ\");",
-							"    ",
+							"    postman.setNextRequest(pm.info.requestId);    ",
 							"}else{",
-							"    console.log(\"Saliendo\");",
 							"    pm.collectionVariables.set(\"CampaignCounter\", 0);",
-							"    //pm.collectionVariables.set(\"Campaign\", '');",
-							"}",
-							"",
-							"console.log('After if clause --> ' + currentRequestName);",
-							""
+							"}"
 						]
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "139e54f9-96c8-41c0-a835-6cb457cc411b",
+						"id": "e41d3af3-cdb0-42cc-b2b7-5f6b2a1f3d47",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1345,25 +1332,25 @@
 	],
 	"variable": [
 		{
-			"id": "ff73245e-3ff1-48f7-a7b8-470b74eb0391",
+			"id": "606c163b-d87a-43b2-b1a7-026bf529cb7d",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "61bff98e-0665-447b-842d-7b97d10548ff",
+			"id": "9a70dd7d-b727-43ce-ba70-06577ec12525",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "928ffe92-2278-4243-a1a2-ad6532245356",
+			"id": "ffd642e5-46e4-4c7f-a466-8d060fd2dc5f",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "0a0a845c-ab28-41ba-b85e-9fac42770bd8",
+			"id": "cecfa52f-ffc4-4378-a59f-ee87d8b0ea2f",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
