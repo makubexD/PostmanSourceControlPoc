@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "0f6a36d7-abc4-436a-90f7-cadb1f5f73f9",
+						"id": "b2084d37-6a77-4d94-ae80-2436d8597d86",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1250,11 +1250,11 @@
 							"",
 							"console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter);",
 							"",
-							"pm.collectionVariables.set(\"Campaign\", Campaigns[campaignCounter]);",
+							"pm.collectionVariables.set(\"Campaign\", Campaigns[campaignCounter - 1]);",
 							"",
 							"if (Campaigns.length > campaignCounter){",
 							"    ",
-							"    console.log('Current Campaign --> ' + Campaigns[campaignCounter]);    ",
+							"    console.log('Current Campaign --> ' + Campaigns[campaignCounter - 1]);    ",
 							"",
 							"    pm.collectionVariables.set(\"CampaignCounter\", campaignCounter);",
 							"    postman.setNextRequest(pm.info.requestId);",
@@ -1387,7 +1387,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "efc053fe-ff54-487c-8352-78ad03401513",
+						"id": "292deeb8-f5f7-4b93-afca-a631cea11f06",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1479,25 +1479,25 @@
 	],
 	"variable": [
 		{
-			"id": "94dcfbb2-6c38-414f-8604-3f790f943b8b",
+			"id": "d0a549f2-63f0-46ac-b7bb-ac406317e498",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "e9bab886-e086-439f-b62a-e0f83431bd39",
+			"id": "1190c385-4cbc-4e86-9906-2272bba9132f",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "ec590511-aaa1-4efd-963e-e8d19d66f061",
+			"id": "9ca7c43f-2f81-4f0d-8a1a-678bad43635c",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5913f799-6a1a-4e30-98a7-fbafa34d60f2",
+			"id": "dd90e58d-58db-4870-bf4a-0549c7e95e4c",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
