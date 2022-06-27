@@ -1207,23 +1207,11 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "fbd5d930-f931-4d94-948f-618ecf5e678e",
+						"id": "240eb04f-4d0b-4665-a206-f8692235fb7c",
 						"type": "text/javascript",
 						"exec": [
-							"let zipCodeMock = \"71654\";",
-							"let cityMock = \"MCGEHEE\";",
-							"let stateMock = \"AR\";",
-							"let areaCodeMock = \"870\";",
-							"",
 							"let xferJSON = [];",
 							"",
-							"function getObjectTemplate(){",
-							"    return {",
-							"        \"Campaign\": \"\",",
-							"        \"ReasonMsg\": \"\",",
-							"        \"ExpectedMsg\": \"\"        ",
-							"    }",
-							"}",
 							"",
 							"const LifeCampaigns = []; //['AFLC', 'AFQL', 'ASUP', 'COL', 'COLS', 'MLF', 'MLFQ', 'MLFS', 'PDP' ];",
 							"const Health_MA_Campaigns = ['CUY-HMA', 'CUY-AMA']; //['CSC', 'AMA', 'ANMA', 'ANMG', 'ANMI', 'BCMA', 'HMA', 'KPMA', 'MAQL', 'OMA', 'SMA', 'THMA', 'WCMA'];",
@@ -1350,7 +1338,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "df83cdb5-a70f-40b2-a80c-c1406169dd67",
+						"id": "607979b0-8f7a-4385-9858-517377263f34",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1442,19 +1430,19 @@
 	],
 	"variable": [
 		{
-			"id": "13b90c22-bcbd-4b96-b801-d437f422b4dd",
+			"id": "b523d6d0-cca4-46dd-a2bb-449245b1ac56",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "84356af1-4427-4a58-a48e-60f3ec3af5e1",
+			"id": "1a0de9dc-01f2-4707-95e7-b34ae2f6c6c7",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "87d6e1af-ad03-4718-9a27-f19b60a19c59",
+			"id": "3595cb96-5d7d-4881-9398-1bf38de4f704",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
