@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "056dc1d7-51ec-4b8b-afe9-697b13ed212e",
+						"id": "f17c41c4-30b2-4924-9976-a9eed25dfc2b",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1243,6 +1243,16 @@
 							"    , 'TR - [Standard] CallEvents'",
 							"    , 'PR - [Call Terminated Event] Main'",
 							"]",
+							"",
+							"",
+							"while (ProcessAndTableRules.some(x => x === pm.info.requestName)){",
+							"    Campaigns.forEach((ca, index) => {",
+							"        pm.collectionVariables.set(\"Campaign\", (Campaigns[index] || \"\").toString());",
+							"        postman.setNextRequest(pm.info.requestId);",
+							"    });",
+							"}",
+							"",
+							"",
 							"/*",
 							"Campaigns.forEach((ca, index) => {",
 							"    ",
@@ -1344,7 +1354,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "924adbe5-39c5-467d-ae83-38b80412cdcc",
+						"id": "7f865da3-3af9-4f87-801a-85cdd55b091c",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1436,19 +1446,19 @@
 	],
 	"variable": [
 		{
-			"id": "3c2db52f-052a-4cfe-bbe9-11a961b45dd4",
+			"id": "514d13bd-f887-461b-9ebf-0ff10961d026",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "f7cb5c4b-4868-4330-a297-753451960bea",
+			"id": "1a23fd90-ffc2-4ff0-b907-283784199f26",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "47c5178c-a25b-4a49-8bd8-2c8308b71076",
+			"id": "97c08d04-a098-4014-b299-934778b59423",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
