@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "5fd93232-e331-4312-b2e1-02d80108a4b4",
+						"id": "fb48a72b-a484-423a-bc55-62c1a33a12a0",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1224,7 +1224,7 @@
 							"console.log(pm.info.requestName)",
 							"console.log(\"Begin1111111111111111111\")",
 							"",
-							"const ProcessAndTableRules = [",
+							"let ProcessAndTableRules = [",
 							"      'TR - [TORO] Blending Time'",
 							"    , 'PR - [DNIS - IB]'",
 							"    , 'TR - [Standard] Fields'",
@@ -1359,7 +1359,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9f1b89cb-9f9d-43f2-b79a-17b36a0e0f1e",
+						"id": "115890b4-8fbc-42b0-a2b0-4e3043958ea8",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1451,19 +1451,19 @@
 	],
 	"variable": [
 		{
-			"id": "acd72564-269a-450f-91aa-1495497df32d",
+			"id": "b928177c-b6a9-4cf8-abcd-07584ed8e486",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "8667f89e-4362-4524-8133-470c73a8da25",
+			"id": "a2b7edf5-30ba-4aed-8793-d8cbd0447c29",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "87afbdd7-086d-48bf-bd46-30a7df05ca9a",
+			"id": "2e714ec7-5030-4285-9d7b-251ddd520e18",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
