@@ -173,7 +173,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/fields?For=marketing",
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/fields?For=marketing",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -183,7 +183,7 @@
 							"path": [
 								"run",
 								"cignium",
-								"cuy-hma",
+								"{{Campaign}}",
 								"{{CurrentEnv}}",
 								"fields"
 							],
@@ -1448,19 +1448,19 @@
 	],
 	"variable": [
 		{
-			"id": "9ccbd4f7-6e10-4d79-bb56-444413897fe0",
+			"id": "89517cc4-babf-4248-a0a7-750bc8330d35",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "b57174f8-7da5-4f53-8ef5-3fb721720ae3",
+			"id": "6577bde6-2649-4891-a4e8-2cf88d514d94",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "bd8ff19a-fceb-4b5e-909f-20183f78c461",
+			"id": "9726f7ce-0b29-4eb2-8b07-e62b3f07ad75",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
