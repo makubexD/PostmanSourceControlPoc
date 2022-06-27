@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "1036b24e-3a40-4a86-8663-98e43cce1382",
+						"id": "f8c397a1-0067-42b1-80b8-cf0f52612218",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1242,9 +1242,22 @@
 							"    , 'PR - [Cadence] Cadence Calculation Process'",
 							"    , 'TR - [Standard] CallEvents'",
 							"    , 'PR - [Call Terminated Event] Main'",
-							"]",
+							"];",
 							"",
 							"let currentRequestName = pm.info.requestName;",
+							"let campaignCounter = pm.collectionVariables.get(\"CampaignCounter\");",
+							"campaignCounter++;",
+							"",
+							"if (Campaigns.length >= campaignCounter){",
+							"    console.log(Campaigns[campaignCounter - 1]);",
+							"}else{",
+							"    console.log(\"Saliendo\");",
+							"}",
+							"",
+							"/*",
+							"pm.collectionVariables.set(\"Campaign\", (Campaigns[index] || \"\").toString());",
+							"",
+							"",
 							"while (ProcessAndTableRules.some(x => x === currentRequestName)){",
 							"    Campaigns.forEach((ca, index) => {",
 							"        pm.collectionVariables.set(\"Campaign\", (Campaigns[index] || \"\").toString());",
@@ -1257,7 +1270,7 @@
 							"        return item !== currentRequestName;",
 							"    });",
 							"}",
-							"",
+							"*/",
 							"",
 							"/*",
 							"Campaigns.forEach((ca, index) => {",
@@ -1360,7 +1373,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3b2294db-790a-473c-9c22-a7699e21b5b3",
+						"id": "cbc2a8c5-b3db-445c-a22d-8f929925e198",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1452,25 +1465,25 @@
 	],
 	"variable": [
 		{
-			"id": "d1f2c1bf-aa5f-49e3-8b67-e0fad79fe963",
+			"id": "2bd32113-d510-468e-91ed-cb6bfd84b31d",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "cb4085c6-2f5a-40e7-8bc9-135ce380dfc7",
+			"id": "c9265550-1db4-4bf3-b8dc-197a3a889db2",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "28a5afea-420b-446a-aec3-386445d8d6ef",
+			"id": "d62cf339-8aa8-478f-ad4f-670a4bc5700b",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5673fcb4-bb9e-412c-ae02-28aa1f74adaf",
+			"id": "54175d18-40af-437f-aaaf-1172d9a74f7c",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
