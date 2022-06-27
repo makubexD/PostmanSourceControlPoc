@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e65345d4-fe29-4b98-a01e-892684d08ec1",
+						"id": "c180b279-e5fe-4a75-8d15-d112543f2f54",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1220,29 +1220,8 @@
 							"",
 							"const Campaigns = LifeCampaigns.concat(Health_MA_Campaigns, Health_MS_Campaigns, Other_Campaigns);",
 							"",
-							"console.log(\"Begin1111111111111111111--------------------------\")",
-							"console.log(pm.info.requestName)",
-							"console.log(\"END1111111111111111111--------------------------\")",
+							"// console.log(pm.info.requestName)",
 							"",
-							"let ProcessAndTableRules = [",
-							"      'TR - [TORO] Blending Time'",
-							"    , 'PR - [DNIS - IB]'",
-							"    , 'TR - [Standard] Fields'",
-							"    , 'PR - [Standard] Marketing'",
-							"    , 'PR - [Standard] Notifications'",
-							"    , 'PR - [Standard] Processes'",
-							"    , 'PR - [Disposition] Main'",
-							"    , 'PR - [Standard] Create Decision'",
-							"    , 'PR - [Standard] Populate Inbound'",
-							"    , 'TR - [Standard] Dialing Strategy Fields'",
-							"    , 'PR - [TORO] Priority'",
-							"    , 'PR - [DNIS - OB]'",
-							"    , 'PR - [Standard] Caller Id'",
-							"    , 'PR - [Standard] Dialing Info Logic'",
-							"    , 'PR - [Cadence] Cadence Calculation Process'",
-							"    , 'TR - [Standard] CallEvents'",
-							"    , 'PR - [Call Terminated Event] Main'",
-							"];",
 							"",
 							"let currentRequestName = pm.info.requestName;",
 							"let campaignCounter = pm.collectionVariables.get(\"CampaignCounter\");",
@@ -1274,7 +1253,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fc4ae8da-7e62-4e41-8095-ad0a282179ce",
+						"id": "139e54f9-96c8-41c0-a835-6cb457cc411b",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1366,25 +1345,25 @@
 	],
 	"variable": [
 		{
-			"id": "69c1107e-30ae-4d1a-81b8-739fecb898be",
+			"id": "ff73245e-3ff1-48f7-a7b8-470b74eb0391",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "935a26e3-67b0-4c78-a92d-3aacdcf7c8ed",
+			"id": "61bff98e-0665-447b-842d-7b97d10548ff",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "11144d28-e6f3-4376-a2b4-b39604c0ec73",
+			"id": "928ffe92-2278-4243-a1a2-ad6532245356",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "3d885564-3a2e-418c-9566-aeec357b8fb4",
+			"id": "0a0a845c-ab28-41ba-b85e-9fac42770bd8",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
