@@ -33,7 +33,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/blending?AgentDialerId=",
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/blending?AgentDialerId=",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -43,7 +43,7 @@
 							"path": [
 								"run",
 								"cignium",
-								"cuy-hma",
+								"{{Campaign}}",
 								"{{CurrentEnv}}",
 								"blending"
 							],
@@ -1395,19 +1395,19 @@
 	],
 	"variable": [
 		{
-			"id": "602b70f7-c7ad-4ed9-ae09-d5b2d0270436",
+			"id": "1d8bb0db-df2c-4113-9801-cbca2ced8de4",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "4b4b97d1-c182-4006-a6e1-56fcc9f1a859",
+			"id": "bf633bef-2e1c-4ebd-a35f-e5680742d4e3",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "0b5ca550-bc91-4a29-a08d-fecda018112d",
+			"id": "8285726a-f808-413a-ae3d-6710362481f9",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
