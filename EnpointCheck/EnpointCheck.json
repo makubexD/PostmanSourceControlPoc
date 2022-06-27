@@ -1344,5 +1344,47 @@
 			],
 			"id": "f07801ac-19b2-4faf-9bfe-1648ec64e9c7"
 		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7e1e0abc-898a-40e0-91e3-60b07e121782",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "59965edd-030f-44c7-848c-14e39066d5e1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b3d090a5-e370-4393-9017-4cbc14511442",
+			"key": "LoopIndex",
+			"value": "0",
+			"type": "string"
+		},
+		{
+			"id": "5aac1369-826e-4a46-85de-55aa8ea58881",
+			"key": "Campaign",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"id": "293c5cca-147c-47d5-8f3e-088ce42ff827",
+			"key": "FolderIndex",
+			"value": "0",
+			"type": "string"
+		}
 	]
 }
