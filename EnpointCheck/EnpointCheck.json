@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "7c3f4f0e-5ad3-4ca0-bb8c-f4f49b8b36c3",
+						"id": "83170d8b-93ff-4150-b1ff-8b1f621fab02",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1258,7 +1258,7 @@
 							"    pm.collectionVariables.set(\"CampaignCounter\", 0);",
 							"}",
 							"",
-							"console.log(currentRequestName);",
+							"console.log('After if clause --> ' + currentRequestName);",
 							"",
 							"/*",
 							"pm.collectionVariables.set(\"Campaign\", (Campaigns[index] || \"\").toString());",
@@ -1379,7 +1379,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5f6a2c05-bda4-4629-9140-0af6680a534e",
+						"id": "4b7b3981-75c2-480b-ada2-c02d3cad1c78",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1471,25 +1471,25 @@
 	],
 	"variable": [
 		{
-			"id": "ab742bc7-78ba-4953-9b0e-426df9f185b8",
+			"id": "0f09356d-4131-4aaa-a668-af0f2fe172e3",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "4f894e4f-24d2-4c93-abc2-4914f695b270",
+			"id": "125cd14e-b489-477b-83a4-4c069ef70d0d",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "2bbdb01f-7818-48cf-9822-354a8b4e0c74",
+			"id": "b0185e06-567a-45b2-b37b-aa7f399627fb",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "ef05d3f6-af97-4783-8f66-7e9ad2d9c76b",
+			"id": "9d2efc67-99a1-46f9-b31b-9b83506d129e",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
