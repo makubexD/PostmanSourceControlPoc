@@ -1207,14 +1207,14 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "9fc88a1f-24df-49b0-992e-85c26b77303f",
+						"id": "5a1259d1-5a95-4bff-b105-03977dfabcda",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
 							"",
 							"",
 							"const LifeCampaigns = []; //['AFLC', 'AFQL', 'ASUP', 'COL', 'COLS', 'MLF', 'MLFQ', 'MLFS', 'PDP' ];",
-							"const Health_MA_Campaigns = ['CUY-HMA', 'CUY-AMA']; //['CSC', 'AMA', 'ANMA', 'ANMG', 'ANMI', 'BCMA', 'HMA', 'KPMA', 'MAQL', 'OMA', 'SMA', 'THMA', 'WCMA'];",
+							"const Health_MA_Campaigns = ['CUY-HMA', 'CUY-AMA', 'CUY-ANMA']; //['CSC', 'AMA', 'ANMA', 'ANMG', 'ANMI', 'BCMA', 'HMA', 'KPMA', 'MAQL', 'OMA', 'SMA', 'THMA', 'WCMA'];",
 							"const Health_MS_Campaigns = []; //['AMS', 'MSQL', 'MMS', 'OMS', 'OMSP', 'OMSS'];",
 							"const Other_Campaigns = []; //['TRN'];",
 							"",
@@ -1274,7 +1274,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d4a9b519-e739-4f01-8421-3d9c76c201c4",
+						"id": "2bdbf30f-d168-450a-ab3d-2fe123a2e902",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1366,25 +1366,25 @@
 	],
 	"variable": [
 		{
-			"id": "b9bd8c54-dbfa-41b0-a105-32d6162c93fd",
+			"id": "2c6b783b-2a8c-4f33-ac04-a86925ce09d2",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "d38c0ae1-431e-437f-9eed-1fe1902cf232",
+			"id": "ad2393cd-8187-46b7-be6c-071c257562ca",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "8d6dba93-628c-4ed3-b72e-744ad9f6183d",
+			"id": "384f15a6-9e7b-47b5-a1e6-e1f0dc724ff4",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "f5d997b5-3373-45ec-9013-202bde2d4d18",
+			"id": "6164a338-4780-4d03-9ec2-5ee17f8d7412",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
