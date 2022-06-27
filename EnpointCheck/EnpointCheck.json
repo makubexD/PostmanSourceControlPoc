@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "caa71e68-bcc5-4c5b-99c0-e36f216679e3",
+						"id": "1b893822-19e9-4492-b7f6-16114251561d",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1246,17 +1246,18 @@
 							"",
 							"let currentRequestName = pm.info.requestName;",
 							"let campaignCounter = pm.collectionVariables.get(\"CampaignCounter\");",
-							"campaignCounter++;",
+							"",
 							"",
 							"console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter);",
 							"",
 							"if (Campaigns.length > campaignCounter){",
-							"    let campaignIndex = campaignCounter - 1;",
-							"    console.log('Current Campaign --> ' + Campaigns[campaignIndex]);",
-							"    pm.collectionVariables.set(\"Campaign\", Health_MA_Campaigns[campaignIndex]);",
+							"    ",
+							"    console.log('Current Campaign --> ' + Campaigns[campaignCounter]);",
+							"    pm.collectionVariables.set(\"Campaign\", Health_MA_Campaigns[campaignCounter]);",
 							"    pm.collectionVariables.set(\"CampaignCounter\", campaignCounter);",
 							"    postman.setNextRequest(pm.info.requestId);",
 							"    console.log(\"AFTER next REQ\");",
+							"    campaignCounter++;",
 							"}else{",
 							"    console.log(\"Saliendo\");",
 							"    pm.collectionVariables.set(\"CampaignCounter\", 0);",
@@ -1384,7 +1385,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a5eda572-0325-4b57-b339-1e61696aa3ad",
+						"id": "90dd77b6-1201-44c7-ae7c-95abcb79c7e5",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1476,25 +1477,25 @@
 	],
 	"variable": [
 		{
-			"id": "21eec970-c8c7-4786-a282-768d8a883477",
+			"id": "2f2c3805-94d8-45d8-a323-a53015887d14",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "e934bde5-726c-40ef-ac82-1a5dddfa46e7",
+			"id": "df15a36d-9139-4ae5-b116-2fff5bf0d16a",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "cbb59d16-9e97-48ed-8cb4-43be646b2fbb",
+			"id": "e415ffda-ce3e-479d-be80-6cf92771435f",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "fa404f0d-9158-4638-afa3-6494b122f839",
+			"id": "51686392-37c1-4b07-bf66-89648c8e7f48",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
