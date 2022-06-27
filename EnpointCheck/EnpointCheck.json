@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e0b1a490-3280-4d2d-b21e-ef542515c453",
+						"id": "e3b7b9fe-cbcb-4d93-8629-3938e263babe",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1246,16 +1246,15 @@
 							"",
 							"let currentRequestName = pm.info.requestName;",
 							"let campaignCounter = pm.collectionVariables.get(\"CampaignCounter\");",
-							"",
+							"campaignCounter++;",
 							"",
 							"console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter);",
 							"",
+							"pm.collectionVariables.set(\"Campaign\", Campaigns[campaignCounter]);",
+							"",
 							"if (Campaigns.length > campaignCounter){",
 							"    ",
-							"    console.log('Current Campaign --> ' + Campaigns[campaignCounter]);",
-							"    pm.collectionVariables.set(\"Campaign\", Health_MA_Campaigns[campaignCounter]);",
-							"",
-							"    campaignCounter++;",
+							"    console.log('Current Campaign --> ' + Campaigns[campaignCounter]);    ",
 							"",
 							"    pm.collectionVariables.set(\"CampaignCounter\", campaignCounter);",
 							"    postman.setNextRequest(pm.info.requestId);",
@@ -1388,7 +1387,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9d21db34-bc20-4021-abd0-a395f359af88",
+						"id": "996338a7-eaa2-41c6-9eab-4511a4a8ea91",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1480,25 +1479,25 @@
 	],
 	"variable": [
 		{
-			"id": "0a348b1c-fd81-492d-93ea-b7f868de99db",
+			"id": "a225756c-4d3b-40d2-aece-5c7299f476e7",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "c6a61760-595b-4357-a20e-2cf6ed773b7c",
+			"id": "6b6de612-c8ae-45a2-aa7b-9fa798893d28",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "bde713ed-9fb6-4917-b2f2-06cbe3614f1d",
+			"id": "0fe3d6b1-3eb5-4367-9960-c899c7072a7b",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "06eba65d-c099-417e-ba99-7f0bd1bd198e",
+			"id": "b2a7b3eb-9ef6-4837-a221-01c769823859",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
