@@ -1177,7 +1177,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "34a00af7-d051-47ec-b8bd-22fe584dd8a8",
+						"id": "c9ee94d6-1394-4598-8c45-15d48233f233",
 						"type": "text/javascript",
 						"exec": [
 							"let zipCodeMock = \"71654\";",
@@ -1229,7 +1229,7 @@
 							"    ProcessAndTableRules.forEach(d => {",
 							"        console.log('Campaign ---- --> ' + d);",
 							"        pm.collectionVariables.set(\"Campaign\", (Campaigns[index] || \"\").toString());",
-							"        pm.setNextRequest(d);",
+							"        postman.setNextRequest(d);",
 							"    });",
 							"})",
 							"",
@@ -1303,7 +1303,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3048f766-82ac-40e3-9b74-12cabf639173",
+						"id": "26844394-5e2e-428c-ba1d-827875b751d0",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1395,19 +1395,19 @@
 	],
 	"variable": [
 		{
-			"id": "1c2ea348-82e9-47f9-b601-a246e9aa6160",
+			"id": "1646c37c-01e2-4aaa-a9f0-a5794ccf9d4e",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "d3830519-6ff7-4d65-a24d-a1a47ef55b4a",
+			"id": "4d2f38fc-2ffe-4953-b89f-78ee6af7018a",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "5593591a-2bbb-40e2-ab18-ba1a8b8516cf",
+			"id": "0d61952e-4406-4785-8c33-ead1503b95d9",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
