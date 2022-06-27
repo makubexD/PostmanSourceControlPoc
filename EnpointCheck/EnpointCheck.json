@@ -29,9 +29,7 @@
 							"script": {
 								"id": "a1d30288-9c19-43d5-bf2e-7ebc6411eac2",
 								"exec": [
-									"console.log('1111');\r",
-									"console.log(pm.info.requestName);\r",
-									"console.log('1111');"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -1448,19 +1446,19 @@
 	],
 	"variable": [
 		{
-			"id": "e766e2c8-9743-48b7-82f6-f26fdf219ca2",
+			"id": "56e2a55d-9d28-4d74-841b-7ef43f11fc02",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "4ae2d85f-5c4e-41b7-bd75-ba5b5a9b63cc",
+			"id": "c41c8f49-ebfe-47f5-b99d-cdc84df0c23d",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "bb2d0f4f-192b-4754-a4d8-84f14aff0c3f",
+			"id": "f3f282b8-aab2-443f-8549-8bec485f6a55",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
