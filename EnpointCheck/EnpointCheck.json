@@ -1366,25 +1366,25 @@
 	],
 	"variable": [
 		{
-			"id": "98ba3ea4-1f3b-4008-a5e7-0560aa8be4ae",
+			"id": "1bfc2f32-8070-4036-992e-9f6c14e4ce9a",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "c6218ff7-9562-4079-b2f1-c4220c5e5069",
+			"id": "719b560c-2e6a-4e1a-abb8-4c66d7aed86f",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "d67e9ef8-7f12-4b5e-8463-1a833216db3a",
+			"id": "527e19cd-c0f7-4c24-bbc7-7b095760cf5b",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "65c65e9d-153c-4d2d-892a-c6f6c06bb94e",
+			"id": "ba007447-f63f-4a54-80d2-e4a5062c9535",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
