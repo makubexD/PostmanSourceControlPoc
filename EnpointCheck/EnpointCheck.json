@@ -105,7 +105,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/campaigninfo?CampaignCode=16&SubCampaignCode=SB00&State=NY",
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/campaigninfo?CampaignCode=16&SubCampaignCode=SB00&State=NY",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -116,6 +116,7 @@
 								"run",
 								"cignium",
 								"{{Campaign}}",
+								"{{CurrentEnv}}",
 								"campaigninfo"
 							],
 							"query": [
@@ -1447,19 +1448,19 @@
 	],
 	"variable": [
 		{
-			"id": "2b31d077-fd53-4c94-9ffb-67d601fb0d23",
+			"id": "ccb4764b-0f1e-4239-88cf-5f83d960d557",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "75872e11-29b9-4ec7-aa29-dade883606d9",
+			"id": "6ad24e8a-e990-4a14-b365-2d8c2dfa38cd",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "d631d00b-898b-4348-8986-ab71c5315f4b",
+			"id": "8680319b-cc9f-47f7-b306-1c141f8389f6",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
