@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "240eb04f-4d0b-4665-a206-f8692235fb7c",
+						"id": "23c11604-a590-4a34-b5b6-e59dd17cfe56",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1220,6 +1220,9 @@
 							"",
 							"const Campaigns = LifeCampaigns.concat(Health_MA_Campaigns, Health_MS_Campaigns, Other_Campaigns);",
 							"",
+							"console.log(\"Begin1111111111111111111\")",
+							"console.log(pm.info.requestName)",
+							"console.log(\"Begin1111111111111111111\")",
 							"",
 							"const ProcessAndTableRules = [",
 							"      'TR - [TORO] Blending Time'",
@@ -1338,7 +1341,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "607979b0-8f7a-4385-9858-517377263f34",
+						"id": "46811dd4-7db2-41cf-beda-2fa1b2d3f70e",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1430,19 +1433,19 @@
 	],
 	"variable": [
 		{
-			"id": "b523d6d0-cca4-46dd-a2bb-449245b1ac56",
+			"id": "1a6c2a13-2a40-483e-8884-2452ffec8822",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "1a0de9dc-01f2-4707-95e7-b34ae2f6c6c7",
+			"id": "13b73d0e-bebb-4db1-8125-967020c43e89",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "3595cb96-5d7d-4881-9398-1bf38de4f704",
+			"id": "f6fde9ad-8b5a-4134-bbcd-5e8238b9d16b",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
