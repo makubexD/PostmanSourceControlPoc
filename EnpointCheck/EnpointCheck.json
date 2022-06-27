@@ -1177,7 +1177,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "c684b4e9-8fb1-4d3c-8c19-b2918f2669a6",
+						"id": "6d132533-8bed-46ad-801f-07a1d548b826",
 						"type": "text/javascript",
 						"exec": [
 							"let zipCodeMock = \"71654\";",
@@ -1222,7 +1222,7 @@
 							"    , 'TR - [Standard] CallEvents'",
 							"    , 'PR - [Call Terminated Event] Main'",
 							"]",
-							"",
+							"/*",
 							"Campaigns.forEach((ca, index) => {",
 							"    ",
 							"    pm.collectionVariables.set(\"Campaign\", (Campaigns[index] || \"\").toString());",
@@ -1235,6 +1235,20 @@
 							"",
 							"    console.log(\"exittttttttttt\");",
 							"})",
+							"*/",
+							"",
+							"",
+							"for (let index = 0; index < Campaigns.length; index++) {    ",
+							"    pm.collectionVariables.set(\"Campaign\", (Campaigns[index] || \"\").toString());",
+							"",
+							"    for (let endpoint = 0; endpoint < ProcessAndTableRules.length; endpoint++) {",
+							"        console.log('Campaign ---- --> ' + endpoint + ' INDEX --> ' + index + '  --- what --> ' + Campaigns[index] );        ",
+							"        pm.setNextRequest(endpoint);",
+							"        ",
+							"    }",
+							"    ",
+							"}",
+							"",
 							"",
 							"/*",
 							"",
@@ -1306,7 +1320,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "46884d6f-487a-4fbf-b43e-4515469b52f1",
+						"id": "819df4f2-7193-4222-95b2-14881ac39d29",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1398,19 +1412,19 @@
 	],
 	"variable": [
 		{
-			"id": "4611cd9d-b0f5-4d86-b7b3-ec69eaddc77f",
+			"id": "2c01d12f-26fc-4083-ad04-894dc933f27c",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "ac4398e2-023e-4b83-b8b3-792429b776fc",
+			"id": "6e0938d7-ffa7-40c9-8ef6-86c3c862de53",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "93543074-0254-4bfa-a5d2-d5c56b90868d",
+			"id": "607488d9-b3a8-48ba-a579-cf45f0772e1d",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
