@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "fb48a72b-a484-423a-bc55-62c1a33a12a0",
+						"id": "1036b24e-3a40-4a86-8663-98e43cce1382",
 						"type": "text/javascript",
 						"exec": [
 							"let xferJSON = [];",
@@ -1250,6 +1250,7 @@
 							"        pm.collectionVariables.set(\"Campaign\", (Campaigns[index] || \"\").toString());",
 							"        //postman.setNextRequest(pm.info.requestId);",
 							"        console.log(pm.info.requestId);",
+							"        console.log(Campaigns[index]);",
 							"    });",
 							"",
 							"    ProcessAndTableRules = ProcessAndTableRules.filter(function(item) {",
@@ -1359,7 +1360,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "115890b4-8fbc-42b0-a2b0-4e3043958ea8",
+						"id": "3b2294db-790a-473c-9c22-a7699e21b5b3",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1451,19 +1452,19 @@
 	],
 	"variable": [
 		{
-			"id": "b928177c-b6a9-4cf8-abcd-07584ed8e486",
+			"id": "19e03962-0de9-475a-978f-a94f9560bc69",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "a2b7edf5-30ba-4aed-8793-d8cbd0447c29",
+			"id": "270348ce-76ff-4f32-8736-7a1c21bc6758",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "2e714ec7-5030-4285-9d7b-251ddd520e18",
+			"id": "19928c0c-f82c-4485-957e-01e818de1a55",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
