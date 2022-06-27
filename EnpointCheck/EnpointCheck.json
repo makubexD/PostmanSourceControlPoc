@@ -1432,7 +1432,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "fa116e6a-e6d8-448a-badc-3887d46f8362",
+				"id": "d7af1388-e4e8-4236-8a75-7cbc5ebf82b8",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1442,7 +1442,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "a3519e8a-1f97-4248-b269-5cbd5681c56a",
+				"id": "e02c8646-ee41-4b5c-bc76-d8553cb4d187",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -1452,21 +1452,27 @@
 	],
 	"variable": [
 		{
-			"id": "a55a9f1b-be86-47c1-8a4b-f32bc6256c90",
+			"id": "d1f2c1bf-aa5f-49e3-8b67-e0fad79fe963",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "e0bbb32f-a536-4e53-a833-37d60fd5c1e2",
+			"id": "cb4085c6-2f5a-40e7-8bc9-135ce380dfc7",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "37448bfd-a8cb-45e2-8179-769f0c5c47d3",
+			"id": "28a5afea-420b-446a-aec3-386445d8d6ef",
 			"key": "FolderIndex",
 			"value": "0",
+			"type": "string"
+		},
+		{
+			"id": "5673fcb4-bb9e-412c-ae02-28aa1f74adaf",
+			"key": "CampaignCounter",
+			"value": "",
 			"type": "string"
 		}
 	]
