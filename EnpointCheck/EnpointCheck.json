@@ -81,7 +81,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/campaigninfo?CampaignCode=16&SubCampaignCode=SB00&State=NY",
+							"raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{Campaign}}/campaigninfo?CampaignCode=16&SubCampaignCode=SB00&State=NY",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -92,7 +92,7 @@
 								"run",
 								"cignium",
 								"cuy-hma",
-								"{{CurrentEnv}}",
+								"{{Campaign}}",
 								"campaigninfo"
 							],
 							"query": [
@@ -1395,19 +1395,19 @@
 	],
 	"variable": [
 		{
-			"id": "1d8bb0db-df2c-4113-9801-cbca2ced8de4",
+			"id": "4b613044-3d02-4808-a26b-0ccdc1aea723",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "bf633bef-2e1c-4ebd-a35f-e5680742d4e3",
+			"id": "cc634fbd-87c9-4785-9429-44a28d78505a",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "8285726a-f808-413a-ae3d-6710362481f9",
+			"id": "81b78913-2260-4023-8ef2-b5b8eae0adc6",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
