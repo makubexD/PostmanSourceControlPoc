@@ -1226,7 +1226,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b3f686ce-7d60-47bd-91b1-bfdf9c65a9a0",
+						"id": "d0e3c4c6-e539-4625-a6e3-ae312cd431b6",
 						"type": "text/javascript",
 						"exec": [
 							"const LifeCampaigns = []; //['AFLC', 'AFQL', 'ASUP', 'COL', 'COLS', 'MLF', 'MLFQ', 'MLFS', 'PDP' ];",
@@ -1242,8 +1242,8 @@
 							"",
 							"/*",
 							"//TODO: To create custom endpoint by campaign/request",
-							"console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter  + ' in --> ' + pm.info.requestName);  ",
 							"*/",
+							"console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter  + ' in --> ' + pm.info.requestName);  ",
 							"",
 							"let cuyCampaign = Campaigns[campaignCounter - 1];",
 							"let cuyCampaignWithoutPrefix = cuyCampaign.replace('CUY-', '');",
@@ -1253,7 +1253,7 @@
 							"",
 							"if (Campaigns.length > campaignCounter){",
 							"    pm.collectionVariables.set(\"CampaignCounter\", campaignCounter);",
-							"    console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter  + ' in --> ' + pm.info.requestName);  ",
+							"    ",
 							"    postman.setNextRequest(pm.info.requestId);    ",
 							"}else{",
 							"    pm.collectionVariables.set(\"CampaignCounter\", 0);",
@@ -1264,7 +1264,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e6ea07fd-0b09-44d6-a36c-6a8d3cde22c3",
+						"id": "11b55dea-bf51-447f-9c63-7d112ca33f66",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1356,31 +1356,31 @@
 	],
 	"variable": [
 		{
-			"id": "903e8a41-9c05-4e5b-ad3a-95be70063d88",
+			"id": "5bc95343-74e2-4d7d-af24-80ee1fa0d118",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "7165ee26-30b2-494a-aeba-0c30b3606c35",
+			"id": "434f35e0-3991-4ff4-96e4-8ae0476cb970",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "74da1b49-ebaf-49a8-8e71-a219489640ae",
+			"id": "dda40427-1458-4db8-b331-542269d29c85",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "35301de7-3f53-4bc6-8889-381cfa64e885",
+			"id": "0a9d56f7-6aa6-45ab-9c62-54973906a0df",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "5c60dd74-c826-4ae6-9c96-2087762a8312",
+			"id": "0c03d11d-0676-4629-be3e-67034d8fe257",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
