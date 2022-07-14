@@ -378,7 +378,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/allowed-processes"
+						"url": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/allowed-processes"
 					},
 					"response": []
 				},
@@ -1336,31 +1336,31 @@
 	],
 	"variable": [
 		{
-			"id": "5748e4af-0104-486f-8000-52546cd8b037",
+			"id": "c64666c1-ccf0-4ac6-8cc5-4b869b5d1f93",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "2518c94d-72c9-4c9c-acd1-953bd00859ec",
+			"id": "bf692051-756d-4b4d-a879-44738e8b4057",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "6fd0a29f-a43a-4042-a125-b65088705882",
+			"id": "c2976a94-5031-4d00-8b8f-ffd26f42dcec",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "9f311a69-0d05-4f2e-a454-816f8e9351ad",
+			"id": "ec653dfa-107c-4e4a-8fdc-f967c14a593b",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "41edd40a-5903-4303-9a88-4d35b527a38f",
+			"id": "422b0002-4a0c-45a9-802f-ef77e343c76c",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
