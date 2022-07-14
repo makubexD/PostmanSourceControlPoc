@@ -409,7 +409,7 @@
 									"\r",
 									"function SetCampaignDispositionEndpoint(campaign) {\r",
 									"    if ([\"CUY-ANMA\", \"CUY-AMA\"].includes(campaign)) {\r",
-									"        pm.collectionVariables.set(\"Campaign\", \"cuy-hma\");\r",
+									"        pm.collectionVariables.set(\"Campaign\", \"CUY-HMA\");\r",
 									"    }\r",
 									"}"
 								],
@@ -1355,31 +1355,31 @@
 	],
 	"variable": [
 		{
-			"id": "1285447a-dfa4-403c-a500-eb412d7b5c29",
+			"id": "d11ee028-5098-4ecd-affd-5c721f531a8e",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "766f5e35-8f1a-4353-917f-d00de1380646",
+			"id": "58a58529-9728-4e5a-8073-bfa8a130e128",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "d158ea8a-c33e-49ad-890f-ecbcc33e8c5f",
+			"id": "75029528-8a3c-47de-8095-bd4c2a7bc952",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "ebbdd0c7-8188-40b4-8a6f-842f0cdcb43a",
+			"id": "6693e4dc-f081-4fd4-94d8-4727d39f1b17",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "db921d79-1d6a-41ff-84a3-5ccfc3c0f415",
+			"id": "b934c58d-8833-4b85-87fb-69670ad574b3",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
