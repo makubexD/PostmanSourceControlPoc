@@ -1201,6 +1201,8 @@
 							"script": {
 								"id": "2345f4ef-9425-4074-b36b-8eb24940127b",
 								"exec": [
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
+									"\r",
 									"if (![\"CUY-ANMA\", \"CUY-AMA\"].includes(campaign)) {\r",
 									"    pm.test(\"Status code is 500 (Internal Server Error: Missing input parameters)\", function () {\r",
 									"        pm.response.to.have.status(500);\r",
@@ -1385,31 +1387,31 @@
 	],
 	"variable": [
 		{
-			"id": "ef695bad-cdf9-4a50-8333-a9d2ca6e2b2c",
+			"id": "5ff4582e-ece0-4db2-8745-ef0dcd491b77",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "a0542db0-d273-4ef0-8e38-52e931c791ca",
+			"id": "7b0e1745-d438-4378-b151-d81a9f580cc0",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "34b88b9b-ad03-4be2-a036-735622eb2409",
+			"id": "e18f56c9-3f41-4e4c-bfcd-0c8d216becee",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "a798bd7a-b48d-4876-8e79-9eb2257da586",
+			"id": "8c9e3042-8e62-4d08-b9ee-61b30f7bfb26",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "ce5f343f-886b-4212-8ede-4a086e4a144a",
+			"id": "47643d10-d919-4e13-97bb-742b684d978a",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
