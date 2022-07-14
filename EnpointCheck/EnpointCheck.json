@@ -578,7 +578,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/create-decision?NewLeadDateOfBirth=&NewLeadAddressStreet1=&NewLeadTransferTo=&NewLeadAddressStreet2=&FoundLeadAddressStreet2=&NewLeadAddressState=&NewLeadFirstName=&Did=&NewLeadAddressCity=&FoundLeadId=&NewLeadLastName=&NewLeadAddressCountyState=&NewLeadCid=&NewLeadAddressPostalCode=",
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/create-decision?NewLeadDateOfBirth=&NewLeadAddressStreet1=&NewLeadTransferTo=&NewLeadAddressStreet2=&FoundLeadAddressStreet2=&NewLeadAddressState=&NewLeadFirstName=&Did=&NewLeadAddressCity=&FoundLeadId=&NewLeadLastName=&NewLeadAddressCountyState=&NewLeadCid=&NewLeadAddressPostalCode=",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -588,7 +588,7 @@
 							"path": [
 								"run",
 								"cignium",
-								"cuy-hma",
+								"{{Campaign}}",
 								"{{CurrentEnv}}",
 								"create-decision"
 							],
@@ -1336,31 +1336,31 @@
 	],
 	"variable": [
 		{
-			"id": "9c8352ae-9503-484c-8e72-0d0e5535c440",
+			"id": "aa05904c-a77e-48e5-8236-3bc639e83c5e",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "44d1ffbd-8179-4180-a586-575d91f2785c",
+			"id": "82c30e5e-29f3-4797-a197-713830e1b266",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "ef9841c3-fea8-4cab-8705-a55179b5b562",
+			"id": "6d0182a9-ec58-4d6c-9309-71b85c5f8089",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "2f7521f4-5830-4b8b-b5d5-459f72bd2ade",
+			"id": "2806a8d2-e224-4332-a073-ed542b61a22d",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "117c4b03-99c0-47a2-a0f1-fc715c0b951f",
+			"id": "443c7ade-b146-4202-a9dc-683bcced4614",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
