@@ -786,7 +786,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/dialing-strategy-priority?Cid=&CreateReason=&LeadDateTime=&Afid=&State=&IsCallMeNow=&StatusReason=&AttemptsCount=",
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/dialing-strategy-priority?Cid=&CreateReason=&LeadDateTime=&Afid=&State=&IsCallMeNow=&StatusReason=&AttemptsCount=",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -796,7 +796,7 @@
 							"path": [
 								"run",
 								"cignium",
-								"cuy-hma",
+								"{{Campaign}}",
 								"{{CurrentEnv}}",
 								"dialing-strategy-priority"
 							],
@@ -1336,31 +1336,31 @@
 	],
 	"variable": [
 		{
-			"id": "c2012cde-c069-489e-9fb5-8b734224c7ab",
+			"id": "909fe92a-1e32-4156-9650-81273be7ac64",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "d63da51e-097b-4749-a24d-204e840ecd1c",
+			"id": "27b9ac19-61ed-4bdc-99fb-4676cfed3bd2",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "5c948575-d64f-40d9-9ec1-3161e941cbe2",
+			"id": "0d1d6fb1-65d3-483f-847c-3f7546ce1084",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "e80b1b22-0f2a-4df8-aca3-d2f8ba2cf129",
+			"id": "72ce8049-8c2e-48fe-b286-719f0f01f4fc",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "a9514187-0acf-457c-8e48-56816fa4752a",
+			"id": "e88921bf-bbc3-4854-a4ce-48ea44c4b7d9",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
