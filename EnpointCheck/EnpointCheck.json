@@ -396,6 +396,25 @@
 								],
 								"type": "text/javascript"
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "53f1920f-be3d-4b8d-b040-596660a6ce16",
+								"exec": [
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
+									"\r",
+									"SetCampaignDispositionEndpoint(campaign)\r",
+									"\r",
+									"\r",
+									"function SetCampaignDispositionEndpoint(campaign) {\r",
+									"    if ([\"CUY-ANMA\", \"CUY-AMA\"].includes(campaign)) {\r",
+									"        pm.collectionVariables.set(\"Campaign\", \"cuy-hma\");\r",
+									"    }\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
 						}
 					],
 					"id": "0cb4e845-597b-4b74-81f5-6f1c2997c1fd",
@@ -1336,31 +1355,31 @@
 	],
 	"variable": [
 		{
-			"id": "8ec7621c-9448-4e13-9b1a-5524ec30f8c4",
+			"id": "cf140126-bba5-40bf-8d30-181e8f77e9e0",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "cf3a3bda-db6b-4155-99f4-6538376f48ff",
+			"id": "fc9976c3-b5ac-4715-8573-a9c149e4fb18",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "f17c1fd1-4f09-46d5-a954-2dadfa4d54e1",
+			"id": "faefa1e1-150a-43b0-aa01-b0dacd250688",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "280205eb-e3eb-4a41-9a2f-a64c1848fd8f",
+			"id": "755d43cc-71e2-4157-872a-33aca1013b8d",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "9d7e8a1b-d3e2-4ec4-87fb-22b5064fe736",
+			"id": "fbdd3ad5-bc73-47d4-b12e-e58a00db4656",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
