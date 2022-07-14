@@ -1359,31 +1359,31 @@
 	],
 	"variable": [
 		{
-			"id": "36008201-82a1-4b22-a4b7-a39968ca4e39",
+			"id": "f7288e9f-7a79-484f-ab65-38686d57ee8a",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "f10a987b-74df-4ebe-95ba-ed18fc559444",
+			"id": "b088d62b-6214-4606-8f5a-789984aff6d9",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "b90dff50-4b61-4fc9-804a-3e3882f8f6ac",
+			"id": "ba865a27-7543-450b-a8fd-fb4486f08485",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "353b1466-5a93-4e41-8dd7-bbf776e443cf",
+			"id": "26725b6d-f062-47d9-b05b-ef490dc50a04",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "b3603064-4f08-4f7e-9480-c4a9f2110e0a",
+			"id": "5c211e77-f77e-4581-a77b-5581c3d6ba5d",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
