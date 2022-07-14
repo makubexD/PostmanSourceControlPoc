@@ -275,7 +275,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/notifications?LeadType=&SessionId=&TransferSourceCampaignDialerID=&Afid=&Tcpa=&State=&AgentName=&ZipCode=&TransferTo=&DID=&IsOakStreet=&LeadDateOfBirth=&IsModelB=&CallType=&Cid=",
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/notifications?LeadType=&SessionId=&TransferSourceCampaignDialerID=&Afid=&Tcpa=&State=&AgentName=&ZipCode=&TransferTo=&DID=&IsOakStreet=&LeadDateOfBirth=&IsModelB=&CallType=&Cid=",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -285,7 +285,7 @@
 							"path": [
 								"run",
 								"cignium",
-								"cuy-hma",
+								"{{Campaign}}",
 								"{{CurrentEnv}}",
 								"notifications"
 							],
@@ -1336,31 +1336,31 @@
 	],
 	"variable": [
 		{
-			"id": "639661fd-1b74-438d-898e-08a0cf5ef9c7",
+			"id": "5748e4af-0104-486f-8000-52546cd8b037",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "b8c5ac49-0048-4838-9f0d-9caca4ee5422",
+			"id": "2518c94d-72c9-4c9c-acd1-953bd00859ec",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "38b5a390-0c1a-4c04-b0e3-6eeecbf8a483",
+			"id": "6fd0a29f-a43a-4042-a125-b65088705882",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "05ca565c-728b-4435-b0a3-074898413dec",
+			"id": "9f311a69-0d05-4f2e-a454-816f8e9351ad",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "c11426b4-ea23-4639-9ebb-8195c0e2aa57",
+			"id": "41edd40a-5903-4303-9a88-4d35b527a38f",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
