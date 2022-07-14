@@ -1207,7 +1207,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e720a67b-1b6e-4ffd-996f-af96a00fe189",
+						"id": "44ce8bb4-b221-4d0c-9cc9-4592302c71c1",
 						"type": "text/javascript",
 						"exec": [
 							"const LifeCampaigns = []; //['AFLC', 'AFQL', 'ASUP', 'COL', 'COLS', 'MLF', 'MLFQ', 'MLFS', 'PDP' ];",
@@ -1227,6 +1227,7 @@
 							"*/",
 							"",
 							"pm.collectionVariables.set(\"Campaign\", Campaigns[campaignCounter - 1]);",
+							"pm.collectionVariables.set(\"CampaignCode\", Campaigns[campaignCounter - 1]);",
 							"",
 							"if (Campaigns.length > campaignCounter){",
 							"    pm.collectionVariables.set(\"CampaignCounter\", campaignCounter);",
@@ -1240,7 +1241,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8e26fe4e-0c70-4ade-a684-af7a37f3b096",
+						"id": "8dbd47ac-e602-407b-afc4-05caf85384b0",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1332,31 +1333,31 @@
 	],
 	"variable": [
 		{
-			"id": "d66c7133-96db-49cb-aa1e-8eebb1dbaa48",
+			"id": "8d9ebed5-39b3-4840-b7f8-10c7caa8d5ea",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5b6e676f-aa88-4c1f-9134-ede6ba5b1ac2",
+			"id": "8d56fa57-9789-4c33-ada8-40b8f2bc7c75",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "8b3d6e21-9934-4142-bce6-3f3e479ddda5",
+			"id": "b9a4fa0e-9109-4c4f-a638-3c88c4aa893e",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "8c2a6fd2-3bed-4083-b6e9-810295269452",
+			"id": "c768a5d5-81f7-4d95-8281-c6dc7baff408",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "f4ec904d-51e9-4d0d-b6d1-e07b3f3cef3d",
+			"id": "1850ff89-5d11-40bf-bd0e-265b2cac74df",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
