@@ -1010,7 +1010,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/dialing-info?CreateReason=&State=&Afid=&Cid=",
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/dialing-info?CreateReason=&State=&Afid=&Cid=",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -1020,7 +1020,7 @@
 							"path": [
 								"run",
 								"cignium",
-								"cuy-hma",
+								"{{Campaign}}",
 								"{{CurrentEnv}}",
 								"dialing-info"
 							],
@@ -1336,31 +1336,31 @@
 	],
 	"variable": [
 		{
-			"id": "4f888ede-f307-441e-b4f7-8444897a7e3d",
+			"id": "8d677635-86b0-4aaf-a034-9f6a9a625b78",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "c57abe15-e854-4642-9918-b19bf43b9adb",
+			"id": "f9d04e52-e112-442d-a1b1-bb52ecd59009",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "4f211a80-b73d-40b3-bf74-7a6973fdcf62",
+			"id": "b0b67dc5-fd9f-4d7a-80d6-fb01180f4837",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "9c6cda1c-6742-4d5a-817f-1c025538e6b5",
+			"id": "ad210e91-d21b-441c-9daf-66c6572644dc",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "f2c9cfe4-b907-4937-8e5e-425dc4d26fb3",
+			"id": "2c7ae606-2b02-44a5-b0f5-93f881e69017",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
