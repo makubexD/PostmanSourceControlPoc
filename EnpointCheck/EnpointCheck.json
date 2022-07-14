@@ -1252,7 +1252,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "da3d0eb2-35a1-4e5f-a02c-3775ee5c336b",
+						"id": "9232035e-5dfe-4f68-8a75-839466246574",
 						"type": "text/javascript",
 						"exec": [
 							"const LifeCampaigns = []; //['AFLC', 'AFQL', 'ASUP', 'COL', 'COLS', 'MLF', 'MLFQ', 'MLFS', 'PDP' ];",
@@ -1283,9 +1283,8 @@
 							"        postman.setNextRequest(null);",
 							"    }else {",
 							"        postman.setNextRequest(pm.info.requestId);",
-							"",
 							"    }",
-							"    //console.log('>>>--->>>  TBD KFV');",
+							"    ",
 							"}else{",
 							"    pm.collectionVariables.set(\"CampaignCounter\", 0);",
 							"}"
@@ -1295,7 +1294,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "0d32d82e-4875-41a6-8178-d5d9dab298d7",
+						"id": "a46ea53d-ad05-4461-b32d-743622600763",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -1387,31 +1386,31 @@
 	],
 	"variable": [
 		{
-			"id": "a7db3ece-83ba-4d6b-ba03-e13163364b97",
+			"id": "3175882b-e112-42f6-ac43-a8a39926a089",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "52386018-e461-4594-a20b-4a5dd69752cb",
+			"id": "0d017d50-7711-493c-908f-97b2d8a864da",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "64f50c2b-f179-4e03-bfcd-2ac9a5308ef9",
+			"id": "bbc1bdc5-5ba8-4ae8-b8c0-4b7369a27e80",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "77f68dcc-950e-40d9-9536-4acc4b6bb729",
+			"id": "1b987f2b-8e39-4fe4-bead-1dc7be2f737a",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "acaaff5e-669e-4e69-98e0-0c4e5e1dd713",
+			"id": "5b84cb3f-cf46-47ec-8e89-e51cb0017593",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
