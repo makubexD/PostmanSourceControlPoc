@@ -1201,9 +1201,14 @@
 							"script": {
 								"id": "2345f4ef-9425-4074-b36b-8eb24940127b",
 								"exec": [
-									"pm.test(\"Status code is 500 (Internal Server Error: Missing input parameters)\", function () {\r",
-									"    pm.response.to.have.status(500);\r",
-									"});"
+									"if (![\"CUY-ANMA\", \"CUY-AMA\"].includes(campaign)) {\r",
+									"    pm.test(\"Status code is 500 (Internal Server Error: Missing input parameters)\", function () {\r",
+									"        pm.response.to.have.status(500);\r",
+									"    });    \r",
+									"}\r",
+									"\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -1380,31 +1385,31 @@
 	],
 	"variable": [
 		{
-			"id": "8b4a6fec-af15-412d-9be6-0aa4c88b4a8f",
+			"id": "214f97b2-bb1f-410d-b5c3-ac73c55f4a45",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "2ee2ad8e-4044-412d-9cf9-8de958aeaea1",
+			"id": "f0de98ae-37e9-4536-850a-7faabd0a755a",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "69ecd57d-fc99-4a42-b10b-e2e92d9ffbb8",
+			"id": "db8a233b-5a02-4458-8d13-4d700224f018",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5dfc8053-0101-4a6d-a67b-37dee99ddb72",
+			"id": "26cd27df-af9f-42e4-8d22-858e47b95e81",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "47526774-3262-43cd-8db9-db8d16f225f8",
+			"id": "b5dd4861-8302-4a7e-b240-2e18e203e116",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
