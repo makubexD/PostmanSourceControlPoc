@@ -215,7 +215,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/cuy-hma/{{CurrentEnv}}/marketing?Did=&Cid=&SessionId=&Afid=",
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/marketing?Did=&Cid=&SessionId=&Afid=",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -225,7 +225,7 @@
 							"path": [
 								"run",
 								"cignium",
-								"cuy-hma",
+								"{{Campaign}}",
 								"{{CurrentEnv}}",
 								"marketing"
 							],
@@ -1336,31 +1336,31 @@
 	],
 	"variable": [
 		{
-			"id": "82ff86be-cbc9-4ce4-9db5-cb4a69d3b1c2",
+			"id": "639661fd-1b74-438d-898e-08a0cf5ef9c7",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "f51f2e8c-35d2-4308-ae6a-541e0e298b00",
+			"id": "b8c5ac49-0048-4838-9f0d-9caca4ee5422",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "f77a4624-b9a6-4abe-9bb5-179693427599",
+			"id": "38b5a390-0c1a-4c04-b0e3-6eeecbf8a483",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "e5bb9c1b-e18c-4194-9090-f37302d74dfe",
+			"id": "05ca565c-728b-4435-b0a3-074898413dec",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "86738ef7-e139-4ad7-9503-2af7cd65f196",
+			"id": "c11426b4-ea23-4639-9ebb-8195c0e2aa57",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
