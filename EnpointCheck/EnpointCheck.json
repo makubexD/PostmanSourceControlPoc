@@ -1531,12 +1531,7 @@
 									"\r",
 									"SetMarketingEndpoint(campaign)\r",
 									"SetCampaignParam(campaign)\r",
-									"console.log(\"er\")\r",
-									"console.log(campaign)\r",
-									"console.log(\"BEGINNNNN\")\r",
-									"console.log(pm.request.url.addQueryParams());\r",
-									"console.log(pm.request.headers);\r",
-									"console.log(\"END\")\r",
+									"\r",
 									"\r",
 									"function SetMarketingEndpoint(campaign) {\r",
 									"    if ([\"CUY-MSQL\", \"CUY-MMS\"].includes(campaign)) {\r",
@@ -2737,37 +2732,37 @@
 	],
 	"variable": [
 		{
-			"id": "92d68bbb-a754-42bb-b4f3-0b27fce8283d",
+			"id": "b34de0e5-c2ec-40e5-b86c-41c20ea2aac5",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "fde2702e-541a-4c62-a705-00e1810c7443",
+			"id": "93e0cf52-d0da-4923-814f-1914c7a2b192",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "3d82b35e-ee26-43d3-aaed-c57f8c7a2838",
+			"id": "5833197d-d875-48ee-9c97-6739a220d0ac",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "dbf1f628-2578-4e97-a236-20ad07981a6c",
+			"id": "0813e01f-eaa1-4536-8ebe-5b6d3220c0c0",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "b066c88b-efaf-4431-8a18-cbedbe5119ff",
+			"id": "e986b0b2-e28a-4938-bb6e-78bce5ed2c01",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "420a32fb-7aec-43b7-8dae-e01765e95fd5",
+			"id": "e55f74f5-e911-49fc-9570-ef4090483aa5",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
