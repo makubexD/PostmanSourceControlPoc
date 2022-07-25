@@ -219,27 +219,7 @@
 							"script": {
 								"id": "32fc9ede-e792-46b5-9150-ac2e12be825e",
 								"exec": [
-									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
-									"\r",
-									"\r",
-									"SetMarketingEndpoint(campaign)\r",
-									"SetCampaignParam(campaign)\r",
-									"\r",
-									"function SetMarketingEndpoint(campaign) {\r",
-									"    if ([\"CUY-MSQL\", \"CUY-MMS\"].includes(campaign)) {\r",
-									"        pm.collectionVariables.set(\"MarketingDefaultEndpoint\", \"marketing-v2\");\r",
-									"    }\r",
-									"}\r",
-									"\r",
-									"function SetCampaignParam(campaign) {\r",
-									"    if ([\"CUY-OMS\", \"CUY-OMSP\", \"CUY-OMSS\"].includes(campaign)) {\r",
-									"        // pm.collectionVariables.set(\"Campaign\", \"CUY-HMA\");\r",
-									"        pm.request.headers.add({\r",
-									"            key: \"CampaignDialerId\",\r",
-									"            value: campaign\r",
-									"        });\r",
-									"    }\r",
-									"}"
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -2749,37 +2729,37 @@
 	],
 	"variable": [
 		{
-			"id": "9f806acb-8159-4b22-84d7-3396e6dd710e",
+			"id": "15b53a38-eaf7-4646-889d-bc2d5697f2be",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "40f3bbb3-b3c4-4629-a299-88e3cd5b660c",
+			"id": "39b6515f-37ad-4c57-9d43-fc48d4d679aa",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "36cab14a-1176-4fcd-aa23-081356a0e804",
+			"id": "2e775855-4bb3-4fff-ba44-8454cebbc2d6",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "21ff8d1c-044c-4db7-af86-7c1d7cebf133",
+			"id": "ffbc42f5-cbf8-4d87-9a20-dfe555420ca8",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "3f503bff-5b80-4487-8f77-5c87e9b6874a",
+			"id": "0f331ee4-7dbe-4c2f-97d1-eab70395466b",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "cfa326ee-3482-412c-9847-07e1a27a73f4",
+			"id": "81a02325-ada2-43e9-824f-8bed949e59a0",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
