@@ -207,12 +207,29 @@
 							"script": {
 								"id": "3354f076-b24e-4e01-930f-8b3b35f220e7",
 								"exec": [
-									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
-									"\r",
-									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "32fc9ede-e792-46b5-9150-ac2e12be825e",
+								"exec": [
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
+									"\r",
+									"\r",
+									"SetMarketingEndpoint(campaign)\r",
+									"\r",
+									"\r",
+									"function SetMarketingEndpoint(campaign) {\r",
+									"    if ([\"CUY-MSQL\", \"CUY-MMS\"].includes(campaign)) {\r",
+									"        pm.collectionVariables.set(\"MarketingDefaultEndpoint\", \"marketing-v2\");\r",
+									"    }\r",
+									"}"
 								],
 								"type": "text/javascript"
 							}
@@ -2692,37 +2709,37 @@
 	],
 	"variable": [
 		{
-			"id": "bcd5dd01-7345-46c9-a7e3-f8a811294859",
+			"id": "fae150df-d3b0-4902-81a3-141bebda5490",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "dba27f4e-05c9-46d6-823b-a629f7bd7f68",
+			"id": "0609f709-43b5-4008-a550-2bb788281186",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "77083634-254b-4821-bf70-157bb0cf2339",
+			"id": "43a401ad-ccb8-4b4e-a629-19b2f168bfb4",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "0edcec52-be6f-4641-b11c-e8097915362e",
+			"id": "f943170c-aa0b-40ca-9ed4-267bb5bc8f50",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "6c7e740e-9115-4214-a185-407ddbf169da",
+			"id": "48ff07bb-8133-4ff8-81e5-322c72d18f4c",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
 		},
 		{
-			"id": "7e6916d5-5764-4812-b355-890dcc75a3cf",
+			"id": "a6ab101c-b6ca-4df6-a9e5-9af7bc08446c",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
