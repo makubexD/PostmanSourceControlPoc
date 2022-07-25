@@ -2729,37 +2729,37 @@
 	],
 	"variable": [
 		{
-			"id": "78b55b9b-d942-40fa-aa71-64da8c7e26d0",
+			"id": "995ed0ea-689f-4815-ae1a-83800df4dfd0",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "01a50b50-b31b-46cd-a01f-172073c92463",
+			"id": "bacd2fc4-66bc-48b9-9c4a-06225c098f12",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "2d7611bc-8a5b-4dff-930a-a01c4fb4dba2",
+			"id": "5fa1161e-550e-432d-bf6a-c3d5e71c8f67",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "92371f01-7d2e-4eea-bc70-548be09213db",
+			"id": "17eeea90-4210-4520-b603-d1ab8f68f89d",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "e93d3c8c-547e-4e8e-9e6b-71146aa68366",
+			"id": "7d48a97b-54ee-4ad1-82fb-10b5278a551c",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "ad405d0b-e8bd-48d4-b55a-f55816be8318",
+			"id": "c7558c7c-c6a0-4ff4-b1ea-21b10fd4781f",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
