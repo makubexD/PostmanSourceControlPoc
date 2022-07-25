@@ -2549,15 +2549,13 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "9232035e-5dfe-4f68-8a75-839466246574",
+						"id": "b43dc525-caf8-4fc2-83c9-3be703d9f0a0",
 						"type": "text/javascript",
 						"exec": [
-							"const LifeCampaigns = []; //['AFLC', 'AFQL', 'ASUP', 'COL', 'COLS', 'MLF', 'MLFQ', 'MLFS', 'PDP' ];",
-							"const Health_MA_Campaigns = ['CUY-HMA', 'CUY-AMA', 'CUY-ANMA']; //['CSC', 'AMA', 'ANMA', 'ANMG', 'ANMI', 'BCMA', 'HMA', 'KPMA', 'MAQL', 'OMA', 'SMA', 'THMA', 'WCMA'];",
 							"const Health_MS_Campaigns = []; //['AMS', 'MSQL', 'MMS', 'OMS', 'OMSP', 'OMSS'];",
 							"const Other_Campaigns = []; //['TRN'];",
 							"",
-							"const Campaigns = LifeCampaigns.concat(Health_MA_Campaigns, Health_MS_Campaigns, Other_Campaigns);",
+							"const Campaigns = Health_MS_Campaigns.concat(Other_Campaigns);",
 							"",
 							"",
 							"let campaignCounter = pm.collectionVariables.get(\"CampaignCounter\");",
@@ -2591,7 +2589,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a46ea53d-ad05-4461-b32d-743622600763",
+						"id": "76208fe7-729c-4f39-9a53-2162f365e52d",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -2683,31 +2681,31 @@
 	],
 	"variable": [
 		{
-			"id": "0e6761fc-89f0-4d65-a659-7cf861c7f282",
+			"id": "3fc80a53-4aff-405d-b218-3fa5a3f063b7",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "91cf8e91-f1ee-467c-8a86-3a74f0e8d852",
+			"id": "e2603ad8-26b3-46b0-8f50-fc2f6ccacf73",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "8e01ec44-e025-43a4-91b5-4273111129b2",
+			"id": "d275dd4a-ea75-4549-9edd-4711bdba50ca",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "070f09ce-d8e0-4a32-93b7-3de7b96b69c3",
+			"id": "f6452cbf-0c64-4176-ad18-cbd7c8994703",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "c9469821-a216-4c94-be31-6188acabb187",
+			"id": "89ab738d-4f87-4ab6-b3fc-e2bb1a9d4f5a",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
