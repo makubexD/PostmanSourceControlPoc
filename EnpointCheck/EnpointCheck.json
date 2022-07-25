@@ -1540,6 +1540,36 @@
 								],
 								"type": "text/javascript"
 							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "911ef849-7dd4-4541-b4d6-f40679e21e55",
+								"exec": [
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
+									"\r",
+									"\r",
+									"SetMarketingEndpoint(campaign)\r",
+									"SetCampaignParam(campaign)\r",
+									"\r",
+									"function SetMarketingEndpoint(campaign) {\r",
+									"    if ([\"CUY-MSQL\", \"CUY-MMS\"].includes(campaign)) {\r",
+									"        pm.collectionVariables.set(\"MarketingDefaultEndpoint\", \"marketing-v2\");\r",
+									"    }\r",
+									"}\r",
+									"\r",
+									"function SetCampaignParam(campaign) {\r",
+									"    if ([\"CUY-OMS\", \"CUY-OMSP\", \"CUY-OMSS\"].includes(campaign)) {\r",
+									"        // pm.collectionVariables.set(\"Campaign\", \"CUY-HMA\");\r",
+									"        pm.request.headers.add({\r",
+									"            key: \"CampaignDialerId\",\r",
+									"            value: campaign\r",
+									"        });\r",
+									"    }\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
 						}
 					],
 					"id": "d95bd888-0478-4100-8279-acc50b976f3d",
@@ -2719,37 +2749,37 @@
 	],
 	"variable": [
 		{
-			"id": "38d383ea-c850-494c-8288-ff4d856fcc7a",
+			"id": "9f806acb-8159-4b22-84d7-3396e6dd710e",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "71ed6d5d-91fe-4d79-991f-673048de30ef",
+			"id": "40f3bbb3-b3c4-4629-a299-88e3cd5b660c",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "3938cfd3-d622-45c6-9a4b-b4b18e2186b6",
+			"id": "36cab14a-1176-4fcd-aa23-081356a0e804",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "1694841a-6158-4661-8fe1-3fb3fcb4c44f",
+			"id": "21ff8d1c-044c-4db7-af86-7c1d7cebf133",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "ac21cc4a-41a3-4535-8bcb-fc066252ae99",
+			"id": "3f503bff-5b80-4487-8f77-5c87e9b6874a",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "cc952388-e54a-4c39-b4d0-35447c3b0642",
+			"id": "cfa326ee-3482-412c-9847-07e1a27a73f4",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
