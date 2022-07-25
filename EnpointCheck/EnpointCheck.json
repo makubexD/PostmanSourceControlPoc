@@ -1535,6 +1535,7 @@
 									"console.log(campaign)\r",
 									"console.log(\"BEGINNNNN\")\r",
 									"console.log(pm.request.url);\r",
+									"console.log(pm.request.headers);\r",
 									"console.log(\"END\")\r",
 									"\r",
 									"function SetMarketingEndpoint(campaign) {\r",
@@ -2734,37 +2735,37 @@
 	],
 	"variable": [
 		{
-			"id": "a8f578fe-3c8c-46ac-a931-c18a0c15c330",
+			"id": "8fc6b9da-c094-4593-8560-41429db33229",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "49c3aa90-a968-4998-8ab3-827fb0126e23",
+			"id": "598a4091-1222-467c-9c48-696c8e1f6a3d",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "ca3712cf-c406-4354-bf96-a914ddb2259b",
+			"id": "ab782709-6fe9-4b7d-b2c7-3d03dec313c8",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "c53c5934-b350-4275-8c0b-fc310b36339c",
+			"id": "d26b05ef-4cda-4d19-9b40-6d41bc4623d4",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "6177ca43-2ddb-4734-9bff-e99b0e1a9b8c",
+			"id": "5c6ec67b-6a8d-4af6-93e2-9542a7997eb8",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "24504729-a4f2-4c7e-bb4e-172a7f905e01",
+			"id": "f69526e0-d535-42e5-9c3b-638aaaea4c09",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
