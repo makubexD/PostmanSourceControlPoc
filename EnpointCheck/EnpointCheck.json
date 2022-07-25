@@ -19,7 +19,15 @@
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
-									"});"
+									"});\r",
+									"\r",
+									"\r",
+									"if (![\"CUY-MSQL\", \"CUY-AMA\"].includes(campaign)) {\r",
+									"    pm.test(\"Status code is 200\", function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"    });\r",
+									"}\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -2681,31 +2689,31 @@
 	],
 	"variable": [
 		{
-			"id": "8f745b05-205e-411b-a693-e61366b93d6a",
+			"id": "47f7deaf-42fa-4712-be5e-19b009bed9d7",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "e192a6b6-9f4c-4cb9-b0c0-797e4a3e7220",
+			"id": "9b7e9d0e-0424-40f0-8fb0-c41e04fcacfb",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "91af7bf8-5365-45c5-988c-b8b22c68a3be",
+			"id": "e6115e11-2521-455f-a5c1-b230d0c56e9e",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "41d1acce-04c1-4172-8dec-0983092176df",
+			"id": "7a2729e0-b541-4bc9-a983-f6fbff66122f",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "7818be97-6cfc-4303-83c3-f0e344b1e0ec",
+			"id": "dabc1faf-c515-4201-91ca-8510798c7c21",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
