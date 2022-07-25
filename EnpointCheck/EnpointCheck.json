@@ -1304,6 +1304,1303 @@
 			]
 		},
 		{
+			"name": "MS",
+			"item": [
+				{
+					"name": "TR - [TORO] Blending Time",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c4e0ed67-df34-467c-ab54-55600629d248",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "a1d30288-9c19-43d5-bf2e-7ebc6411eac2",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "e5fc0959-f0fe-48a0-8449-a83fd7c5c0fe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/blending?AgentDialerId=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"blending"
+							],
+							"query": [
+								{
+									"key": "AgentDialerId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [DNIS - IB]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c79b5930-a32a-43f6-b7bd-ebc2b8aeb28f",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3ee9cc77-ca84-4b0f-8b2a-02b77afe15e5",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "9ab030a9-c2b7-4814-a072-0cf0a64ec6ba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/campaigninfo?CampaignCode={{CampaignCode}}&SubCampaignCode=SB00&State=NY",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"campaigninfo"
+							],
+							"query": [
+								{
+									"key": "CampaignCode",
+									"value": "{{CampaignCode}}"
+								},
+								{
+									"key": "SubCampaignCode",
+									"value": "SB00"
+								},
+								{
+									"key": "State",
+									"value": "NY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TR - [Standard] Fields",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f46e33e7-f062-463f-bc64-51aa935b7a01",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "bb721769-8e62-4f24-987f-3eb0b079fd4c",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "7b5ee079-9e8a-4109-ba9f-42a37372c5dd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/fields?For=marketing",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"fields"
+							],
+							"query": [
+								{
+									"key": "For",
+									"value": "marketing"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Standard] Marketing",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3354f076-b24e-4e01-930f-8b3b35f220e7",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "d95bd888-0478-4100-8279-acc50b976f3d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/marketing?Did=&Cid=&SessionId=&Afid=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"marketing"
+							],
+							"query": [
+								{
+									"key": "Did",
+									"value": ""
+								},
+								{
+									"key": "Cid",
+									"value": ""
+								},
+								{
+									"key": "SessionId",
+									"value": ""
+								},
+								{
+									"key": "Afid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Standard] Notifications",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4bd5ad80-8aad-4854-85d2-264031507b9d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "c268f314-c626-4ef7-9787-5589a2f7824c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/notifications?LeadType=&SessionId=&TransferSourceCampaignDialerID=&Afid=&Tcpa=&State=&AgentName=&ZipCode=&TransferTo=&DID=&IsOakStreet=&LeadDateOfBirth=&IsModelB=&CallType=&Cid=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"notifications"
+							],
+							"query": [
+								{
+									"key": "LeadType",
+									"value": ""
+								},
+								{
+									"key": "SessionId",
+									"value": ""
+								},
+								{
+									"key": "TransferSourceCampaignDialerID",
+									"value": ""
+								},
+								{
+									"key": "Afid",
+									"value": ""
+								},
+								{
+									"key": "Tcpa",
+									"value": ""
+								},
+								{
+									"key": "State",
+									"value": ""
+								},
+								{
+									"key": "AgentName",
+									"value": ""
+								},
+								{
+									"key": "ZipCode",
+									"value": ""
+								},
+								{
+									"key": "TransferTo",
+									"value": ""
+								},
+								{
+									"key": "DID",
+									"value": ""
+								},
+								{
+									"key": "IsOakStreet",
+									"value": ""
+								},
+								{
+									"key": "LeadDateOfBirth",
+									"value": ""
+								},
+								{
+									"key": "IsModelB",
+									"value": ""
+								},
+								{
+									"key": "CallType",
+									"value": ""
+								},
+								{
+									"key": "Cid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Standard] Processes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f41f395d-a91e-4c2c-ae8e-b20466e2f1fa",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "258042d0-682e-447d-ba3b-c4ab26f2298a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/allowed-processes"
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Disposition] Main",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "81be08e0-a5b4-410d-a7a5-48645be54b6c",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "53f1920f-be3d-4b8d-b040-596660a6ce16",
+								"exec": [
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
+									"\r",
+									"SetCampaignDispositionEndpoint(campaign)\r",
+									"\r",
+									"\r",
+									"function SetCampaignDispositionEndpoint(campaign) {\r",
+									"    if ([\"CUY-ANMA\", \"CUY-AMA\"].includes(campaign)) {\r",
+									"        pm.collectionVariables.set(\"Campaign\", \"CUY-HMA\");\r",
+									"    }\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "5a48108b-b62a-4d7a-8730-c58464c33918",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/disposition?LeadGender=&LeadType=&LeadMaidenName=&LeadState=&LeadMiddleName=&SessionId=&PartnerSendEmailCallConsent=&CallType=&SelectedTransferName=&DispositionGroupCode=&TransferIsStopped=&Tcpa=&TransferFulfilled=&AgentName=&LeadAfid=&LeadZipCode=&LeadPhoneNumber=&LeadLastName=&LeadStreet2=&LeadCity=&LeadEmailAddress=&LeadTFN=&AgentEMail=&LeadFirstName=&LeadDateOfBirth=&DispositionCode=&LeadPhoneAreaCode=&LeadExternalId=&CampaignDialerId=&Carrier=&LeadStreet1=&LeadPhone=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"disposition"
+							],
+							"query": [
+								{
+									"key": "LeadGender",
+									"value": ""
+								},
+								{
+									"key": "LeadType",
+									"value": ""
+								},
+								{
+									"key": "LeadMaidenName",
+									"value": ""
+								},
+								{
+									"key": "LeadState",
+									"value": ""
+								},
+								{
+									"key": "LeadMiddleName",
+									"value": ""
+								},
+								{
+									"key": "SessionId",
+									"value": ""
+								},
+								{
+									"key": "PartnerSendEmailCallConsent",
+									"value": ""
+								},
+								{
+									"key": "CallType",
+									"value": ""
+								},
+								{
+									"key": "SelectedTransferName",
+									"value": ""
+								},
+								{
+									"key": "DispositionGroupCode",
+									"value": ""
+								},
+								{
+									"key": "TransferIsStopped",
+									"value": ""
+								},
+								{
+									"key": "Tcpa",
+									"value": ""
+								},
+								{
+									"key": "TransferFulfilled",
+									"value": ""
+								},
+								{
+									"key": "AgentName",
+									"value": ""
+								},
+								{
+									"key": "LeadAfid",
+									"value": ""
+								},
+								{
+									"key": "LeadZipCode",
+									"value": ""
+								},
+								{
+									"key": "LeadPhoneNumber",
+									"value": ""
+								},
+								{
+									"key": "LeadLastName",
+									"value": ""
+								},
+								{
+									"key": "LeadStreet2",
+									"value": ""
+								},
+								{
+									"key": "LeadCity",
+									"value": ""
+								},
+								{
+									"key": "LeadEmailAddress",
+									"value": ""
+								},
+								{
+									"key": "LeadTFN",
+									"value": ""
+								},
+								{
+									"key": "AgentEMail",
+									"value": ""
+								},
+								{
+									"key": "LeadFirstName",
+									"value": ""
+								},
+								{
+									"key": "LeadDateOfBirth",
+									"value": ""
+								},
+								{
+									"key": "DispositionCode",
+									"value": ""
+								},
+								{
+									"key": "LeadPhoneAreaCode",
+									"value": ""
+								},
+								{
+									"key": "LeadExternalId",
+									"value": ""
+								},
+								{
+									"key": "CampaignDialerId",
+									"value": ""
+								},
+								{
+									"key": "Carrier",
+									"value": ""
+								},
+								{
+									"key": "LeadStreet1",
+									"value": ""
+								},
+								{
+									"key": "LeadPhone",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Standard] Create Decision",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b1a00b16-ccb9-4ce0-a408-60f850a712e2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "075e3140-50df-4b67-bf20-208b0345a6f5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/create-decision?NewLeadDateOfBirth=&NewLeadAddressStreet1=&NewLeadTransferTo=&NewLeadAddressStreet2=&FoundLeadAddressStreet2=&NewLeadAddressState=&NewLeadFirstName=&Did=&NewLeadAddressCity=&FoundLeadId=&NewLeadLastName=&NewLeadAddressCountyState=&NewLeadCid=&NewLeadAddressPostalCode=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"create-decision"
+							],
+							"query": [
+								{
+									"key": "NewLeadDateOfBirth",
+									"value": ""
+								},
+								{
+									"key": "NewLeadAddressStreet1",
+									"value": ""
+								},
+								{
+									"key": "NewLeadTransferTo",
+									"value": ""
+								},
+								{
+									"key": "NewLeadAddressStreet2",
+									"value": ""
+								},
+								{
+									"key": "FoundLeadAddressStreet2",
+									"value": ""
+								},
+								{
+									"key": "NewLeadAddressState",
+									"value": ""
+								},
+								{
+									"key": "NewLeadFirstName",
+									"value": ""
+								},
+								{
+									"key": "Did",
+									"value": ""
+								},
+								{
+									"key": "NewLeadAddressCity",
+									"value": ""
+								},
+								{
+									"key": "FoundLeadId",
+									"value": ""
+								},
+								{
+									"key": "NewLeadLastName",
+									"value": ""
+								},
+								{
+									"key": "NewLeadAddressCountyState",
+									"value": ""
+								},
+								{
+									"key": "NewLeadCid",
+									"value": ""
+								},
+								{
+									"key": "NewLeadAddressPostalCode",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Standard] Populate Inbound",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "065d1e80-92fe-40c5-a465-5a6d4b1d75b0",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "8f2f1f00-b263-4934-b2f0-79a3e55005f8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/populate-inbound?LeadAfid=&LeadId=&Tfn=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"populate-inbound"
+							],
+							"query": [
+								{
+									"key": "LeadAfid",
+									"value": ""
+								},
+								{
+									"key": "LeadId",
+									"value": ""
+								},
+								{
+									"key": "Tfn",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TR - [Standard] Dialing Strategy Fields",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "310fc923-c91e-4c50-9fd2-a060d6a9664e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "148885a7-591f-4980-a283-5de7d6883fa8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/dialing-strategy-fields?For=&Trigger=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"dialing-strategy-fields"
+							],
+							"query": [
+								{
+									"key": "For",
+									"value": ""
+								},
+								{
+									"key": "Trigger",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [TORO] Priority",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3cef20f8-b212-46a4-aff9-87716e56e152",
+								"exec": [
+									"pm.test(\"Status code is 400 (Bad Request Error: Missing input parameters)\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "14b10ccb-1e35-4aa1-a850-05dd4f5ec39e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/dialing-strategy-priority?Cid=&CreateReason=&LeadDateTime=&Afid=&State=&IsCallMeNow=&StatusReason=&AttemptsCount=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"dialing-strategy-priority"
+							],
+							"query": [
+								{
+									"key": "Cid",
+									"value": ""
+								},
+								{
+									"key": "CreateReason",
+									"value": ""
+								},
+								{
+									"key": "LeadDateTime",
+									"value": ""
+								},
+								{
+									"key": "Afid",
+									"value": ""
+								},
+								{
+									"key": "State",
+									"value": ""
+								},
+								{
+									"key": "IsCallMeNow",
+									"value": ""
+								},
+								{
+									"key": "StatusReason",
+									"value": ""
+								},
+								{
+									"key": "AttemptsCount",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [DNIS - OB]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d2c411f8-e301-40f9-bf55-022aefe442d4",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "a4560805-a416-452d-add3-8a53b4d9bf71",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/dnis?CreateReason=&Trigger=&State=&TransferSourceCampaignDialerId=&Cid=&Pseudodnis=&TransferSourceLeadType=&RecalculateReason=&TFN=&InitialAttemptsCount=&AttemptsCount=&Afid=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"dnis"
+							],
+							"query": [
+								{
+									"key": "CreateReason",
+									"value": ""
+								},
+								{
+									"key": "Trigger",
+									"value": ""
+								},
+								{
+									"key": "State",
+									"value": ""
+								},
+								{
+									"key": "TransferSourceCampaignDialerId",
+									"value": ""
+								},
+								{
+									"key": "Cid",
+									"value": ""
+								},
+								{
+									"key": "Pseudodnis",
+									"value": ""
+								},
+								{
+									"key": "TransferSourceLeadType",
+									"value": ""
+								},
+								{
+									"key": "RecalculateReason",
+									"value": ""
+								},
+								{
+									"key": "TFN",
+									"value": ""
+								},
+								{
+									"key": "InitialAttemptsCount",
+									"value": ""
+								},
+								{
+									"key": "AttemptsCount",
+									"value": ""
+								},
+								{
+									"key": "Afid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Standard] Caller Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "304200a0-ecb1-499b-a074-b6b745a0bccb",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "72711849-c19f-4221-8501-a6c47f956b2c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/callerid?Cid=&Afid=&AreaCode=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"callerid"
+							],
+							"query": [
+								{
+									"key": "Cid",
+									"value": ""
+								},
+								{
+									"key": "Afid",
+									"value": ""
+								},
+								{
+									"key": "AreaCode",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Standard] Dialing Info Logic",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a293459-9d31-4587-9959-53fd4f179d97",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "ea10ef82-517d-4464-9a14-5f9df689559f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/dialing-info?CreateReason=&State=&Afid=&Cid=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"dialing-info"
+							],
+							"query": [
+								{
+									"key": "CreateReason",
+									"value": ""
+								},
+								{
+									"key": "State",
+									"value": ""
+								},
+								{
+									"key": "Afid",
+									"value": ""
+								},
+								{
+									"key": "Cid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Cadence] Cadence Calculation Process",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1bcc162a-b541-4ca4-a119-7e4fbfac32a4",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "22365259-0066-4fdd-bf1c-5cbe85dc40fb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/dialing-strategy-cadence?LeadAttemptsCount=&LeadState=&SessionCallType=&SessionDispositionCode=&LeadCreateReason=&LeadCid=&LeadAfid=&LeadDialingStrategyCadenceScenario=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"dialing-strategy-cadence"
+							],
+							"query": [
+								{
+									"key": "LeadAttemptsCount",
+									"value": ""
+								},
+								{
+									"key": "LeadState",
+									"value": ""
+								},
+								{
+									"key": "SessionCallType",
+									"value": ""
+								},
+								{
+									"key": "SessionDispositionCode",
+									"value": ""
+								},
+								{
+									"key": "LeadCreateReason",
+									"value": ""
+								},
+								{
+									"key": "LeadCid",
+									"value": ""
+								},
+								{
+									"key": "LeadAfid",
+									"value": ""
+								},
+								{
+									"key": "LeadDialingStrategyCadenceScenario",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TR - [Standard] CallEvents",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4ca99a98-a8eb-4faa-8f01-21d540a08be6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "b02fa332-fd61-470b-af98-806e4c51ca72",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/call-events?DispositionCode=&event=",
+							"protocol": "https",
+							"host": [
+								"lm",
+								"cignium",
+								"com"
+							],
+							"path": [
+								"run",
+								"cignium",
+								"{{Campaign}}",
+								"{{CurrentEnv}}",
+								"call-events"
+							],
+							"query": [
+								{
+									"key": "DispositionCode",
+									"value": ""
+								},
+								{
+									"key": "event",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PR - [Call Terminated Event] Main",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2345f4ef-9425-4074-b36b-8eb24940127b",
+								"exec": [
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
+									"\r",
+									"if (![\"CUY-ANMA\", \"CUY-AMA\"].includes(campaign)) {\r",
+									"    pm.test(\"Status code is 500 (Internal Server Error: Missing input parameters)\", function () {\r",
+									"        pm.response.to.have.status(500);\r",
+									"    });    \r",
+									"}\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "07587d01-de55-4a4d-8444-fbf292578fb7",
+								"exec": [
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
+									"\r",
+									"\r",
+									"if ([\"CUY-ANMA\", \"CUY-AMA\"].includes(campaign)) {\r",
+									"    postman.setNextRequest(null);\r",
+									"}\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "3d148e6c-abd5-4763-8385-6ce4069ef117",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/call-terminated-event"
+					},
+					"response": []
+				}
+			],
+			"id": "b9b38d76-4eb2-442d-b015-d4d4165447e8",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9232035e-5dfe-4f68-8a75-839466246574",
+						"type": "text/javascript",
+						"exec": [
+							"const LifeCampaigns = []; //['AFLC', 'AFQL', 'ASUP', 'COL', 'COLS', 'MLF', 'MLFQ', 'MLFS', 'PDP' ];",
+							"const Health_MA_Campaigns = ['CUY-HMA', 'CUY-AMA', 'CUY-ANMA']; //['CSC', 'AMA', 'ANMA', 'ANMG', 'ANMI', 'BCMA', 'HMA', 'KPMA', 'MAQL', 'OMA', 'SMA', 'THMA', 'WCMA'];",
+							"const Health_MS_Campaigns = []; //['AMS', 'MSQL', 'MMS', 'OMS', 'OMSP', 'OMSS'];",
+							"const Other_Campaigns = []; //['TRN'];",
+							"",
+							"const Campaigns = LifeCampaigns.concat(Health_MA_Campaigns, Health_MS_Campaigns, Other_Campaigns);",
+							"",
+							"",
+							"let campaignCounter = pm.collectionVariables.get(\"CampaignCounter\");",
+							"campaignCounter++;",
+							"",
+							"/*",
+							"//TODO: To create custom endpoint by campaign/request",
+							"console.log('>>>>>>>>>>>>>>>>>>>>>>>> Current Campaign Counter --> ' + campaignCounter  + ' in --> ' + pm.info.requestName);  ",
+							"*/",
+							"",
+							"let cuyCampaign = Campaigns[campaignCounter - 1];",
+							"let cuyCampaignWithoutPrefix = cuyCampaign.replace('CUY-', '');",
+							"",
+							"pm.collectionVariables.set(\"Campaign\", cuyCampaign);",
+							"pm.collectionVariables.set(\"CampaignCode\", cuyCampaignWithoutPrefix);",
+							"",
+							"if (Campaigns.length > campaignCounter){",
+							"    pm.collectionVariables.set(\"CampaignCounter\", campaignCounter);",
+							"    if (pm.info.requestName == 'PR - [Call Terminated Event] Main' && [\"CUY-ANMA\", \"CUY-AMA\"].includes(cuyCampaign)){",
+							"        postman.setNextRequest(null);",
+							"    }else {",
+							"        postman.setNextRequest(pm.info.requestId);",
+							"    }",
+							"    ",
+							"}else{",
+							"    pm.collectionVariables.set(\"CampaignCounter\", 0);",
+							"}"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a46ea53d-ad05-4461-b32d-743622600763",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
 			"name": "MA-SHARED",
 			"item": [
 				{
@@ -1386,31 +2683,31 @@
 	],
 	"variable": [
 		{
-			"id": "a216e64a-91d7-4f32-be98-626c07900472",
+			"id": "0e6761fc-89f0-4d65-a659-7cf861c7f282",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "8d8b6cae-ea00-4756-a2d2-18c9cf590ed5",
+			"id": "91cf8e91-f1ee-467c-8a86-3a74f0e8d852",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "3e80d7c4-1b23-417b-b45a-6e36c32748f8",
+			"id": "8e01ec44-e025-43a4-91b5-4273111129b2",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "15a73e8f-3594-488c-a729-88c38bb66db0",
+			"id": "070f09ce-d8e0-4a32-93b7-3de7b96b69c3",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "46894ee3-9218-4b0d-a8c9-6cd58fbe4d25",
+			"id": "c9469821-a216-4c94-be31-6188acabb187",
 			"key": "CampaignCode",
 			"value": "HMA",
 			"type": "string"
