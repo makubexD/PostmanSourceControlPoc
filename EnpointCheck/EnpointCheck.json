@@ -1768,8 +1768,8 @@
 									"\r",
 									"\r",
 									"function SetCampaignDispositionEndpoint(campaign) {\r",
-									"    if ([\"CUY-ANMA\", \"CUY-AMA\"].includes(campaign)) {\r",
-									"        pm.collectionVariables.set(\"Campaign\", \"CUY-HMA\");\r",
+									"    if ([\"CUY-OMSP\", \"CUY-AMA\"].includes(campaign)) {\r",
+									"        pm.collectionVariables.set(\"Campaign\", \"CUY-OMSS\");\r",
 									"    }\r",
 									"}\r",
 									"\r",
@@ -2770,37 +2770,37 @@
 	],
 	"variable": [
 		{
-			"id": "c91a7c4a-4516-414f-9552-1107bbc5d30c",
+			"id": "cf9efe51-0b26-4628-965b-15943ef63dbf",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "09ff7738-0e88-479b-9582-c002404e0e21",
+			"id": "dcde9e6a-3076-45c0-aa75-6e75232823e6",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "d61a630e-6ffd-4dbd-95ac-c2905136527f",
+			"id": "0544c2ab-4bb3-4610-aaa0-4125331d1f54",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "08a8ab09-64cf-42a8-8949-7ee237b5555a",
+			"id": "76a54b12-f8f5-4cda-b7f8-81e101975266",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "47beddee-5dfe-41c2-bc0a-e073daf65aea",
+			"id": "ea9514ac-f9c3-4d42-8957-ce6de7af739f",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "c2ccef59-a5e2-436b-acee-cf7763b247cb",
+			"id": "9e4d2af1-f84d-4a2c-9b21-f136c2ce96ff",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
