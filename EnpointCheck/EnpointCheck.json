@@ -2771,37 +2771,37 @@
 	],
 	"variable": [
 		{
-			"id": "11e5536a-bbc4-44fd-baf2-09dd73e84387",
+			"id": "dbf5cdfa-5d70-42ac-bb05-2d18155b91a1",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "d6847705-40e1-48e2-aafe-e6a14a442134",
+			"id": "c9be4ee0-65f2-410d-9ce0-11b996772f8d",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "620300bf-eac9-4859-ba27-b817a787b189",
+			"id": "c765c78e-975a-40ba-9712-48974a7dc116",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "184bfb42-2706-4b3f-9fbd-106d04e6aaaa",
+			"id": "f1cd0a09-4c52-4fff-a316-58561e7135e6",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "1670a68f-fa0b-4570-9376-a563b08fc548",
+			"id": "60c54bcd-cf08-44ec-b5aa-7fe82edeab81",
 			"key": "CampaignCode",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "8f0089ae-3fe7-4f27-b50e-e5f9c2d3dd12",
+			"id": "b05df69f-a4c3-4db4-a9db-9c1b5c1989ca",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
