@@ -2181,7 +2181,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/dialing-strategy-priority?Cid=&CreateReason=&LeadDateTime=2022-07-26+16%3a01%3a14Z&Afid=&State=&IsCallMeNow=&StatusReason=&AttemptsCount=",
+							"raw": "https://lm.cignium.com/run/cignium/{{Campaign}}/{{CurrentEnv}}/dialing-strategy-priority?Cid=&CreateReason=&LeadDateTime=2022-07-26+16%3a01%3a14Z&Afid=&State=&IsCallMeNow=False&StatusReason=&AttemptsCount=",
 							"protocol": "https",
 							"host": [
 								"lm",
@@ -2218,7 +2218,7 @@
 								},
 								{
 									"key": "IsCallMeNow",
-									"value": ""
+									"value": "False"
 								},
 								{
 									"key": "StatusReason",
@@ -2770,37 +2770,37 @@
 	],
 	"variable": [
 		{
-			"id": "33dd293f-101f-446b-ba64-430bce5a3a48",
+			"id": "214df70e-9c00-47f9-95d0-c645ede9b95a",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "b851b115-f96f-49c1-ab4f-5f5462d5eb42",
+			"id": "6d253335-7453-45c3-bc58-00ccb6f7d022",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "d3e1ad3b-05cf-4e54-9151-a51c94517cff",
+			"id": "ce58b769-780e-4dd2-a005-11aaa8baac24",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "2a84af9b-a0aa-4275-89db-9463b9b65548",
+			"id": "126ae8d4-df8f-4e75-bb5c-7512fb31ae37",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "03f76701-d12c-4787-9d3b-a9742d7a2e60",
+			"id": "28c1b51b-a388-4cf7-af94-1338690ea10a",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "014d4377-bf9e-4b6d-b64b-d9e1a895a792",
+			"id": "ddd19ee5-0a0b-44f5-a877-43ec053a7e6f",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
