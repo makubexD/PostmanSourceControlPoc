@@ -2167,8 +2167,8 @@
 								"exec": [
 									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
 									"\r",
-									"pm.test(\"Status code is 400 (Bad Request Error: Missing input parameters)\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
+									"pm.test(`Status code is 200 for campaign ${campaign}`, function () {\r",
+									"    pm.response.to.have.status(200);   \r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -2777,37 +2777,37 @@
 	],
 	"variable": [
 		{
-			"id": "c8b580f8-5c84-46ea-9cb7-060a462f7767",
+			"id": "20351441-97a0-4980-9488-98369c0dbc20",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5ffa666f-e1aa-4e0f-b658-c00f6cea4ab4",
+			"id": "6e06cfbf-9d79-4e3d-8473-7f589d962665",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "827220cf-4b32-4726-9066-8d1a214c2d8f",
+			"id": "4f398036-46b2-4381-a011-d940f7b68184",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "30d38e4a-98f9-4ec8-bd8d-a232c4014eb4",
+			"id": "18ad13cc-2fe4-4ae8-8961-a27afa20ea61",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "148b7370-7ba1-4f48-bd16-f3915085d5e0",
+			"id": "f14be4d5-df63-4685-9e00-7edded90328e",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "5ee22cca-75e8-4819-9229-6a46da461dec",
+			"id": "6787f40f-7baa-4a51-b3bd-02aa48d8c6f4",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
