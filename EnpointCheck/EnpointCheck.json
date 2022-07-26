@@ -2628,7 +2628,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"lead\" : {\r\n        \"id\": 11111111\r\n    },\r\n    \"call\" : {\r\n\r\n    }\r\n}",
+							"raw": "{\r\n    \"lead\" : {\r\n        \"id\": 11111111\r\n    },\r\n    \"call\" : {\r\n        \"disposition\": {\r\n            \"id\": 41,\r\n            \"code\": \"SE\",\r\n            \"name\": \"Sale\",\r\n            \"description\": null,\r\n            \"dialerDisposition\": null,\r\n            \"dialerDispositionId\": 1,\r\n            \"dispositionGroupId\": 1,\r\n            \"dispositionGroup\": {\r\n                \"id\": 1,\r\n                \"code\": \"SA\",\r\n                \"name\": \"Sale\",\r\n                \"description\": \"Indicates a completed sale\"\r\n            }\r\n        }\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2772,37 +2772,37 @@
 	],
 	"variable": [
 		{
-			"id": "f77c1804-54fd-4cbc-ae18-8ccfb140f6fa",
+			"id": "71997895-7b77-4667-8f79-4da56118d372",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "0cb2c456-c741-4242-978a-d8bdb92f828d",
+			"id": "6e45607e-60e2-4e60-8551-64588a346614",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "10e41205-5e31-4586-bd68-da71eb3b7421",
+			"id": "b6bec584-d5a3-460c-a4fd-e51068bda200",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "ced9b569-4ae2-4a74-886f-7e3bd739be7b",
+			"id": "c07c0f2a-5a38-4e12-b337-af4c66aa59ac",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "0a288c56-6236-42e6-9b4c-083668302c9a",
+			"id": "2e9f22ea-35e9-44a4-92a0-6a9462f5d95c",
 			"key": "CampaignCode",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "a6598628-0aaa-4ee6-af9d-4fcd21471f29",
+			"id": "62d17317-6c0a-4b43-b6e8-0ca724a89e81",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
