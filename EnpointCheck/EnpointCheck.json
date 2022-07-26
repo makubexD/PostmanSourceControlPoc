@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "HMA",
+			"name": "MA",
 			"item": [
 				{
 					"name": "TR - [TORO] Blending Time",
@@ -2773,37 +2773,37 @@
 	],
 	"variable": [
 		{
-			"id": "9adac93b-a93c-4234-9a48-7d892e87805c",
+			"id": "d0f982d0-a394-4230-a7eb-3c9796197f83",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "d75473ee-acca-4624-a564-8c40cfb17439",
+			"id": "f9811bb3-7bec-4cc6-8dc8-17cbab0dd560",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "d073e920-6eee-4b2d-a0b5-405aff4e0f00",
+			"id": "171f9501-dcc9-4702-a624-5db88f086d66",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "1552a371-d333-41d3-a9e1-5e0ea283186b",
+			"id": "b34c99ab-ee21-487b-bca2-1405bf9a9d47",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "7c101f55-6470-42ba-93b4-d55d3e0467fd",
+			"id": "59f5c6a0-d4e4-4994-a396-260806eeee87",
 			"key": "CampaignCode",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "f3fd9243-c4a4-4d1c-b03e-242858136f2f",
+			"id": "9c06e193-ff1a-410b-859d-d92b1e15c4aa",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
