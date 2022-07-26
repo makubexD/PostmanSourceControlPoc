@@ -1750,7 +1750,9 @@
 							"script": {
 								"id": "81be08e0-a5b4-410d-a7a5-48645be54b6c",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
+									"\r",
+									"pm.test(`Status code is 200 for campaign ${campaign}`, function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
@@ -2744,37 +2746,37 @@
 	],
 	"variable": [
 		{
-			"id": "a70ccf36-a06f-406b-a0f4-a93508431608",
+			"id": "81e26e71-55fa-4c68-b209-cb61b1b21465",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "b4ad5503-49c3-456d-80a2-b8fc038b1e72",
+			"id": "d8b2e03b-8252-4703-8610-35b9bf9f74ca",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "92f03b0e-2f81-4aa2-94f7-ffd76f76b958",
+			"id": "03c5cce4-09c0-4f76-aa33-feac5126bb35",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "3ad23b44-d98e-43be-aeab-56a96827c90e",
+			"id": "cb52ccbb-98ca-4985-9929-dae3358ba209",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "26a3770d-8699-48b2-ae02-5e4ff37a32be",
+			"id": "3fd6d7a3-888c-4a91-812a-9ffa2f077975",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "49823843-2dba-4288-a781-51e95732dfb5",
+			"id": "34bba537-f9cf-4ad1-ae43-0bf17910f8fc",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
