@@ -2627,7 +2627,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \r\n}",
+							"raw": "{\r\n    \"lead\" : {\r\n\r\n    },\r\n    \"call\" : {\r\n        \r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2770,37 +2770,37 @@
 	],
 	"variable": [
 		{
-			"id": "da37d962-a40a-4d6d-88bf-9f99185ab3d6",
+			"id": "153dac76-7989-43b1-af39-1aa874e99923",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "e5bbc683-60f8-4bf2-85a1-9410b52ce8a3",
+			"id": "905a9f13-0a0e-4186-a868-97412d89a9e9",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "2b017204-9bda-4b8f-b9e7-3397b9c7bbf7",
+			"id": "9a16e91c-374d-4c4b-9230-427d9730b68a",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5ea6c7e6-2947-4055-8260-b22656677892",
+			"id": "a1ea05df-9731-49d9-9429-ec1fa9cbc48b",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "e0a4ef2c-cf90-4f71-bf17-fab5075d0e79",
+			"id": "0785d910-e756-4a82-a5d3-04d9c8cbeb36",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "44209d74-ef7e-4120-96f4-309f1d6614f2",
+			"id": "0d6c689f-f661-43c7-b3c0-0e7b2a683a00",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
