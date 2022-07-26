@@ -2597,7 +2597,7 @@
 									"\r",
 									"if ([\"CUY-MMS\", \"CUY-OMS\", \"OMSP\", \"OMSS\"].includes(campaign)) {\r",
 									"    pm.test(`Status code is 200 for campaign ${campaign}`, function () {\r",
-									"        pm.response.to.have.status(500);\r",
+									"        pm.response.to.have.status(200);\r",
 									"    });\r",
 									"}else {\r",
 									"    pm.test(\"Status code is 500 (Internal Server Error: Missing input parameters)\", function () {\r",
@@ -2771,37 +2771,37 @@
 	],
 	"variable": [
 		{
-			"id": "c1a93981-153a-4dcd-a300-8ae1135aae1a",
+			"id": "5cc6ed75-9d34-4e62-bcad-9e2a06fe624c",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "6248b566-1d2f-4ccc-90f4-596b7f2a6da8",
+			"id": "709812ae-ae11-4756-b2c7-db41712ef28b",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "db7a6f78-f3e5-4bb2-9399-66204972131a",
+			"id": "f89eaf25-1111-4960-8d39-c69ed78472f5",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "23a8f2a1-6f4e-4163-9de2-5e46caa35519",
+			"id": "13afc7bd-fbd3-417b-92d1-2f44a688b2fd",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "2ad4f824-a8fd-4f3a-9850-cb6b98734fe5",
+			"id": "fed62be3-c812-4f78-a86f-60f74f6482f5",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "568959ea-7810-4f1d-bd64-7652a3c97ffd",
+			"id": "254d5e82-9e1d-437d-8e2c-363e4d53a878",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
