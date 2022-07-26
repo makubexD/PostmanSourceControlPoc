@@ -1764,14 +1764,25 @@
 								"exec": [
 									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
 									"\r",
-									"SetCampaignDispositionEndpoint(campaign)\r",
+									"SetCampaignDispositionEndpoint(campaign);\r",
+									"SetCampaignParam(campaign);\r",
 									"\r",
 									"\r",
 									"function SetCampaignDispositionEndpoint(campaign) {\r",
 									"    if ([\"CUY-ANMA\", \"CUY-AMA\"].includes(campaign)) {\r",
 									"        pm.collectionVariables.set(\"Campaign\", \"CUY-HMA\");\r",
 									"    }\r",
-									"}"
+									"}\r",
+									"\r",
+									"function SetCampaignParam(campaign) {\r",
+									"    if ([\"CUY-AMS\", \"CUY-OMSP\", \"CUY-OMSS\"].includes(campaign)) {        \r",
+									"        pm.request.url.addQueryParams({\r",
+									"            key: \"DispositionName\",\r",
+									"            value: \"\"\r",
+									"        });        \r",
+									"    }\r",
+									"}\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -2760,37 +2771,37 @@
 	],
 	"variable": [
 		{
-			"id": "921ce855-603c-4195-be49-362f7ab12e94",
+			"id": "0bc3d8c2-7193-4584-9b09-d4ba8bc5e0ca",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "5427be6d-a7d7-46dc-bca9-a74892f73ebf",
+			"id": "333d38d9-d709-40c6-9c19-9a110b312300",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "000afbfe-5a62-4fb1-ad24-de204505037b",
+			"id": "e8a27173-d050-4bb4-8140-a088c503c0eb",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "4ac81c41-331f-4b64-8c8f-26a1a9e50da6",
+			"id": "08372a92-d7eb-4813-be36-09dd1352706e",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "852e4ef4-bce3-4174-bc39-bc4d42ad6e08",
+			"id": "d8946d39-084c-4761-98b0-92fccc1f9358",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "63cc0f38-9d60-420d-82b3-a84b3755334f",
+			"id": "4111f3d2-14d1-41dd-b3f2-b228e5c7726f",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
