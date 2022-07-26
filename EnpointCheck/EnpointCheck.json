@@ -2751,7 +2751,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4cc7cf01-f945-46e5-badf-c449972dc9ac",
+				"id": "22935a2b-beb2-4a7a-9d77-c81b900b4801",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2761,7 +2761,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "c014a139-cc71-42aa-8587-163d4d378d46",
+				"id": "23bd3f2b-c77c-45e3-ad9c-cc6cf5dedcd3",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2771,37 +2771,37 @@
 	],
 	"variable": [
 		{
-			"id": "c2f5accc-cc29-4723-9cdf-46ea6386aa14",
+			"id": "2f91d1e5-ec38-4655-819e-62d0e6104303",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "41845801-11f0-4191-81b0-10a0425f8e74",
+			"id": "6b59e9eb-74a5-41a2-9ff6-09daffc641ee",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "e5b2455a-dc90-473c-8d62-89e280625cd9",
+			"id": "7b42ea7a-59f5-46d8-b6e1-e7cee25b0e26",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "4455585e-f240-431f-b25c-e7508e7b14be",
+			"id": "a51ab470-ac07-41f4-98fd-4da47e65c0ba",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "45fc3188-84e8-4cea-a088-f5797d2b0e5b",
+			"id": "b17ce679-f781-4851-83bc-1ac7adfe9aa4",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "61c79cea-3a35-496c-b8de-cc670b82edaf",
+			"id": "a1d53af7-7449-41a8-9024-ae615d3e7326",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
