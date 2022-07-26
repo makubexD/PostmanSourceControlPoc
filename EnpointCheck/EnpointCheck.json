@@ -1332,9 +1332,18 @@
 							"script": {
 								"id": "c4e0ed67-df34-467c-ab54-55600629d248",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
+									"let campaign = (pm.iterationData.get(\"Campaign\") || pm.collectionVariables.get(\"Campaign\") || '');\r",
+									"\r",
+									"if ([\"CUY-MSQL\", \"CUY-OMSP\", \"CUY-OMSS\"].includes(campaign)) {\r",
+									"    pm.test(`Status code is 404 since this endpoint doesn't exist in ${campaign}`, function () {\r",
+									"        pm.response.to.have.status(404);\r",
+									"    });\r",
+									"}else{\r",
+									"    pm.test(`Status code is 200 for campaign ${campaign}`, function () {\r",
+									"        pm.response.to.have.status(200);\r",
+									"    });\r",
+									"}\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -2733,37 +2742,37 @@
 	],
 	"variable": [
 		{
-			"id": "8662ee73-c3a8-4e8b-a081-57f3475e5e22",
+			"id": "a645f52a-5ac6-4f5c-958b-4e5055d687d1",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "cb1b75db-3c65-4ebc-a766-3736f35a3b18",
+			"id": "cdb2fb06-2f9d-4d7e-bac9-a0d3bef316e4",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "9d6dc69f-ec6c-4e8c-a913-02a581fe71c5",
+			"id": "5883edd4-ab61-47cb-909f-e5f104c2c2f5",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "ccff825b-e41f-48db-9232-6477ce63b0d3",
+			"id": "9f738b02-7149-4d02-936c-f8c0389a8582",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "70a4d91f-6407-4a3c-8a31-ed8317c00f17",
+			"id": "d09bf903-4d14-4fac-b0ea-c62a9ae65ab6",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "e9626a3d-4422-480d-9b90-aecdfb6f6761",
+			"id": "2ca1b3f9-f02b-4c5e-88ff-9e2dd29f64fd",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
