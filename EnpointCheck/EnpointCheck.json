@@ -1548,8 +1548,7 @@
 									"}\r",
 									"\r",
 									"function SetCampaignParam(campaign) {\r",
-									"    if ([\"CUY-OMS\", \"CUY-OMSP\", \"CUY-OMSS\"].includes(campaign)) {\r",
-									"        // pm.collectionVariables.set(\"Campaign\", \"CUY-HMA\");\r",
+									"    if ([\"CUY-OMS\", \"CUY-OMSP\", \"CUY-OMSS\"].includes(campaign)) {        \r",
 									"        pm.request.url.addQueryParams({\r",
 									"            key: \"CampaignDialerId\",\r",
 									"            value: campaign\r",
@@ -2771,37 +2770,37 @@
 	],
 	"variable": [
 		{
-			"id": "0bc3d8c2-7193-4584-9b09-d4ba8bc5e0ca",
+			"id": "c91a7c4a-4516-414f-9552-1107bbc5d30c",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "333d38d9-d709-40c6-9c19-9a110b312300",
+			"id": "09ff7738-0e88-479b-9582-c002404e0e21",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "e8a27173-d050-4bb4-8140-a088c503c0eb",
+			"id": "d61a630e-6ffd-4dbd-95ac-c2905136527f",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "08372a92-d7eb-4813-be36-09dd1352706e",
+			"id": "08a8ab09-64cf-42a8-8949-7ee237b5555a",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "d8946d39-084c-4761-98b0-92fccc1f9358",
+			"id": "47beddee-5dfe-41c2-bc0a-e073daf65aea",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "4111f3d2-14d1-41dd-b3f2-b228e5c7726f",
+			"id": "c2ccef59-a5e2-436b-acee-cf7763b247cb",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
