@@ -1553,9 +1553,7 @@
 									"        pm.request.url.addQueryParams({\r",
 									"            key: \"CampaignDialerId\",\r",
 									"            value: campaign\r",
-									"        });\r",
-									"\r",
-									"        \r",
+									"        });        \r",
 									"    }\r",
 									"}"
 								],
@@ -2762,37 +2760,37 @@
 	],
 	"variable": [
 		{
-			"id": "53d54fbb-a213-4afa-b3d3-c32e081ace79",
+			"id": "921ce855-603c-4195-be49-362f7ab12e94",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "4574c344-18b4-4e9b-bc8f-c271056db102",
+			"id": "5427be6d-a7d7-46dc-bca9-a74892f73ebf",
 			"key": "Campaign",
 			"value": "CUY-OMS",
 			"type": "string"
 		},
 		{
-			"id": "47929e9a-d2ab-4024-bd3d-a4ff18004f90",
+			"id": "000afbfe-5a62-4fb1-ad24-de204505037b",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "fcd7c881-5487-44a1-863a-77e62c56457c",
+			"id": "4ac81c41-331f-4b64-8c8f-26a1a9e50da6",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "9d073845-ee51-46aa-a9ec-634c7f6a4791",
+			"id": "852e4ef4-bce3-4174-bc39-bc4d42ad6e08",
 			"key": "CampaignCode",
 			"value": "OMS",
 			"type": "string"
 		},
 		{
-			"id": "afcf9fe9-4a40-484d-8789-c3a5425b3287",
+			"id": "63cc0f38-9d60-420d-82b3-a84b3755334f",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
