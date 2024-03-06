@@ -2773,37 +2773,31 @@
 	],
 	"variable": [
 		{
-			"id": "4448eacb-8099-4353-8ed9-142a7aa6053c",
 			"key": "LoopCollectionIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "90dd3ce0-a371-4c83-a784-f239b4760eb7",
 			"key": "Campaign",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "97285407-d736-469a-9dd4-b807891cab83",
 			"key": "FolderIndex",
 			"value": "0",
 			"type": "string"
 		},
 		{
-			"id": "d9e6f140-643e-4f4e-9857-9611fa0f51ae",
 			"key": "CampaignCounter",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "6bed57c9-1549-475a-8998-8f6a50eaa27a",
 			"key": "CampaignCode",
 			"value": "",
 			"type": "string"
 		},
 		{
-			"id": "379a1e80-9531-433e-b903-2613753a16f8",
 			"key": "MarketingDefaultEndpoint",
 			"value": "marketing",
 			"type": "string"
